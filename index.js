@@ -161,7 +161,7 @@ class Utils {
   }
 
   //get link query
-  parsePathQuery(link) {
+  parseParams(link) {
     const linkType = link.split('?');
     const linkQuery = {};
     const queryString = linkType[1];
@@ -178,7 +178,7 @@ class Utils {
   }
 
   //serialize query
-  stringifyPathQuery(query) {
+  stringifyParams(query) {
     if(!this.isPlainObject(query)) return '';
     let _query = [];
     this.each(query, (value, key) => {
