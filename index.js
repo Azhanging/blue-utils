@@ -159,7 +159,36 @@ class Utils {
     });
     return index;
   }
+
+  //get link query
+  parsePathQuery(link) {
+    const linkType = link.split('?');
+    const linkQuery = {};
+    const queryString = linkType[1];
+    //是否存在原query
+    if (linkType.length > 0 && queryString && queryString !== '') {
+      (queryString.split('&') || []).forEach((queryItemString) => {
+        const splitQueryItem = queryItemString.split('=');
+        const key = splitQueryItem[0];
+        const value = splitQueryItem[1];
+        linkQuery[key] = value;
+      });
+    }
+    return linkQuery;
+  }
+
+  //serialize query
+  stringifyPathQuery(query) {
+    if(!this.isPlainObject(query)) return '';
+    let _query = [];
+    this.each(query, (value, key) => {
+      _query.push(`${key}=${encodeURIComponent(value)}`);
+    });
+    return _query.join('&');
+  }
+
 }
+
 
 const utils = new Utils();
 
