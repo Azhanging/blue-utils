@@ -1,4 +1,4 @@
-class Utils {
+class BlueUtils {
 
   nullPlainObject(val) {
     return JSON.stringify(val) === "{}";
@@ -190,6 +190,6 @@ class Utils {
 }
 
 
-const utils = new Utils();
+const blueUtils = new BlueUtils();
 
-module.exports = utils;
+module.exports = blueUtils;
