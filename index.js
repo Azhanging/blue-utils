@@ -160,24 +160,31 @@ class BlueUtils {
     return index;
   }
 
-  //get link query
-  parseParams(link) {
+  //get link query string
+  getLinkParams(link){
     const linkType = link.split('?');
-    const linkQuery = {};
     const queryString = linkType[1];
-    //是否存在原query
     if (linkType.length > 0 && queryString && queryString !== '') {
-      (queryString.split('&') || []).forEach((queryItemString) => {
-        const splitQueryItem = queryItemString.split('=');
-        const key = splitQueryItem[0];
-        const value = splitQueryItem[1];
-        linkQuery[key] = value;
-      });
+      return queryString;
     }
+    return '';
+  }
+
+  //query string 转化为 object
+  parseParams(queryString) {
+    const linkQuery = {};
+    if(!queryString) return linkQuery;
+    //是否存在原query
+    (queryString.split('&') || []).forEach((queryItemString) => {
+      const splitQueryItem = queryItemString.split('=');
+      const key = splitQueryItem[0];
+      const value = splitQueryItem[1];
+      linkQuery[key] = value;
+    });
     return linkQuery;
   }
 
-  //serialize query
+  //query 转化为 string
   stringifyParams(query) {
     if(!this.isPlainObject(query)) return '';
     let _query = [];
