@@ -1,65 +1,93 @@
-class BlueUtils {
+//blue utils 常用工具类 ES5
+function BlueUtils() {
+}
 
-  nullPlainObject(val) {
+//工具方法
+BlueUtils.prototype = {
+
+  constructor: BlueUtils,
+
+  //是否为空的对象
+  nullPlainObject: function (val) {
     return JSON.stringify(val) === "{}";
-  }
+  },
 
-  isStr(val) {
+  //是否为字符串
+  isStr: function (val) {
     return typeof val === 'string';
-  }
+  },
 
-  isPlainObject(val) {
+  //是否为对象类型
+  isPlainObject: function (val) {
     return val && val !== null && (val.toString() === '[object Object]');
-  }
+  },
 
-  isArray(val) {
+  //是否为数组
+  isArray: function (val) {
     return val instanceof Array;
-  }
+  },
 
-  isObjcet(val) {
+  //是否为对象
+  isObjcet: function (val) {
     return this.isPlainObject(val) || this.isArray(val);
-  }
+  },
 
-  isDef(val) {
+  //是否为定义
+  isDef: function (val) {
     return val !== undefined && val !== null;
-  }
+  },
 
-  isUndef(val) {
+  //是否为未定义
+  isUndef: function (val) {
     return val === undefined || val === null;
-  }
+  },
 
-  isBlankSpace(val) {
+  //val是否为空
+  isBlankSpace: function (val) {
     return val.trim().length === 0;
-  }
+  },
 
-  isTrue(bool) {
+  //是否为true
+  isTrue: function (bool) {
     return bool === true;
-  }
+  },
 
-  isFalse(bool) {
+  //是否为false
+  isFalse: function (bool) {
     return bool === false;
-  }
+  },
 
-  isFunction(fn) {
+  //是否为function
+  isFunction: function (fn) {
     return typeof fn === 'function';
-  }
+  },
 
-  hook(context, callback = function () {
-  }, args = []) {
-    if (typeof callback === 'function') {
+  //执行某一段在context 中的 function ，带上指定的arguments
+  hook: function (context, callback, args) {
+
+    if (callback === undefined) callback = function () {
+    };
+
+    if (args === undefined) args = [];
+
+    if (this.isFunction(callback)) {
       return callback.apply(context, args);
     }
-  }
+  },
 
-  each(obj, cb, isReturn = false) {
+  //遍历
+  each: function (obj, cb, isReturn) {
+
+    if (!isReturn) isReturn = false;
+
     if (this.isUndef(obj)) return;
-    let i = 0,
+
+    var i = 0,
       index = 0,
-      newVal = [];
+      newVal = [],
+      len = obj.length;
 
-    const len = obj.length;
-
-    if (this.isArray(obj)) {
+    if (this.isArray(obj) || this.isStr(obj)) {
       for (; i < len; i++) {
         if (isReturn) {
           newVal.push(cb(obj[i], i));
@@ -67,7 +95,7 @@ class BlueUtils {
           cb(obj[i], i);
         }
       }
-    } else {
+    } else if (this.isPlainObject(obj)) {
       for (i in obj) {
         if (!obj.hasOwnProperty(i)) continue;
         if (isReturn) {
@@ -79,20 +107,13 @@ class BlueUtils {
     }
 
     if (isReturn) return newVal;
-  }
+  },
 
-  definePropertyVal(obj, key, val) {
-    Object.defineProperty(obj, key, {
-      configurable: false,
-      enumerable: false,
-      value: val
-    });
-  }
-
-  deepCopy(obj) {
+  //深拷贝
+  deepCopy: function (obj) {
     if (!obj || !(obj instanceof Array) && !(obj.toString() === "[object Object]")) return obj;
-    const _obj = obj instanceof Array ? [] : {};
-    for (let key in obj) {
+    var _obj = obj instanceof Array ? [] : {};
+    for (var key in obj) {
       if (!obj.hasOwnProperty(key)) continue;
       if ((obj instanceof Array) || (obj instanceof Object)) {
         _obj[key] = this.deepCopy(obj[key]);
@@ -101,21 +122,23 @@ class BlueUtils {
       }
     }
     return _obj;
-  }
+  },
 
-  extend(object, _object, isDeep = true) {
+  //扩展
+  extend: function (object, _object, isDeep) {
 
-    if (isDeep) {
-      object = this.deepCopy(object);
-    }
+    if (isDeep === undefined) isDeep = true;
 
-    const oldObjKeys = this.each(object, (obj, key) => {
+    if (isDeep) object = this.deepCopy(object);
+
+    var oldObjKeys = this.each(object, function (obj, key) {
       return key;
     }, true);
 
-    this.each(_object, (obj, key) => {
+    this.each(_object, function (obj, key) {
 
-      const findIndexInOld = oldObjKeys.indexOf(key);
+      var findIndexInOld = oldObjKeys.indexOf(key);
+
       if (findIndexInOld != -1) {
         oldObjKeys.splice(findIndexInOld, 1);
       }
@@ -127,76 +150,75 @@ class BlueUtils {
         this.extend(object[key], obj, isDeep);
       }
       object[key] = obj;
-    });
+    }.bind(this));
 
-    this.each(oldObjKeys, (key) => {
+    this.each(oldObjKeys, function (key) {
       _object[key] = object[key];
     });
 
     return object;
-  }
+  },
 
   //把当前key-value复制到对应对象的key-value上
-  copy(object, _object) {
-    this.each(_object, (obj, key) => {
+  copy: function (object, _object) {
+    this.each(_object, function (obj, key) {
       object[key] = obj;
     });
-  }
+  },
 
   //获取表达式
-  getRegExp(expr) {
-    const tm = '\\/*.?+$^[](){}|\'\"';
-    this.each(tm, (tmItem, index) => {
+  getRegExp: function (expr) {
+    var tm = '\\/*.?+$^[](){}|\'\"';
+    this.each(tm, function (tmItem, index) {
       expr = expr.replace(new RegExp('\\' + tmItem, 'g'), '\\' + tmItem);
     });
     return expr;
-  }
+  },
 
-  getObjLen(obj) {
-    let index = 0;
-    this.each(obj, () => {
+  //或者object的长度
+  getObjLen: function (obj) {
+    var index = 0;
+    this.each(obj, function () {
       ++index;
     });
     return index;
-  }
+  },
 
-  //get link query string
-  getLinkParams(link){
-    const linkType = link.split('?');
-    const queryString = linkType[1];
+  //获取链接中的参数
+  getLinkParams: function (link) {
+    var linkType = link.split('?');
+    var queryString = linkType[1];
     if (linkType.length > 0 && queryString && queryString !== '') {
       return queryString;
     }
     return '';
-  }
+  },
 
   //query string 转化为 object
-  parseParams(queryString) {
-    const linkQuery = {};
-    if(!queryString) return linkQuery;
+  parseParams: function (queryString) {
+    var linkQuery = {};
+    if (!queryString) return linkQuery;
     //是否存在原query
-    (queryString.split('&') || []).forEach((queryItemString) => {
-      const splitQueryItem = queryItemString.split('=');
-      const key = splitQueryItem[0];
-      const value = splitQueryItem[1];
+    (queryString.split('&') || []).forEach(function (queryItemString) {
+      var splitQueryItem = queryItemString.split('=');
+      var key = splitQueryItem[0];
+      var value = splitQueryItem[1];
       linkQuery[key] = value;
     });
     return linkQuery;
-  }
+  },
 
   //query 转化为 string
-  stringifyParams(query) {
-    if(!this.isPlainObject(query)) return '';
-    let _query = [];
-    this.each(query, (value, key) => {
-      _query.push(`${key}=${encodeURIComponent(value)}`);
+  stringifyParams: function (query) {
+    if (!this.isPlainObject(query)) return '';
+    var _query = [];
+    this.each(query, function (value, key) {
+      _query.push(key + '=' + encodeURIComponent(value));
     });
     return _query.join('&');
   }
+};
 
-}
-
-
-const blueUtils = new BlueUtils();
+var blueUtils = new BlueUtils();
 
 module.exports = blueUtils;
