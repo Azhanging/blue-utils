@@ -1,19 +1,46 @@
 {
   "name": "blue-utils",
-  "version": "1.0.9",
-  "description": "utils",
-  "main": "index.js",
+  "version": "1.0.10",
+  "description": "blue-utils",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --config build/dev.js",
+    "build": "node build/build.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Azhanging/blue-utils.git"
-  },
-  "author": "blue",
+  "contributors": [
+    "Blue"
+  ],
+  "keyword": [
+    "utils",
+    "blue utils"
+  ],
+  "author": "Blue",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Azhanging/blue-utils/issues"
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "uglify-js": "^2.8.28",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2"
   },
-  "homepage": "https://github.com/Azhanging/blue-utils#readme"
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "repositories": [
+    "https://github.com/Azhanging/blue-utils"
+  ],
+  "bugs": {
+    "mail": "azhanging@qq.com",
+    "web": "https://github.com/Azhanging/blue-utils"
+  }
 }
