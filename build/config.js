@@ -102,7 +102,7 @@ time:${new Date().toUTCString()}
     new HtmlWebpackPlugin({
       filename: path.resolve(__dirname, '../dist/index.html'),
       template: 'index.html',
-      inject: true,
+      inject: "head",
       minify: {
         removeComments: true,
         collapseWhitespace: true,

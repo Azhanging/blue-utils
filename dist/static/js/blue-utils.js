@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.10
+ * blue-utils.js 1.0.11
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 17 Apr 2019 16:30:06 GMT
+ * time:Thu, 16 May 2019 06:53:07 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -99,59 +99,103 @@ var BlueUtils = function () {
 
   _createClass(BlueUtils, [{
     key: 'nullPlainObject',
+
+
+    //是否为空对象
     value: function nullPlainObject(val) {
       return JSON.stringify(val) === "{}";
     }
+
+    //是否为string
+
   }, {
     key: 'isStr',
     value: function isStr(val) {
       return typeof val === 'string';
     }
+
+    //是否为obj对象
+
   }, {
     key: 'isPlainObject',
     value: function isPlainObject(val) {
       return val && val !== null && val.toString() === '[object Object]';
     }
+
+    //是否为数据
+
   }, {
     key: 'isArray',
     value: function isArray(val) {
       return val instanceof Array;
     }
+
+    //是否为对象Object
+
   }, {
     key: 'isObjcet',
     value: function isObjcet(val) {
       return this.isPlainObject(val) || this.isArray(val);
     }
+
+    //是有值
+
   }, {
     key: 'isDef',
     value: function isDef(val) {
       return val !== undefined && val !== null;
     }
+
+    //是否为undefine 或者 null
+
   }, {
     key: 'isUndef',
     value: function isUndef(val) {
       return val === undefined || val === null;
     }
+
+    //字符串是否为空
+
   }, {
     key: 'isBlankSpace',
     value: function isBlankSpace(val) {
       return val.trim().length === 0;
     }
+
+    //是否为true
+
   }, {
     key: 'isTrue',
     value: function isTrue(bool) {
       return bool === true;
     }
+
+    //是否为false
+
   }, {
     key: 'isFalse',
     value: function isFalse(bool) {
       return bool === false;
     }
+
+    //是否为function
+
   }, {
     key: 'isFunction',
     value: function isFunction(fn) {
       return typeof fn === 'function';
     }
+
+    //是否为error
+
+  }, {
+    key: 'isError',
+    value: function isError(error) {
+      return error instanceof Error;
+    }
+
+    //执行function
+
   }, {
     key: 'hook',
     value: function hook(context) {
@@ -162,6 +206,9 @@ var BlueUtils = function () {
         return callback.apply(context, args);
       }
     }
+
+    //遍历
+
   }, {
     key: 'each',
     value: function each(obj, cb) {
@@ -204,6 +251,9 @@ var BlueUtils = function () {
         value: val
       });
     }
+
+    //深拷贝
+
   }, {
     key: 'deepCopy',
     value: function deepCopy(obj) {
@@ -219,6 +269,9 @@ var BlueUtils = function () {
       }
       return _obj;
     }
+
+    //扩展
+
   }, {
     key: 'extend',
     value: function extend(object, _object) {
@@ -279,6 +332,9 @@ var BlueUtils = function () {
       });
       return expr;
     }
+
+    //获取obj的长度
+
   }, {
     key: 'getObjLen',
     value: function getObjLen(obj) {
@@ -330,6 +386,18 @@ var BlueUtils = function () {
         _query.push(key + '=' + encodeURIComponent(value));
       });
       return _query.join('&');
+    }
+
+    //返回promise
+
+  }, {
+    key: 'promise',
+    value: function promise(hook) {
+      var _this2 = this;
+
+      return new Promise(function (resolve, reject) {
+        _this2.hook(_this2, hook, [resolve, reject]);
+      });
     }
   }]);
 
