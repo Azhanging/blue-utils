@@ -1,6 +1,6 @@
 {
   "name": "blue-utils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "blue-utils",
   "main": "./index.js",
   "scripts": {
