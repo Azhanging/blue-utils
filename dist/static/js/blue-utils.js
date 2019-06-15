@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.12
+ * blue-utils.js 1.0.13
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sat, 25 May 2019 02:47:26 GMT
+ * time:Sat, 15 Jun 2019 06:54:36 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -102,43 +102,43 @@ var BlueUtils = function () {
 
 
     //是否为空对象
-    value: function nullPlainObject(val) {
-      return JSON.stringify(val) === "{}";
+    value: function nullPlainObject(object) {
+      return JSON.stringify(object) === "{}";
     }
 
     //是否为string
 
   }, {
     key: 'isStr',
-    value: function isStr(val) {
-      return typeof val === 'string';
+    value: function isStr(string) {
+      return typeof string === 'string';
     }
 
     //是否为obj对象
 
   }, {
     key: 'isPlainObject',
-    value: function isPlainObject(val) {
-      return val && val !== null && val.toString() === '[object Object]';
+    value: function isPlainObject(object) {
+      return object && object !== null && object.toString() === '[object Object]';
     }
 
-    //是否为数据
+    //是否为数组
 
   }, {
     key: 'isArray',
-    value: function isArray(val) {
-      return val instanceof Array;
+    value: function isArray(array) {
+      return array instanceof Array;
     }
 
     //是否为对象Object
 
   }, {
     key: 'isObjcet',
-    value: function isObjcet(val) {
-      return this.isPlainObject(val) || this.isArray(val);
+    value: function isObjcet(object) {
+      return this.isPlainObject(object) || this.isArray(object);
     }
 
-    //是有值
+    //是否有值
 
   }, {
     key: 'isDef',
@@ -192,6 +192,14 @@ var BlueUtils = function () {
     key: 'isError',
     value: function isError(error) {
       return error instanceof Error;
+    }
+
+    //是否为布尔值
+
+  }, {
+    key: 'isBoolean',
+    value: function isBoolean(bool) {
+      return typeof bool === 'boolean';
     }
 
     //执行function
@@ -274,41 +282,57 @@ var BlueUtils = function () {
 
   }, {
     key: 'extend',
-    value: function extend(object, _object) {
+    value: function extend() {
       var _this = this;
 
-      var isDeep = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      //是否深拷贝
+      var isDeep = true;
+      //存放arguments的参数
+      var objects = [].concat(Array.prototype.slice.call(arguments));
+      //合并后的obj
+      var extendObject = {};
 
+      var lastArg = objects[objects.length - 1];
 
-      if (isDeep) {
-        object = this.deepCopy(object);
+      if (this.isBoolean(lastArg)) {
+        isDeep = lastArg;
+        [].pop.call(objects);
+        if (isDeep) {
+          objects = this.deepCopy(objects);
+        }
       }
 
-      var oldObjKeys = this.each(object, function (obj, key) {
-        return key;
-      }, true);
+      this.each(objects, function (object, index) {
+        if (index === objects.length - 1) return;
 
-      this.each(_object, function (obj, key) {
+        var nextObject = objects[index + 1];
 
-        var findIndexInOld = oldObjKeys.indexOf(key);
-        if (findIndexInOld != -1) {
-          oldObjKeys.splice(findIndexInOld, 1);
-        }
+        var currentKeys = _this.getObjKeys(object);
 
-        if (_this.isPlainObject(obj)) {
-          if (!object[key]) {
-            object[key] = {};
+        _this.each(nextObject, function (obj, key) {
+
+          var findCurrentIndex = currentKeys.indexOf(key);
+          if (findCurrentIndex != -1) {
+            currentKeys.splice(findCurrentIndex, 1);
           }
-          _this.extend(object[key], obj, isDeep);
-        }
-        object[key] = obj;
+
+          if (_this.isPlainObject(obj)) {
+            if (!object[key]) {
+              object[key] = {};
+            }
+            _this.extend(object[key], obj, isDeep);
+          }
+          object[key] = obj;
+        });
+
+        _this.each(currentKeys, function (key) {
+          nextObject[key] = object[key];
+        });
+
+        extendObject = nextObject;
       });
 
-      this.each(oldObjKeys, function (key) {
-        _object[key] = object[key];
-      });
-
-      return object;
+      return extendObject;
     }
 
     //把当前key-value复制到对应对象的key-value上
@@ -343,6 +367,13 @@ var BlueUtils = function () {
         ++index;
       });
       return index;
+    }
+  }, {
+    key: 'getObjKeys',
+    value: function getObjKeys(object) {
+      return this.each(object, function (obj, key) {
+        return key;
+      }, true);
     }
 
     //get link query string

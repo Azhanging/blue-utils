@@ -1,31 +1,31 @@
 class BlueUtils {
 
   //是否为空对象
-  nullPlainObject(val) {
-    return JSON.stringify(val) === "{}";
+  nullPlainObject(object) {
+    return JSON.stringify(object) === "{}";
   }
 
   //是否为string
-  isStr(val) {
-    return typeof val === 'string';
+  isStr(string) {
+    return typeof string === 'string';
   }
 
   //是否为obj对象
-  isPlainObject(val) {
-    return val && val !== null && (val.toString() === '[object Object]');
+  isPlainObject(object) {
+    return object && object !== null && (object.toString() === '[object Object]');
   }
 
-  //是否为数据
-  isArray(val) {
-    return val instanceof Array;
+  //是否为数组
+  isArray(array) {
+    return array instanceof Array;
   }
 
   //是否为对象Object
-  isObjcet(val) {
-    return this.isPlainObject(val) || this.isArray(val);
+  isObjcet(object) {
+    return this.isPlainObject(object) || this.isArray(object);
   }
 
-  //是有值
+  //是否有值
   isDef(val) {
     return val !== undefined && val !== null;
   }
@@ -58,6 +58,11 @@ class BlueUtils {
   //是否为error
   isError(error) {
     return error instanceof Error;
+  }
+
+  //是否为布尔值
+  isBoolean(bool) {
+    return typeof bool === 'boolean';
   }
 
   //执行function
@@ -123,37 +128,56 @@ class BlueUtils {
   }
 
   //扩展
-  extend(object, _object, isDeep = true) {
+  extend() {
+    //是否深拷贝
+    let isDeep = true;
+    //存放arguments的参数
+    let objects = [...arguments];
+    //合并后的obj
+    let extendObject = {};
 
-    if (isDeep) {
-      object = this.deepCopy(object);
+    const lastArg = objects[objects.length - 1];
+
+    if (this.isBoolean(lastArg)) {
+      isDeep = lastArg;
+      [].pop.call(objects);
+      if (isDeep) {
+        objects = this.deepCopy(objects);
+      }
     }
 
-    const oldObjKeys = this.each(object, (obj, key) => {
-      return key;
-    }, true);
+    this.each(objects, (object, index) => {
+      if (index === (objects.length - 1)) return;
 
-    this.each(_object, (obj, key) => {
+      const nextObject = objects[index + 1];
 
-      const findIndexInOld = oldObjKeys.indexOf(key);
-      if (findIndexInOld != -1) {
-        oldObjKeys.splice(findIndexInOld, 1);
-      }
+      const currentKeys = this.getObjKeys(object);
 
-      if (this.isPlainObject(obj)) {
-        if (!object[key]) {
-          object[key] = {};
+      this.each(nextObject, (obj, key) => {
+
+        const findCurrentIndex = currentKeys.indexOf(key);
+        if (findCurrentIndex != -1) {
+          currentKeys.splice(findCurrentIndex, 1);
         }
-        this.extend(object[key], obj, isDeep);
-      }
-      object[key] = obj;
+
+        if (this.isPlainObject(obj)) {
+          if (!object[key]) {
+            object[key] = {};
+          }
+          this.extend(object[key], obj, isDeep);
+        }
+        object[key] = obj;
+      });
+
+      this.each(currentKeys, (key) => {
+        nextObject[key] = object[key];
+      });
+
+      extendObject = nextObject;
+
     });
 
-    this.each(oldObjKeys, (key) => {
-      _object[key] = object[key];
-    });
-
-    return object;
+    return extendObject;
   }
 
   //把当前key-value复制到对应对象的key-value上
@@ -179,6 +203,12 @@ class BlueUtils {
       ++index;
     });
     return index;
+  }
+
+  getObjKeys(object){
+    return this.each(object, (obj, key) => {
+      return key;
+    }, true);
   }
 
   //get link query string

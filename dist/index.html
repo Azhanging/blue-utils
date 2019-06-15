@@ -1,1 +1,15 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>Title</title><script type=text/javascript src=./static/js/blue-utils.js></script><script type=text/javascript src=./static/js/blue-utils.min.js></script></head><body></body></html>
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>Title</title><script type=text/javascript src=./static/js/blue-utils.js></script><script type=text/javascript src=./static/js/blue-utils.min.js></script></head><body><script>var utils = new BlueUtils();
+      var data = {
+        aa: 123,
+        ttt: 34534
+      };
+      var res = utils.extend({
+        a: 1
+      }, {
+        b: 2
+      }, {
+        a: 3,
+        d: 4,
+        l: 60
+      }, data, false);
+      console.log(res);</script></body></html>
