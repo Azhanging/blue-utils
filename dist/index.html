@@ -4,12 +4,23 @@
         ttt: 34534
       };
       var res = utils.extend({
-        a: 1
+        data: {
+          a: 1,
+          c: 6
+        },
+        mounted() {
+        }
       }, {
-        b: 2
-      }, {
-        a: 3,
-        d: 4,
-        l: 60
-      }, data, false);
+        created() {
+        },
+        data: {
+          b: 2,
+          d() {
+          }
+        },
+        methods: {
+          get() {
+          }
+        }
+      });
       console.log(res);</script></body></html>

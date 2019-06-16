@@ -147,33 +147,23 @@ class BlueUtils {
     }
 
     this.each(objects, (object, index) => {
+
       if (index === (objects.length - 1)) return;
 
       const nextObject = objects[index + 1];
 
-      const currentKeys = this.getObjKeys(object);
-
       this.each(nextObject, (obj, key) => {
-
-        const findCurrentIndex = currentKeys.indexOf(key);
-        if (findCurrentIndex != -1) {
-          currentKeys.splice(findCurrentIndex, 1);
-        }
-
         if (this.isPlainObject(obj)) {
           if (!object[key]) {
             object[key] = {};
           }
-          this.extend(object[key], obj, isDeep);
+          object[key] = this.extend(object[key], obj, isDeep);
+        } else {
+          object[key] = obj;
         }
-        object[key] = obj;
       });
 
-      this.each(currentKeys, (key) => {
-        nextObject[key] = object[key];
-      });
-
-      extendObject = nextObject;
+      extendObject = object;
 
     });
 
@@ -205,7 +195,7 @@ class BlueUtils {
     return index;
   }
 
-  getObjKeys(object){
+  getObjKeys(object) {
     return this.each(object, (obj, key) => {
       return key;
     }, true);

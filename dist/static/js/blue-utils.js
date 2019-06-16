@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.13
+ * blue-utils.js 1.0.14
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sat, 15 Jun 2019 06:54:36 GMT
+ * time:Sun, 16 Jun 2019 14:35:55 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -303,33 +303,23 @@ var BlueUtils = function () {
       }
 
       this.each(objects, function (object, index) {
+
         if (index === objects.length - 1) return;
 
         var nextObject = objects[index + 1];
 
-        var currentKeys = _this.getObjKeys(object);
-
         _this.each(nextObject, function (obj, key) {
-
-          var findCurrentIndex = currentKeys.indexOf(key);
-          if (findCurrentIndex != -1) {
-            currentKeys.splice(findCurrentIndex, 1);
-          }
-
           if (_this.isPlainObject(obj)) {
             if (!object[key]) {
               object[key] = {};
             }
-            _this.extend(object[key], obj, isDeep);
+            object[key] = _this.extend(object[key], obj, isDeep);
+          } else {
+            object[key] = obj;
           }
-          object[key] = obj;
         });
 
-        _this.each(currentKeys, function (key) {
-          nextObject[key] = object[key];
-        });
-
-        extendObject = nextObject;
+        extendObject = object;
       });
 
       return extendObject;
