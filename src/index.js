@@ -241,6 +241,31 @@ class BlueUtils {
       this.hook(this, hook, [resolve, reject]);
     });
   }
+
+  //防抖
+  debounce(hook, delay = 200) {
+    let timer = 0;
+    return (ctx, args = []) => {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        this.hook(ctx, hook, args);
+        timer = null;
+      }, delay);
+    }
+  }
+
+  //节流
+  throttle(hook, delay = 200) {
+    let last, delayTimer;
+    return (ctx, args = []) => {
+      const now = +new Date();
+      if (!last || (last && (now > (last + delay)))) {
+        last = now;
+        this.hook(ctx, hook, args);
+      }
+    }
+  }
+
 }
 
 export default BlueUtils;

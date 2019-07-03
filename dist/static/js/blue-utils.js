@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.14
+ * blue-utils.js 1.0.15
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sun, 16 Jun 2019 14:35:55 GMT
+ * time:Wed, 03 Jul 2019 13:29:18 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -419,6 +419,49 @@ var BlueUtils = function () {
       return new Promise(function (resolve, reject) {
         _this2.hook(_this2, hook, [resolve, reject]);
       });
+    }
+
+    //防抖
+
+  }, {
+    key: 'debounce',
+    value: function debounce(hook) {
+      var _this3 = this;
+
+      var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
+
+      var timer = 0;
+      return function (ctx) {
+        var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(function () {
+          _this3.hook(ctx, hook, args);
+          timer = null;
+        }, delay);
+      };
+    }
+
+    //节流
+
+  }, {
+    key: 'throttle',
+    value: function throttle(hook) {
+      var _this4 = this;
+
+      var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
+
+      var last = void 0,
+          delayTimer = void 0;
+      return function (ctx) {
+        var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+        var now = +new Date();
+        if (!last || last && now > last + delay) {
+          last = now;
+          _this4.hook(ctx, hook, args);
+        }
+      };
     }
   }]);
 

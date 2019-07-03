@@ -100,6 +100,19 @@ blue-utils
       } else {
         reject();
       }
-      
     });
+    
+    //防抖@return function(ctx,args);
+    const debounceFn = utils.debounce((data)=>{
+      console.log(data);
+    },200);
+    debounceFn(utils,[`data`]);
+    
+    //节流
+    const throttleFn = utils.throttle((data)=>{
+      console.log(data);
+    },200);
+    throttleFn(window,[`data`]);
+    
+    
 ```

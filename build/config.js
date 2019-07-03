@@ -75,7 +75,7 @@ const prod = {
   },
   entry: {
     [`${library.name}`]: './src/index',
-    [`${library.name}.min`]: './src/index'
+//    [`${library.name}.min`]: './src/index'
   },
   output: {
     path: path.resolve(__dirname, '../dist/static/'),

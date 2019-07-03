@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>Title</title><script type=text/javascript src=./static/js/blue-utils.js></script><script type=text/javascript src=./static/js/blue-utils.min.js></script></head><body><script>var utils = new BlueUtils();
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>Title</title><script type=text/javascript src=./static/js/blue-utils.js></script></head><body><button id=debounce>debounce</button> <button id=throttle>throttle</button><script>var utils = new BlueUtils();
       var data = {
         aa: 123,
         ttt: 34534
@@ -23,4 +23,19 @@
           }
         }
       });
-      console.log(res);</script></body></html>
+      console.log(res);
+
+      const debounceFn = utils.debounce(function () {
+        console.log(event, +new Date());
+      });
+
+      const throttleFn = utils.throttle(function (event) {
+        console.log(event, +new Date());
+      }, 1000);
+
+      document.querySelector(`#debounce`).addEventListener('click', (event) => {
+        debounceFn(null, [event]);
+      });
+      document.querySelector(`#throttle`).addEventListener('click', (event) => {
+        throttleFn(null, [event]);
+      });</script></body></html>

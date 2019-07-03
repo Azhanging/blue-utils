@@ -5,6 +5,8 @@
     <title>Title</title>
   </head>
   <body>
+    <button id="debounce">debounce</button>
+    <button id="throttle">throttle</button>
     <script>
       var utils = new BlueUtils();
       var data = {
@@ -32,6 +34,22 @@
         }
       });
       console.log(res);
+
+      const debounceFn = utils.debounce(function () {
+        console.log(event, +new Date());
+      });
+
+      const throttleFn = utils.throttle(function (event) {
+        console.log(event, +new Date());
+      }, 1000);
+
+      document.querySelector(`#debounce`).addEventListener('click', (event) => {
+        debounceFn(null, [event]);
+      });
+      document.querySelector(`#throttle`).addEventListener('click', (event) => {
+        throttleFn(null, [event]);
+      });
+
     </script>
   </body>
 </html>
