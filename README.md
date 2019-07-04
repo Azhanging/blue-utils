@@ -2,7 +2,7 @@
 blue-utils
 
 
-####in Node CommonJS,default instantiation;
+#### in Node CommonJS,default instantiation;
 
 ```javascript
     const utils = require('blue-utils');
@@ -12,13 +12,13 @@ blue-utils
 
 ***********************************
 
-####in browser your need new BlueUtils;
+#### in browser your need new BlueUtils;
 
 ```javascript
   const utils = new BlueUtils();
 ```
 
-####Methods
+#### Methods
 
 ```javascript
 
