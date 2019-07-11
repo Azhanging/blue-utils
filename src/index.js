@@ -12,7 +12,7 @@ class BlueUtils {
 
   //是否为obj对象
   isPlainObject(object) {
-    return object && object !== null && (object.toString() === '[object Object]');
+    return object && !this.isArray(object) && object !== null && (object.toString() === '[object Object]');
   }
 
   //是否为数组

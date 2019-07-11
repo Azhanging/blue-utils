@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f6e5473-bd65-46d8-9720-20cdf9ffbaf6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/build/config.js" afterPath="$PROJECT_DIR$/build/config.js" />
       <change beforePath="$PROJECT_DIR$/build/library.js" afterPath="$PROJECT_DIR$/build/library.js" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/blue-utils.js" afterPath="$PROJECT_DIR$/dist/static/js/blue-utils.js" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/blue-utils.js.map" afterPath="$PROJECT_DIR$/dist/static/js/blue-utils.js.map" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/blue-utils.min.js" afterPath="$PROJECT_DIR$/dist/static/js/blue-utils.min.js" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/blue-utils.min.js.map" afterPath="$PROJECT_DIR$/dist/static/js/blue-utils.min.js.map" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
@@ -27,68 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="257" column="31" lean-forward="true" selection-start-line="257" selection-start-column="31" selection-end-line="257" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-                <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#1126#1131#0" expanded="false" />
-                <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#1186#1237#0" expanded="false" />
-                <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#1429#1587#0" expanded="false" />
-                <element signature="e#1458#1581#0" expanded="false" />
-                <element signature="e#1482#1531#0" expanded="false" />
-                <element signature="e#1537#1573#0" expanded="false" />
-                <element signature="e#1593#1809#0" expanded="false" />
-                <element signature="e#1616#1803#0" expanded="false" />
-                <element signature="e#1686#1744#0" expanded="false" />
-                <element signature="e#1750#1795#0" expanded="false" />
-                <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#1922#1998#0" expanded="false" />
-                <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#2202#2416#0" expanded="false" />
-                <element signature="e#2311#2365#0" expanded="false" />
-                <element signature="e#2371#2410#0" expanded="false" />
-                <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#2674#2803#0" expanded="false" />
-                <element signature="e#2746#2797#0" expanded="false" />
-                <element signature="e#2847#3267#0" expanded="false" />
-                <element signature="e#2989#3228#0" expanded="false" />
-                <element signature="e#3028#3174#0" expanded="false" />
-                <element signature="e#3058#3101#0" expanded="false" />
-                <element signature="e#3180#3220#0" expanded="false" />
-                <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#3399#3431#0" expanded="false" />
-                <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#3545#3626#0" expanded="false" />
-                <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#3727#3749#0" expanded="false" />
-                <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#3841#3866#0" expanded="false" />
-                <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#4071#4104#0" expanded="false" />
-                <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#4329#4499#0" expanded="false" />
-                <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#4682#4747#0" expanded="false" />
-                <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-                <element signature="e#4860#4915#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="778">
+              <first_editor relative-caret-position="3306">
                 <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
                 <folding>
                   <marker date="1562159175089" expanded="true" signature="1030:1072" ph="{...}" />
@@ -123,21 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="58">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -146,8 +76,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="-119">
+              <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blue-utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/static/js/blue-utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -156,7 +96,7 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="1073">
               <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
               <folding>
                 <element signature="e#307#1235#0" expanded="false" />
@@ -205,6 +145,8 @@
       <find>=&gt;</find>
       <find>isPlainObject</find>
       <find>build</find>
+      <find>timer</find>
+      <find>isP</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,14 +161,14 @@
         <option value="$PROJECT_DIR$/index-1.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/test-promise.js" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/build/base.js" />
         <option value="$PROJECT_DIR$/build/config.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/build/library.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -244,7 +186,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-6" />
     <option name="y" value="1" />
     <option name="width" value="1932" />
@@ -265,6 +207,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,24 +219,12 @@
             <path>
               <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,29 +295,33 @@
       <workItem from="1558752332595" duration="756000" />
       <workItem from="1560561021185" duration="11000" />
       <workItem from="1560689207470" duration="6058000" />
-      <workItem from="1562156995959" duration="4184000" />
+      <workItem from="1562156995959" duration="5765000" />
+      <workItem from="1562207760822" duration="611000" />
+      <workItem from="1562230256168" duration="189000" />
+      <workItem from="1562251279619" duration="736000" />
+      <workItem from="1562595526178" duration="1691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40283000" />
+    <option name="totallyTimeSpent" value="45091000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.46185854" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.4557927" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4726257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26703912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16684435" sideWeight="0.5381415" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16684435" sideWeight="0.54420733" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33407822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -403,7 +339,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -420,63 +356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -484,63 +364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -556,63 +380,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2888">
           <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,63 +396,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -700,63 +412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -773,63 +429,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2888">
           <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -845,63 +445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -917,63 +461,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,63 +486,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,63 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2888">
           <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,63 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1206,63 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,63 +543,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2888">
           <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,63 +559,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,63 +575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,63 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="584">
           <caret line="198" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,16 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/static/js/blue-utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="339" column="6" lean-forward="true" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1618,17 +648,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="1073">
           <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding>
             <element signature="e#307#1235#0" expanded="false" />
@@ -1636,26 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="778">
+          <first_editor relative-caret-position="3306">
             <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
             <folding>
               <marker date="1562159175089" expanded="true" signature="1030:1072" ph="{...}" />
@@ -1670,75 +676,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        <state relative-caret-position="-119">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/static/js/blue-utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="257" column="31" lean-forward="true" selection-start-line="257" selection-start-column="31" selection-end-line="257" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!block;n#nullPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isStr#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isPlainObject#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isArray#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isObjcet#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isDef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isUndef#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBlankSpace#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isTrue#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFalse#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isFunction#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isError#0;n#BlueUtils#0" expanded="false" />
-            <element signature="n#!!block;n#isBoolean#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1126#1131#0" expanded="false" />
-            <element signature="n#!!block;n#hook#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1186#1237#0" expanded="false" />
-            <element signature="n#!!block;n#each#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1429#1587#0" expanded="false" />
-            <element signature="e#1458#1581#0" expanded="false" />
-            <element signature="e#1482#1531#0" expanded="false" />
-            <element signature="e#1537#1573#0" expanded="false" />
-            <element signature="e#1593#1809#0" expanded="false" />
-            <element signature="e#1616#1803#0" expanded="false" />
-            <element signature="e#1686#1744#0" expanded="false" />
-            <element signature="e#1750#1795#0" expanded="false" />
-            <element signature="n#!!block;n#definePropertyVal#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#1922#1998#0" expanded="false" />
-            <element signature="n#!!block;n#deepCopy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2202#2416#0" expanded="false" />
-            <element signature="e#2311#2365#0" expanded="false" />
-            <element signature="e#2371#2410#0" expanded="false" />
-            <element signature="n#!!block;n#extend#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#2674#2803#0" expanded="false" />
-            <element signature="e#2746#2797#0" expanded="false" />
-            <element signature="e#2847#3267#0" expanded="false" />
-            <element signature="e#2989#3228#0" expanded="false" />
-            <element signature="e#3028#3174#0" expanded="false" />
-            <element signature="e#3058#3101#0" expanded="false" />
-            <element signature="e#3180#3220#0" expanded="false" />
-            <element signature="n#!!block;n#copy#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3399#3431#0" expanded="false" />
-            <element signature="n#!!block;n#getRegExp#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3545#3626#0" expanded="false" />
-            <element signature="n#!!block;n#getObjLen#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3727#3749#0" expanded="false" />
-            <element signature="n#!!block;n#getObjKeys#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#3841#3866#0" expanded="false" />
-            <element signature="n#!!block;n#getLinkParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4071#4104#0" expanded="false" />
-            <element signature="n#!!block;n#parseParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4329#4499#0" expanded="false" />
-            <element signature="n#!!block;n#stringifyParams#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4682#4747#0" expanded="false" />
-            <element signature="n#!!block;n#promise#0;n#BlueUtils#0" expanded="false" />
-            <element signature="e#4860#4915#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

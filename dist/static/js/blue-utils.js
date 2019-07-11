@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.15
+ * blue-utils.js 1.0.16
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 03 Jul 2019 13:29:18 GMT
+ * time:Mon, 08 Jul 2019 14:28:50 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -119,7 +119,7 @@ var BlueUtils = function () {
   }, {
     key: 'isPlainObject',
     value: function isPlainObject(object) {
-      return object && object !== null && object.toString() === '[object Object]';
+      return object && !this.isArray(object) && object !== null && object.toString() === '[object Object]';
     }
 
     //是否为数组
