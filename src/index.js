@@ -211,6 +211,11 @@ class BlueUtils {
     return '';
   }
 
+  getNoParamsLink(link = '') {
+    const linkType = link.split('?');
+    return linkType[0];
+  }
+
   //query string 转化为 object
   parseParams(queryString) {
     const linkQuery = {};
@@ -265,7 +270,73 @@ class BlueUtils {
       }
     }
   }
-
 }
+
+BlueUtils.config = {
+  jsonp: {
+    callbackParamName: `jsonp_callbcak`
+  }
+};
+
+BlueUtils.prototype.jsonp = (() => {
+
+  const jsonpConfig = BlueUtils.config.jsonp;
+
+  if (!window.BlueJsonp) {
+    window.BlueJsonp = {
+      id: 0,
+      callback: {}
+    };
+  }
+
+  const options = {
+    url: ``,
+    params: {},
+    callbackParamName: jsonpConfig.callbackParamName,
+    callback: function () {
+    },
+    onload: function () {
+    },
+    onerror: function () {
+    }
+  };
+
+  return function (opts = {}) {
+
+    const utils = this;
+    const _opts = this.extend(options, opts);
+    const script = document.createElement('script');
+    const {
+      callbackParamName,
+      callback,
+      url,
+      params
+    } = _opts;
+    const id = ++BlueJsonp.id;
+    const JsonpCallback = window.BlueJsonp.callback;
+
+    JsonpCallback[id] = callback;
+
+    params[callbackParamName] = `BlueJsonp.callback[${id}]`;
+
+    const linkParams = this.stringifyParams(this.extend(this.parseParams(this.getLinkParams(url)), params));
+
+    script.src = `${this.getNoParamsLink(url)}` + (this.getObjKeys(linkParams).length > 0) ? `?${linkParams}` : '';
+
+    return this.promise((resolve, reject) => {
+      script.onload = function () {
+        delete JsonpCallback[id - 1];
+        document.head.removeChild(this);
+        resolve();
+      };
+      script.onerror = function (error) {
+        delete JsonpCallback[id];
+        document.head.removeChild(this);
+        reject();
+      };
+      document.head.appendChild(script);
+    });
+  };
+})();
 
 export default BlueUtils;

@@ -4,7 +4,7 @@
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Mon, 08 Jul 2019 14:28:50 GMT
+ * time:Mon, 15 Jul 2019 04:00:37 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -378,6 +378,14 @@ var BlueUtils = function () {
       }
       return '';
     }
+  }, {
+    key: 'getNoParamsLink',
+    value: function getNoParamsLink() {
+      var link = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      var linkType = link.split('?');
+      return linkType[0];
+    }
 
     //query string 转化为 object
 
@@ -466,6 +474,71 @@ var BlueUtils = function () {
   }]);
 
   return BlueUtils;
+}();
+
+BlueUtils.config = {
+  jsonp: {
+    callbackParamName: 'jsonp_callbcak'
+  }
+};
+
+BlueUtils.prototype.jsonp = function () {
+
+  var jsonpConfig = BlueUtils.config.jsonp;
+
+  if (!window.BlueJsonp) {
+    window.BlueJsonp = {
+      id: 0,
+      callback: {}
+    };
+  }
+
+  var options = {
+    url: '',
+    params: {},
+    callbackParamName: jsonpConfig.callbackParamName,
+    callback: function callback() {},
+    onload: function onload() {},
+    onerror: function onerror() {}
+  };
+
+  return function () {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+
+    var utils = this;
+    var _opts = this.extend(options, opts);
+    var script = document.createElement('script');
+    var callbackParamName = _opts.callbackParamName,
+        callback = _opts.callback,
+        url = _opts.url,
+        params = _opts.params;
+
+    var id = ++BlueJsonp.id;
+    var JsonpCallback = window.BlueJsonp.callback;
+
+    JsonpCallback[id] = callback;
+
+    params[callbackParamName] = 'BlueJsonp.callback[' + id + ']';
+
+    var linkParams = this.stringifyParams(this.extend(this.parseParams(this.getLinkParams(url)), params));
+
+    script.src = '' + this.getNoParamsLink(url) + (this.getObjKeys(linkParams).length > 0) ? '?' + linkParams : '';
+
+    return this.promise(function (resolve, reject) {
+      script.onload = function () {
+        delete JsonpCallback[id - 1];
+        document.head.removeChild(this);
+        resolve();
+      };
+      script.onerror = function (error) {
+        delete JsonpCallback[id];
+        document.head.removeChild(this);
+        reject();
+      };
+      document.head.appendChild(script);
+    });
+  };
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (BlueUtils);

@@ -55,6 +55,88 @@
         throttleFn(null, [event]);
       });
 
+      utils.jsonp({
+        url: `//localhost:63342/blue-utils/dist/static/js/blue-utils.js?asd=asd&ccxv=asdad`,
+        callbackParamName: `jsonp_callback`,
+        callback: function (data) {
+          console.log(data);
+          return data;
+        }
+      }).then(() => {
+        console.log(`success`);
+      }).catch((e) => {
+
+      });
+
+      Function.prototype.myCall = function () {
+        let [ctx, ...args] = arguments;
+        if (!ctx) ctx = window;
+        const key = `${new Date().getTime()}${Math.random()}`;
+        ctx[key] = this;
+        setTimeout(() => {
+          delete ctx[key];
+        }, 0);
+        ctx[key](...args);
+      };
+
+      Function.prototype.myApply = function () {
+        let [ctx, args = []] = arguments;
+        if (!ctx) ctx = window;
+        const key = `${new Date().getTime()}${Math.random()}`;
+        ctx[key] = this;
+        setTimeout(() => {
+          delete ctx[key];
+        }, 0);
+        return ctx[key](...args);
+      };
+
+      Function.prototype.myBind = function () {
+        const [ctx, ...args] = arguments;
+        const _this = this;
+        return function () {
+          return _this.myApply(ctx, [...args, ...arguments]);
+        };
+      };
+
+      function a(data) {
+        console.log(this.value, data);
+      }
+
+      a.myCall({ value: 1 }, '123');
+      a.myCall(null, '123');
+
+      a.myApply({ value: '123123' }, [`data1`, `data2`]);
+
+      function bindFn() {
+        console.log(arguments);
+      }
+
+      bindFn.myBind({ value: 1 }, `data1`, `data2`, `data3`)(`data4`);
+
+      function _new() {
+        const [fn, ...args] = arguments;
+        const obj = Object.create(fn.prototype);
+        fn.apply(obj, args);
+        return obj;
+      }
+
+      function P(opts) {
+        this.a = opts.a;
+        this.b = opts.b;
+      }
+
+      P.prototype.getA = function(){
+        return this.a;
+      };
+
+      const p = _new(P, {
+        a: 1,
+        b: 2
+      });
+
+      console.log(p);
+
+
     </script>
   </body>
 </html>
