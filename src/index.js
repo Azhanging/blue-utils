@@ -274,7 +274,7 @@ class BlueUtils {
 
 BlueUtils.config = {
   jsonp: {
-    callbackParamName: `jsonp_callbcak`
+    callbackParamName: `jsonp_callback`
   }
 };
 
@@ -294,26 +294,18 @@ BlueUtils.prototype.jsonp = (() => {
     params: {},
     callbackParamName: jsonpConfig.callbackParamName,
     callback: function () {
-    },
-    onload: function () {
-    },
-    onerror: function () {
     }
   };
 
   return function (opts = {}) {
 
+    const BlueJsonp = window.BlueJsonp;
     const utils = this;
     const _opts = this.extend(options, opts);
     const script = document.createElement('script');
-    const {
-      callbackParamName,
-      callback,
-      url,
-      params
-    } = _opts;
+    const { callbackParamName, callback, url, params } = _opts;
     const id = ++BlueJsonp.id;
-    const JsonpCallback = window.BlueJsonp.callback;
+    const JsonpCallback = BlueJsonp.callback;
 
     JsonpCallback[id] = callback;
 

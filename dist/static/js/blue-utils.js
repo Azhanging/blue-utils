@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.16
+ * blue-utils.js 1.0.17
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Mon, 15 Jul 2019 04:00:37 GMT
+ * time:Wed, 17 Jul 2019 07:57:15 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -478,7 +478,7 @@ var BlueUtils = function () {
 
 BlueUtils.config = {
   jsonp: {
-    callbackParamName: 'jsonp_callbcak'
+    callbackParamName: 'jsonp_callback'
   }
 };
 
@@ -497,15 +497,14 @@ BlueUtils.prototype.jsonp = function () {
     url: '',
     params: {},
     callbackParamName: jsonpConfig.callbackParamName,
-    callback: function callback() {},
-    onload: function onload() {},
-    onerror: function onerror() {}
+    callback: function callback() {}
   };
 
   return function () {
     var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 
+    var BlueJsonp = window.BlueJsonp;
     var utils = this;
     var _opts = this.extend(options, opts);
     var script = document.createElement('script');
@@ -515,7 +514,7 @@ BlueUtils.prototype.jsonp = function () {
         params = _opts.params;
 
     var id = ++BlueJsonp.id;
-    var JsonpCallback = window.BlueJsonp.callback;
+    var JsonpCallback = BlueJsonp.callback;
 
     JsonpCallback[id] = callback;
 
