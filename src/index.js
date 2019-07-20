@@ -282,13 +282,6 @@ BlueUtils.prototype.jsonp = (() => {
 
   const jsonpConfig = BlueUtils.config.jsonp;
 
-  if (!window.BlueJsonp) {
-    window.BlueJsonp = {
-      id: 0,
-      callback: {}
-    };
-  }
-
   const options = {
     url: ``,
     params: {},
@@ -298,6 +291,13 @@ BlueUtils.prototype.jsonp = (() => {
   };
 
   return function (opts = {}) {
+
+	  if (!window.BlueJsonp) {
+		  window.BlueJsonp = {
+			  id: 0,
+			  callback: {}
+		  };
+	  }
 
     const BlueJsonp = window.BlueJsonp;
     const utils = this;
@@ -313,7 +313,9 @@ BlueUtils.prototype.jsonp = (() => {
 
     const linkParams = this.stringifyParams(this.extend(this.parseParams(this.getLinkParams(url)), params));
 
-    script.src = `${this.getNoParamsLink(url)}` + (this.getObjKeys(linkParams).length > 0) ? `?${linkParams}` : '';
+    const link = this.getNoParamsLink(url);
+
+    script.src = link + ((this.getObjKeys(linkParams).length > 0) ? `?${linkParams}` : '');
 
     return this.promise((resolve, reject) => {
       script.onload = function () {

@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.17
+ * blue-utils.js 1.0.18
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 17 Jul 2019 07:57:15 GMT
+ * time:Sat, 20 Jul 2019 08:37:48 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -486,13 +486,6 @@ BlueUtils.prototype.jsonp = function () {
 
   var jsonpConfig = BlueUtils.config.jsonp;
 
-  if (!window.BlueJsonp) {
-    window.BlueJsonp = {
-      id: 0,
-      callback: {}
-    };
-  }
-
   var options = {
     url: '',
     params: {},
@@ -503,6 +496,13 @@ BlueUtils.prototype.jsonp = function () {
   return function () {
     var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
+
+    if (!window.BlueJsonp) {
+      window.BlueJsonp = {
+        id: 0,
+        callback: {}
+      };
+    }
 
     var BlueJsonp = window.BlueJsonp;
     var utils = this;
@@ -522,7 +522,9 @@ BlueUtils.prototype.jsonp = function () {
 
     var linkParams = this.stringifyParams(this.extend(this.parseParams(this.getLinkParams(url)), params));
 
-    script.src = '' + this.getNoParamsLink(url) + (this.getObjKeys(linkParams).length > 0) ? '?' + linkParams : '';
+    var link = this.getNoParamsLink(url);
+
+    script.src = link + (this.getObjKeys(linkParams).length > 0 ? '?' + linkParams : '');
 
     return this.promise(function (resolve, reject) {
       script.onload = function () {
