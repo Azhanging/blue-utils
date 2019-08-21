@@ -115,7 +115,7 @@
         this.b = opts.b;
       }
 
-      P.prototype.getA = function(){
+      P.prototype.getA = function () {
         return this.a;
       };
 
@@ -124,4 +124,21 @@
         b: 2
       });
 
-      console.log(p);</script></body></html>
+      console.log(p);
+
+      const obj1 = {
+
+      };
+
+      const obj2 = {
+        c: 3,
+        cc: 4,
+        ccc: 5
+      };
+
+      const obj3 = {
+        d: 4,
+        e: 5
+      };
+
+      console.log(utils.extend(obj1, obj2, obj3));</script></body></html>

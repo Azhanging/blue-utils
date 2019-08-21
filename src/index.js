@@ -147,11 +147,8 @@ class BlueUtils {
     }
 
     this.each(objects, (object, index) => {
-
       if (index === (objects.length - 1)) return;
-
       const nextObject = objects[index + 1];
-
       this.each(nextObject, (obj, key) => {
         if (this.isPlainObject(obj)) {
           if (!object[key]) {
@@ -162,9 +159,8 @@ class BlueUtils {
           object[key] = obj;
         }
       });
-
-      extendObject = object;
-
+      objects[index + 1] = extendObject = object;
+      objects[index] = null;
     });
 
     return extendObject;
@@ -292,12 +288,12 @@ BlueUtils.prototype.jsonp = (() => {
 
   return function (opts = {}) {
 
-	  if (!window.BlueJsonp) {
-		  window.BlueJsonp = {
-			  id: 0,
-			  callback: {}
-		  };
-	  }
+    if (!window.BlueJsonp) {
+      window.BlueJsonp = {
+        id: 0,
+        callback: {}
+      };
+    }
 
     const BlueJsonp = window.BlueJsonp;
     const utils = this;
