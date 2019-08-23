@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.19
+ * blue-utils.js 1.0.20
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 21 Aug 2019 03:26:54 GMT
+ * time:Fri, 23 Aug 2019 14:34:30 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -294,12 +294,15 @@ var BlueUtils = function () {
 
       var lastArg = objects[objects.length - 1];
 
+      //检查最后一个参数是否为深拷贝
       if (this.isBoolean(lastArg)) {
         isDeep = lastArg;
         [].pop.call(objects);
-        if (isDeep) {
-          objects = this.deepCopy(objects);
-        }
+      }
+
+      //默认深拷贝，否则最后一个参数为深拷贝布尔值
+      if (isDeep) {
+        objects = this.deepCopy(objects);
       }
 
       this.each(objects, function (object, index) {

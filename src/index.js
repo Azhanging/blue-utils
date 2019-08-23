@@ -138,12 +138,15 @@ class BlueUtils {
 
     const lastArg = objects[objects.length - 1];
 
+    //检查最后一个参数是否为深拷贝
     if (this.isBoolean(lastArg)) {
       isDeep = lastArg;
       [].pop.call(objects);
-      if (isDeep) {
-        objects = this.deepCopy(objects);
-      }
+    }
+
+    //默认深拷贝，否则最后一个参数为深拷贝布尔值
+    if (isDeep) {
+      objects = this.deepCopy(objects);
     }
 
     this.each(objects, (object, index) => {
