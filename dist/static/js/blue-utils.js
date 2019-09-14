@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.0.20
+ * blue-utils.js 1.1.0
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 23 Aug 2019 14:34:30 GMT
+ * time:Fri, 13 Sep 2019 17:42:27 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -119,7 +119,7 @@ var BlueUtils = function () {
   }, {
     key: 'isPlainObject',
     value: function isPlainObject(object) {
-      return object && !this.isArray(object) && object !== null && object.toString() === '[object Object]';
+      return object && !this.isArray(object) && object !== null && object.toString() === '[object Object]' && object.constructor === Object;
     }
 
     //是否为数组
@@ -266,6 +266,8 @@ var BlueUtils = function () {
     key: 'deepCopy',
     value: function deepCopy(obj) {
       if (!obj || !(obj instanceof Array) && !(obj.toString() === "[object Object]")) return obj;
+      //非纯对象类型，直接返回出去
+      if (!(obj instanceof Array) && obj.constructor !== Object) return obj;
       var _obj = obj instanceof Array ? [] : {};
       for (var key in obj) {
         if (!obj.hasOwnProperty(key)) continue;

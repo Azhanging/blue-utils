@@ -1,4 +1,4 @@
 module.exports = {
   name: `blue-utils`,
-  version: `1.0.20`
+  version: `1.1.0`
 };

@@ -136,22 +136,26 @@
 
       console.log(p);
 
-      const obj1 = {
+      function A() {
+        this.a = 11;
+        this.b = 22;
+      }
 
-      };
+      const obj1 = {};
 
       const obj2 = {
         c: 3,
         cc: 4,
-        ccc: 5
+        ccc: new A()
       };
 
       const obj3 = {
         d: 4,
-        e: 5
+        e: 5,
+        ccc: 5
       };
 
-      console.log(utils.extend(obj2, obj3));
+      console.log(utils.extend(obj1, obj2, obj3));
 
 
     </script>

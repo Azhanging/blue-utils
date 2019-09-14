@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f6e5473-bd65-46d8-9720-20cdf9ffbaf6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/build/library.js" afterPath="$PROJECT_DIR$/build/library.js" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/blue-utils.js" afterPath="$PROJECT_DIR$/dist/static/js/blue-utils.js" />
@@ -26,18 +27,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="16" />
+            <state relative-caret-position="4234">
+              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="148" column="39" lean-forward="false" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+            <state relative-caret-position="3538">
+              <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -46,22 +47,35 @@
       <file leaf-file-name="blue-utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/static/js/blue-utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="342" column="6" lean-forward="false" selection-start-line="342" selection-start-column="6" selection-end-line="342" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1566570872196" expanded="true" signature="8137:8207" ph="{...}" />
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1568396549760" expanded="true" signature="8268:8338" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
+              <first_editor relative-caret-position="29">
+                <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <folding>
+                  <marker date="1568397272232" expanded="true" signature="858:892" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1493:1554" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1505:1527" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1533:1552" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1632:1656" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1739:1763" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="1846:1886" ph="{&quot;callbackParamName&quot;: `jsonp_callback`...}" />
+                  <marker date="1568397272232" expanded="true" signature="1927:2043" ph="{&quot;url&quot;: ``...}" />
+                  <marker date="1568397272232" expanded="true" signature="2031:2041" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="2054:2087" ph="{...}" />
+                  <marker date="1568397272232" expanded="true" signature="2100:2131" ph="{...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -71,8 +85,8 @@
       <file leaf-file-name="library.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/library.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="87">
+              <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -82,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="58">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -101,8 +115,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="153" column="31" lean-forward="false" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+            <state relative-caret-position="4176">
+              <caret line="155" column="8" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
               <folding>
                 <element signature="e#266#311#0" expanded="false" />
                 <element signature="e#342#439#0" expanded="false" />
@@ -162,6 +176,7 @@
       <find>callback</find>
       <find>BlueJsonp</find>
       <find>extend</find>
+      <find>deep</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,12 +193,12 @@
         <option value="$PROJECT_DIR$/test-promise.js" />
         <option value="$PROJECT_DIR$/build/base.js" />
         <option value="$PROJECT_DIR$/build/config.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/build/library.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/build/library.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -201,7 +216,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-6" />
     <option name="y" value="38" />
     <option name="width" value="1932" />
@@ -222,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,13 +264,27 @@
             <path>
               <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="blue-utils.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="blue-utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-utils" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -338,11 +368,12 @@
       <workItem from="1563611102533" duration="1450000" />
       <workItem from="1566356581482" duration="2200000" />
       <workItem from="1566570491186" duration="1077000" />
+      <workItem from="1568425434479" duration="395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68803000" />
+    <option name="totallyTimeSpent" value="71990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,8 +385,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16791044" sideWeight="0.4039146" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -697,45 +727,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="16" />
+        <state relative-caret-position="4234">
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="153" column="31" lean-forward="false" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+        <state relative-caret-position="4176">
+          <caret line="155" column="8" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
           <folding>
             <element signature="e#266#311#0" expanded="false" />
             <element signature="e#342#439#0" expanded="false" />
@@ -744,21 +747,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3538">
+          <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dist/static/js/blue-utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="342" column="6" lean-forward="false" selection-start-line="342" selection-start-column="6" selection-end-line="342" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1566570872196" expanded="true" signature="8137:8207" ph="{...}" />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1568396549760" expanded="true" signature="8268:8338" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="148" column="39" lean-forward="false" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="29">
+            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <folding>
+              <marker date="1568397272232" expanded="true" signature="858:892" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1493:1554" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1505:1527" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1533:1552" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1632:1656" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1739:1763" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="1846:1886" ph="{&quot;callbackParamName&quot;: `jsonp_callback`...}" />
+              <marker date="1568397272232" expanded="true" signature="1927:2043" ph="{&quot;url&quot;: ``...}" />
+              <marker date="1568397272232" expanded="true" signature="2031:2041" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="2054:2087" ph="{...}" />
+              <marker date="1568397272232" expanded="true" signature="2100:2131" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

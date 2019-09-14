@@ -12,7 +12,11 @@ class BlueUtils {
 
   //是否为obj对象
   isPlainObject(object) {
-    return object && !this.isArray(object) && object !== null && (object.toString() === '[object Object]');
+    return object &&
+      !this.isArray(object) &&
+      object !== null &&
+      (object.toString() === '[object Object]') &&
+      (object.constructor === Object);
   }
 
   //是否为数组
@@ -115,6 +119,8 @@ class BlueUtils {
   //深拷贝
   deepCopy(obj) {
     if (!obj || !(obj instanceof Array) && !(obj.toString() === "[object Object]")) return obj;
+    //非纯对象类型，直接返回出去
+    if (!(obj instanceof Array) && (obj.constructor !== Object)) return obj;
     const _obj = obj instanceof Array ? [] : {};
     for (let key in obj) {
       if (!obj.hasOwnProperty(key)) continue;
