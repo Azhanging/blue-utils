@@ -75,6 +75,7 @@ class BlueUtils {
     if (typeof callback === 'function') {
       return callback.apply(context, args);
     }
+    return callback;
   }
 
   //遍历

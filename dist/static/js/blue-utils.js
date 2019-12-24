@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.0
+ * blue-utils.js 1.1.1
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 13 Sep 2019 17:42:27 GMT
+ * time:Tue, 24 Dec 2019 09:51:49 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -213,6 +213,7 @@ var BlueUtils = function () {
       if (typeof callback === 'function') {
         return callback.apply(context, args);
       }
+      return callback;
     }
 
     //遍历
