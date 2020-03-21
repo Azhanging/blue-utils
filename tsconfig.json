@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    //严格模式
+    "alwaysStrict": true,
+    //实验性装饰器
+    "experimentalDecorators": true,
+    //报错不生成文件
+    "noEmitOnError": true,
+    //允许UMD在全局访问
+    "allowUmdGlobalAccess": true,
+    //生成d.ts文件
+    "declaration": true,
+    //生成d.ts文件路径
+    "declarationDir": "./",
+    //编译模块类型
+    "module": "UMD",
+    //目标版本
+    "target": "ES5",
+    //忽略.d.ts
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "lib": [
+      "es2015",
+      "DOM",
+      "ES5",
+      "ScriptHost"
+    ]
+  },
+  "files": [
+    "./src/index.ts"
+  ]
+}

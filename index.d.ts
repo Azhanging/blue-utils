@@ -1,0 +1,30 @@
+declare class BlueUtils {
+    isEmptyPlainObject(object: any): boolean;
+    isStr(val: string): boolean;
+    isPlainObject(object: any): boolean;
+    isArray(val: any): boolean;
+    isObject(object: any): boolean;
+    isDef(val: any): boolean;
+    isUndef(val: any): boolean;
+    isEmptyStr(val: string): boolean;
+    isTrue(bool: any): boolean;
+    isFalse(bool: any): boolean;
+    isFunction(fn: any): boolean;
+    isError(error: any): boolean;
+    isBoolean(bool: any): boolean;
+    hook(context: any, cb: any, args?: any[]): any;
+    each(obj: any, cb: Function, isReturn?: boolean): any[] | void;
+    deepCopy(obj: any): any;
+    extend(...args: any[]): any;
+    getRegExp(expr: any): string;
+    getObjLen(obj: any): number;
+    getObjKeys(object: any): any[] | void;
+    getLinkParams(link: string): string;
+    getNoParamsLink(link?: string): string;
+    parseParams(queryString: string): any;
+    stringifyParams(query: any): string;
+    promise(hook: Function): Promise<any>;
+    debounce(hook: Function, delay?: number): Function;
+    throttle(hook: Function, delay?: number): Function;
+}
+export default BlueUtils;

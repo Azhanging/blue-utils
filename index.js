@@ -1,3 +1,3 @@
-const BlueUtils = require('./dist/static/js/blue-utils');
+const BlueUtils = require('./dist/blue-utils');
 
 module.exports = new BlueUtils();

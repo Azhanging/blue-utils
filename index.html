@@ -55,19 +55,6 @@
         throttleFn(null, [event]);
       });
 
-      utils.jsonp({
-        url: `//localhost:63342/blue-utils/dist/static/js/blue-utils.js?asd=asd&ccxv=asdad`,
-        callbackParamName: `jsonp_callback`,
-        callback: function (data) {
-          console.log(data);
-          return data;
-        }
-      }).then(() => {
-        console.log(`success`);
-      }).catch((e) => {
-
-      });
-
       Function.prototype.myCall = function () {
         let [ctx, ...args] = arguments;
         if (!ctx) ctx = window;

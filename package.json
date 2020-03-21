@@ -1,15 +1,13 @@
 {
   "name": "blue-utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "blue-utils",
   "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "dev": "webpack-dev-server --config build/dev.js",
-    "build": "node build/build.js"
+    "dev": "webpack-dev-server --config blue-build-library/dev.js",
+    "build": "node blue-build-library/build.js"
   },
-  "contributors": [
-    "Blue"
-  ],
   "keyword": [
     "utils",
     "blue utils"
@@ -24,10 +22,13 @@
     "babel-preset-stage-2": "^6.24.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
     "uglify-js": "^2.8.28",
     "uglifyjs-webpack-plugin": "^1.1.1",
-    "webpack": "3.10.0",
-    "webpack-dev-server": "^2.11.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.1.2"
   },
   "files": [

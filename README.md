@@ -22,7 +22,7 @@ const utils = new BlueUtils();
 
 ```javascript
 //是否为空对象:Boolean
-utils.nullPlainObject({});
+utils.isEmptyPlainObject({});
 
 //是否为string
 utils.isStr('string');
@@ -34,7 +34,7 @@ utils.isPlainObject({});
 utils.isArray([]);
 
 //是否为对象Object
-utils.isObjcet({}||[]);
+utils.isObject({}||[]);
 
 //是否有值
 utils.isDef('123');
