@@ -112,23 +112,3 @@ const throttleFn = utils.throttle((data)=>{
   console.log(data);
 },200);
 throttleFn(window,[`data`]);
-
-//这里可以修改jsonp的callback配置
-utils.config.jsonp = {
-  callbackParamName:`jsonp_callback`
-};
-
-//jsonp处理 @return Promise
-utils.jsonp({
-  url:``,
-  callbackParamName:`callback_param_name`,    //也可以通过这里修改callback的Json
-  callback(jsonpData){
-    
-  }
-}).then(()=>{
-  //jsonp script load success
-}).catch((e)=>{
-  //jsonp script load error
-});
-    
-```
