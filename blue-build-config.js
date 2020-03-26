@@ -7,10 +7,12 @@ const output = {
   libraryExport: 'default'
 };
 
+const name = `blue-utils`;
+
 module.exports = {
   library: {
-    name: 'blue-utils',
-    github: `https://github.com/azhanging/blue-utils`,
+    name,
+    github: `https://github.com/azhanging/${name}`,
     date: `2016-2020`,
     version: package.version,
     author: package.author
