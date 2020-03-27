@@ -1,69 +1,69 @@
-class BlueUtils {
+const blueUtils = {
 
 	//是否为空对象
 	isEmptyPlainObject ( object: any ): boolean {
 		return JSON.stringify(object) === "{}";
-	}
+	},
 
 	//是否为string
 	isStr ( val: string ): boolean {
 		return typeof val === 'string';
-	}
+	},
 
 	//是否为obj对象
 	isPlainObject ( object: any ): boolean {
 		return object && !this.isArray(object) && (object.toString() === '[object Object]') && (object.constructor === Object);
-	}
+	},
 
 	//是否为数组
 	isArray ( val: any ): boolean {
 		return val instanceof Array;
-	}
+	},
 
 	//是否为对象Object Object
 	isObject ( object: any ): boolean {
 		return this.isPlainObject(object) || this.isArray(object);
-	}
+	},
 
 	//是否有值
 	isDef ( val: any ): boolean {
 		return val !== undefined && val !== null;
-	}
+	},
 
 	//是否为undefine 或者 null
 	isUndef ( val: any ): boolean {
 		return val === undefined || val === null;
-	}
+	},
 
 	//字符串是否为空
 	isEmptyStr ( val: string ): boolean {
 		return val.trim().length === 0;
-	}
+	},
 
 	//是否为true
 	isTrue ( bool: any ): boolean {
 		return bool === true;
-	}
+	},
 
 	//是否为false
 	isFalse ( bool: any ): boolean {
 		return bool === false;
-	}
+	},
 
 	//是否为function
 	isFunction ( fn: any ): boolean {
 		return typeof fn === 'function';
-	}
+	},
 
 	//是否为error
 	isError ( error: any ): boolean {
 		return error instanceof Error;
-	}
+	},
 
 	//是否为布尔值
 	isBoolean ( bool: any ): boolean {
 		return typeof bool === 'boolean';
-	}
+	},
 
 	//执行function
 	hook ( context: any, cb: any, args: any[] = [] ) {
@@ -71,7 +71,7 @@ class BlueUtils {
 			return cb.apply(context, args);
 		}
 		return cb;
-	}
+	},
 
 	//遍历
 	each ( obj: any, cb: Function, isReturn: boolean = false ): any[] | void {
@@ -102,7 +102,7 @@ class BlueUtils {
 		}
 
 		if (isReturn) return newVal;
-	}
+	},
 
 	//深拷贝
 	deepCopy ( obj: any ): any {
@@ -119,7 +119,7 @@ class BlueUtils {
 			}
 		}
 		return _obj;
-	}
+	},
 
 	//扩展
 	extend ( ...args: any[] ): any {
@@ -161,7 +161,7 @@ class BlueUtils {
 		});
 
 		return extendObject;
-	}
+	},
 
 	//获取表达式
 	getRegExp ( expr ): string {
@@ -170,7 +170,7 @@ class BlueUtils {
 			expr = expr.replace(new RegExp('\\' + tmItem, 'g'), '\\' + tmItem);
 		});
 		return expr;
-	}
+	},
 
 	//获取obj的长度
 	getObjLen ( obj: any ): number {
@@ -179,13 +179,13 @@ class BlueUtils {
 			++index;
 		});
 		return index;
-	}
+	},
 
 	getObjKeys ( object: any ): any[] | void {
 		return this.each(object, ( obj, key ) => {
 			return key;
 		}, true);
-	}
+	},
 
 	//get link query string
 	getLinkParams ( link: string ): string {
@@ -195,12 +195,12 @@ class BlueUtils {
 			return queryString;
 		}
 		return '';
-	}
+	},
 
 	getNoParamsLink ( link: string = '' ): string {
 		const linkType = link.split('?');
 		return linkType[ 0 ];
-	}
+	},
 
 	//query string 转化为 object
 	parseParams ( queryString: string ): any {
@@ -212,7 +212,7 @@ class BlueUtils {
 			linkQuery[ splitQueryItem[ 0 ] ] = splitQueryItem[ 1 ];
 		});
 		return linkQuery;
-	}
+	},
 
 	//query 转化为 string
 	stringifyParams ( query: any ): string {
@@ -225,14 +225,14 @@ class BlueUtils {
 			_query.push(`${key}=${encodeURIComponent(value)}`);
 		});
 		return _query.join('&');
-	}
+	},
 
 	//返回promise
 	promise ( hook: Function ): Promise<any> {
 		return new Promise(( resolve?: Function, reject?: Function ) => {
 			this.hook(this, hook, [ resolve, reject ]);
 		});
-	}
+	},
 
 	//防抖
 	debounce ( hook: Function, delay: number = 200 ): Function {
@@ -244,7 +244,7 @@ class BlueUtils {
 				timer = null;
 			}, delay);
 		}
-	}
+	},
 
 	//节流
 	throttle ( hook: Function, delay: number = 200 ): Function {
@@ -257,6 +257,6 @@ class BlueUtils {
 			}
 		}
 	}
-}
+};
 
-export default BlueUtils;
+export default blueUtils;

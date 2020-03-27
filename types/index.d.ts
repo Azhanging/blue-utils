@@ -1,4 +1,4 @@
-declare class BlueUtils {
+declare const blueUtils: {
     isEmptyPlainObject(object: any): boolean;
     isStr(val: string): boolean;
     isPlainObject(object: any): boolean;
@@ -13,12 +13,12 @@ declare class BlueUtils {
     isError(error: any): boolean;
     isBoolean(bool: any): boolean;
     hook(context: any, cb: any, args?: any[]): any;
-    each(obj: any, cb: Function, isReturn?: boolean): any[] | void;
+    each(obj: any, cb: Function, isReturn?: boolean): void | any[];
     deepCopy(obj: any): any;
     extend(...args: any[]): any;
     getRegExp(expr: any): string;
     getObjLen(obj: any): number;
-    getObjKeys(object: any): any[] | void;
+    getObjKeys(object: any): void | any[];
     getLinkParams(link: string): string;
     getNoParamsLink(link?: string): string;
     parseParams(queryString: string): any;
@@ -26,5 +26,5 @@ declare class BlueUtils {
     promise(hook: Function): Promise<any>;
     debounce(hook: Function, delay?: number): Function;
     throttle(hook: Function, delay?: number): Function;
-}
-export default BlueUtils;
+};
+export default blueUtils;

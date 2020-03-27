@@ -2,7 +2,7 @@ const package = require('./package');
 
 //输出源
 const output = {
-  library: "BlueUtils",
+  library: "blueUtils",
   libraryTarget: 'umd',
   libraryExport: 'default'
 };

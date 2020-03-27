@@ -55,8 +55,11 @@
       <recent name="D:\achang\web\blue-utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="Node.js.test.js (1)">
     <configuration name="blue-build-config.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/blue-build-config.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js (1)" type="NodeJSConfigurationType" temporary="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/test.js" working-dir="$PROJECT_DIR$/src">
@@ -85,12 +88,14 @@
     <list>
       <item itemvalue="Node.js.blue-build-config.js" />
       <item itemvalue="Node.js.test.js" />
+      <item itemvalue="Node.js.test.js (1)" />
       <item itemvalue="npm.build" />
       <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.build" />
+        <item itemvalue="Node.js.test.js (1)" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.blue-build-config.js" />
@@ -143,6 +148,8 @@
       <workItem from="1585145507807" duration="1910000" />
       <workItem from="1585229041772" duration="29000" />
       <workItem from="1585232975148" duration="646000" />
+      <workItem from="1585300174948" duration="529000" />
+      <workItem from="1585302285470" duration="1107000" />
     </task>
     <servers />
   </component>
@@ -163,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1584250842771" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585229068511">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585300701544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585229068511" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585300701544" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1584802323230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

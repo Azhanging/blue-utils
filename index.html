@@ -8,12 +8,11 @@
     <button id="debounce">debounce</button>
     <button id="throttle">throttle</button>
     <script>
-      var utils = new BlueUtils();
       var data = {
         aa: 123,
         ttt: 34534
       };
-      var res = utils.extend({
+      var res = blueUtils.extend({
         data: {
           a: 1,
           c: 6
@@ -40,11 +39,11 @@
       });
       console.log(res);
 
-      const debounceFn = utils.debounce(function () {
+      const debounceFn = blueUtils.debounce(function () {
         console.log(event, +new Date());
       });
 
-      const throttleFn = utils.throttle(function (event) {
+      const throttleFn = blueUtils.throttle(function (event) {
         console.log(event, +new Date());
       }, 1000);
 
@@ -142,7 +141,7 @@
         ccc: 5
       };
 
-      console.log(utils.extend(obj1, obj2, obj3));
+      console.log(blueUtils.extend(obj1, obj2, obj3));
 
 
     </script>

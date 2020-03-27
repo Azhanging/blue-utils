@@ -11,7 +11,7 @@
     //生成d.ts文件
     "declaration": true,
     //生成d.ts文件路径
-    "declarationDir": "./",
+    "declarationDir": "./types",
     //编译模块类型
     "module": "UMD",
     //目标版本

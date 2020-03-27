@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.2
+ * blue-utils.js 1.1.5
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sat, 21 Mar 2020 14:12:13 GMT
+ * time:Fri, 27 Mar 2020 10:12:14 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -13,9 +13,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["BlueUtils"] = factory();
+		exports["blueUtils"] = factory();
 	else
-		root["BlueUtils"] = factory();
+		root["blueUtils"] = factory();
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -128,71 +128,69 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var BlueUtils = /** @class */ (function () {
-        function BlueUtils() {
-        }
+    var blueUtils = {
         //是否为空对象
-        BlueUtils.prototype.isEmptyPlainObject = function (object) {
+        isEmptyPlainObject: function (object) {
             return JSON.stringify(object) === "{}";
-        };
+        },
         //是否为string
-        BlueUtils.prototype.isStr = function (val) {
+        isStr: function (val) {
             return typeof val === 'string';
-        };
+        },
         //是否为obj对象
-        BlueUtils.prototype.isPlainObject = function (object) {
+        isPlainObject: function (object) {
             return object && !this.isArray(object) && (object.toString() === '[object Object]') && (object.constructor === Object);
-        };
+        },
         //是否为数组
-        BlueUtils.prototype.isArray = function (val) {
+        isArray: function (val) {
             return val instanceof Array;
-        };
+        },
         //是否为对象Object Object
-        BlueUtils.prototype.isObject = function (object) {
+        isObject: function (object) {
             return this.isPlainObject(object) || this.isArray(object);
-        };
+        },
         //是否有值
-        BlueUtils.prototype.isDef = function (val) {
+        isDef: function (val) {
             return val !== undefined && val !== null;
-        };
+        },
         //是否为undefine 或者 null
-        BlueUtils.prototype.isUndef = function (val) {
+        isUndef: function (val) {
             return val === undefined || val === null;
-        };
+        },
         //字符串是否为空
-        BlueUtils.prototype.isEmptyStr = function (val) {
+        isEmptyStr: function (val) {
             return val.trim().length === 0;
-        };
+        },
         //是否为true
-        BlueUtils.prototype.isTrue = function (bool) {
+        isTrue: function (bool) {
             return bool === true;
-        };
+        },
         //是否为false
-        BlueUtils.prototype.isFalse = function (bool) {
+        isFalse: function (bool) {
             return bool === false;
-        };
+        },
         //是否为function
-        BlueUtils.prototype.isFunction = function (fn) {
+        isFunction: function (fn) {
             return typeof fn === 'function';
-        };
+        },
         //是否为error
-        BlueUtils.prototype.isError = function (error) {
+        isError: function (error) {
             return error instanceof Error;
-        };
+        },
         //是否为布尔值
-        BlueUtils.prototype.isBoolean = function (bool) {
+        isBoolean: function (bool) {
             return typeof bool === 'boolean';
-        };
+        },
         //执行function
-        BlueUtils.prototype.hook = function (context, cb, args) {
+        hook: function (context, cb, args) {
             if (args === void 0) { args = []; }
             if (this.isFunction(cb)) {
                 return cb.apply(context, args);
             }
             return cb;
-        };
+        },
         //遍历
-        BlueUtils.prototype.each = function (obj, cb, isReturn) {
+        each: function (obj, cb, isReturn) {
             if (isReturn === void 0) { isReturn = false; }
             if (this.isUndef(obj))
                 return;
@@ -222,9 +220,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             }
             if (isReturn)
                 return newVal;
-        };
+        },
         //深拷贝
-        BlueUtils.prototype.deepCopy = function (obj) {
+        deepCopy: function (obj) {
             if (!obj || !(this.isArray(obj)) && !(obj.toString() === "[object Object]"))
                 return obj;
             //非纯对象类型，直接返回出去
@@ -242,9 +240,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 }
             }
             return _obj;
-        };
+        },
         //扩展
-        BlueUtils.prototype.extend = function () {
+        extend: function () {
             var _this = this;
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
@@ -285,44 +283,44 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 objects[index] = null;
             });
             return extendObject;
-        };
+        },
         //获取表达式
-        BlueUtils.prototype.getRegExp = function (expr) {
+        getRegExp: function (expr) {
             var tm = '\\/*.?+$^[](){}|\'\"';
             this.each(tm, function (tmItem, index) {
                 expr = expr.replace(new RegExp('\\' + tmItem, 'g'), '\\' + tmItem);
             });
             return expr;
-        };
+        },
         //获取obj的长度
-        BlueUtils.prototype.getObjLen = function (obj) {
+        getObjLen: function (obj) {
             var index = 0;
             this.each(obj, function () {
                 ++index;
             });
             return index;
-        };
-        BlueUtils.prototype.getObjKeys = function (object) {
+        },
+        getObjKeys: function (object) {
             return this.each(object, function (obj, key) {
                 return key;
             }, true);
-        };
+        },
         //get link query string
-        BlueUtils.prototype.getLinkParams = function (link) {
+        getLinkParams: function (link) {
             var linkType = link.split('?');
             var queryString = linkType[1];
             if (linkType.length > 0 && queryString && queryString !== '') {
                 return queryString;
             }
             return '';
-        };
-        BlueUtils.prototype.getNoParamsLink = function (link) {
+        },
+        getNoParamsLink: function (link) {
             if (link === void 0) { link = ''; }
             var linkType = link.split('?');
             return linkType[0];
-        };
+        },
         //query string 转化为 object
-        BlueUtils.prototype.parseParams = function (queryString) {
+        parseParams: function (queryString) {
             var linkQuery = {};
             if (!queryString)
                 return linkQuery;
@@ -332,9 +330,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 linkQuery[splitQueryItem[0]] = splitQueryItem[1];
             });
             return linkQuery;
-        };
+        },
         //query 转化为 string
-        BlueUtils.prototype.stringifyParams = function (query) {
+        stringifyParams: function (query) {
             var _this = this;
             if (!this.isPlainObject(query))
                 return '';
@@ -346,16 +344,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 _query.push(key + "=" + encodeURIComponent(value));
             });
             return _query.join('&');
-        };
+        },
         //返回promise
-        BlueUtils.prototype.promise = function (hook) {
+        promise: function (hook) {
             var _this = this;
             return new Promise(function (resolve, reject) {
                 _this.hook(_this, hook, [resolve, reject]);
             });
-        };
+        },
         //防抖
-        BlueUtils.prototype.debounce = function (hook, delay) {
+        debounce: function (hook, delay) {
             var _this = this;
             if (delay === void 0) { delay = 200; }
             var timer = 0;
@@ -368,9 +366,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     timer = null;
                 }, delay);
             };
-        };
+        },
         //节流
-        BlueUtils.prototype.throttle = function (hook, delay) {
+        throttle: function (hook, delay) {
             var _this = this;
             if (delay === void 0) { delay = 200; }
             var last;
@@ -382,10 +380,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     _this.hook(ctx, hook, args);
                 }
             };
-        };
-        return BlueUtils;
-    }());
-    exports.default = BlueUtils;
+        }
+    };
+    exports.default = blueUtils;
 });
 
 

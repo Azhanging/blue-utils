@@ -1,9 +1,9 @@
 {
   "name": "blue-utils",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "description": "blue-utils",
   "main": "./index.js",
-  "types": "./index.d.ts",
+  "types": "./types/index.d.ts",
   "scripts": {
     "dev": "webpack-dev-server --config blue-build-library/dev.js",
     "build": "node blue-build-library/build.js"
@@ -31,12 +31,6 @@
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.1.2"
   },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md",
-    "index.js"
-  ],
   "repositories": [
     "https://github.com/Azhanging/blue-utils"
   ],
