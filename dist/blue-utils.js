@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.5
+ * blue-utils.js 1.1.6
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 27 Mar 2020 10:12:14 GMT
+ * time:Sat, 28 Mar 2020 08:31:30 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -105,300 +105,250 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-(function (factory) {
-    if ( true && typeof module.exports === "object") {
-        var v = factory(__webpack_require__(1), exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var blueUtils = {
-        //是否为空对象
-        isEmptyPlainObject: function (object) {
-            return JSON.stringify(object) === "{}";
-        },
-        //是否为string
-        isStr: function (val) {
-            return typeof val === 'string';
-        },
-        //是否为obj对象
-        isPlainObject: function (object) {
-            return object && !this.isArray(object) && (object.toString() === '[object Object]') && (object.constructor === Object);
-        },
-        //是否为数组
-        isArray: function (val) {
-            return val instanceof Array;
-        },
-        //是否为对象Object Object
-        isObject: function (object) {
-            return this.isPlainObject(object) || this.isArray(object);
-        },
-        //是否有值
-        isDef: function (val) {
-            return val !== undefined && val !== null;
-        },
-        //是否为undefine 或者 null
-        isUndef: function (val) {
-            return val === undefined || val === null;
-        },
-        //字符串是否为空
-        isEmptyStr: function (val) {
-            return val.trim().length === 0;
-        },
-        //是否为true
-        isTrue: function (bool) {
-            return bool === true;
-        },
-        //是否为false
-        isFalse: function (bool) {
-            return bool === false;
-        },
-        //是否为function
-        isFunction: function (fn) {
-            return typeof fn === 'function';
-        },
-        //是否为error
-        isError: function (error) {
-            return error instanceof Error;
-        },
-        //是否为布尔值
-        isBoolean: function (bool) {
-            return typeof bool === 'boolean';
-        },
-        //执行function
-        hook: function (context, cb, args) {
-            if (args === void 0) { args = []; }
-            if (this.isFunction(cb)) {
-                return cb.apply(context, args);
-            }
-            return cb;
-        },
-        //遍历
-        each: function (obj, cb, isReturn) {
-            if (isReturn === void 0) { isReturn = false; }
-            if (this.isUndef(obj))
-                return;
-            var i = 0, index = 0, newVal = [];
-            var len = obj.length;
-            if (this.isArray(obj)) {
-                for (; i < len; i++) {
-                    if (isReturn) {
-                        newVal.push(cb(obj[i], i));
-                    }
-                    else {
-                        cb(obj[i], i);
-                    }
-                }
-            }
-            else {
-                for (i in obj) {
-                    if (!obj.hasOwnProperty(i))
-                        continue;
-                    if (isReturn) {
-                        newVal.push(cb(obj[i], i, index++));
-                    }
-                    else {
-                        cb(obj[i], i, index++);
-                    }
-                }
-            }
-            if (isReturn)
-                return newVal;
-        },
-        //深拷贝
-        deepCopy: function (obj) {
-            if (!obj || !(this.isArray(obj)) && !(obj.toString() === "[object Object]"))
-                return obj;
-            //非纯对象类型，直接返回出去
-            if (!(this.isArray(obj)) && (obj.constructor !== Object))
-                return obj;
-            var _obj = this.isArray(obj) ? [] : {};
-            for (var key in obj) {
-                if (!obj.hasOwnProperty(key))
-                    continue;
-                if ((this.isArray(obj)) || (this.isPlainObject(obj))) {
-                    _obj[key] = this.deepCopy(obj[key]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const blueUtils = {
+    //是否为空对象
+    isEmptyPlainObject(object) {
+        return JSON.stringify(object) === "{}";
+    },
+    //是否为string
+    isStr(val) {
+        return typeof val === 'string';
+    },
+    //是否为obj对象
+    isPlainObject(object) {
+        return object && !this.isArray(object) && (object.toString() === '[object Object]') && (object.constructor === Object);
+    },
+    //是否为数组
+    isArray(val) {
+        return val instanceof Array;
+    },
+    //是否为对象Object Object
+    isObject(object) {
+        return this.isPlainObject(object) || this.isArray(object);
+    },
+    //是否有值
+    isDef(val) {
+        return val !== undefined && val !== null;
+    },
+    //是否为undefine 或者 null
+    isUndef(val) {
+        return val === undefined || val === null;
+    },
+    //字符串是否为空
+    isEmptyStr(val) {
+        return val.trim().length === 0;
+    },
+    //是否为true
+    isTrue(bool) {
+        return bool === true;
+    },
+    //是否为false
+    isFalse(bool) {
+        return bool === false;
+    },
+    //是否为function
+    isFunction(fn) {
+        return typeof fn === 'function';
+    },
+    //是否为error
+    isError(error) {
+        return error instanceof Error;
+    },
+    //是否为布尔值
+    isBoolean(bool) {
+        return typeof bool === 'boolean';
+    },
+    //执行function
+    hook(context, cb, args = []) {
+        if (this.isFunction(cb)) {
+            return cb.apply(context, args);
+        }
+        return cb;
+    },
+    //遍历
+    each(obj, cb, isReturn = false) {
+        if (this.isUndef(obj))
+            return;
+        let i = 0, index = 0, newVal = [];
+        const len = obj.length;
+        if (this.isArray(obj)) {
+            for (; i < len; i++) {
+                if (isReturn) {
+                    newVal.push(cb(obj[i], i));
                 }
                 else {
-                    _obj[key] = obj[key];
+                    cb(obj[i], i);
                 }
             }
-            return _obj;
-        },
-        //扩展
-        extend: function () {
-            var _this = this;
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            //是否深拷贝
-            var isDeep = true;
-            //存放arguments的参数
-            var objects = __spreadArrays(args);
-            //合并后的obj
-            var extendObject = {};
-            var lastArg = objects[objects.length - 1];
-            //检查最后一个参数是否为深拷贝
-            if (this.isBoolean(lastArg)) {
-                isDeep = lastArg;
-                [].pop.call(objects);
-            }
-            //默认深拷贝，否则最后一个参数为深拷贝布尔值
-            if (isDeep) {
-                objects = this.deepCopy(objects);
-            }
-            this.each(objects, function (object, index) {
-                if (index === (objects.length - 1))
-                    return;
-                var nextObject = objects[index + 1];
-                _this.each(nextObject, function (obj, key) {
-                    if (_this.isPlainObject(obj)) {
-                        if (!object[key]) {
-                            object[key] = {};
-                        }
-                        object[key] = _this.extend(object[key], obj, isDeep);
-                    }
-                    else {
-                        object[key] = obj;
-                    }
-                });
-                objects[index + 1] = extendObject = object;
-                objects[index] = null;
-            });
-            return extendObject;
-        },
-        //获取表达式
-        getRegExp: function (expr) {
-            var tm = '\\/*.?+$^[](){}|\'\"';
-            this.each(tm, function (tmItem, index) {
-                expr = expr.replace(new RegExp('\\' + tmItem, 'g'), '\\' + tmItem);
-            });
-            return expr;
-        },
-        //获取obj的长度
-        getObjLen: function (obj) {
-            var index = 0;
-            this.each(obj, function () {
-                ++index;
-            });
-            return index;
-        },
-        getObjKeys: function (object) {
-            return this.each(object, function (obj, key) {
-                return key;
-            }, true);
-        },
-        //get link query string
-        getLinkParams: function (link) {
-            var linkType = link.split('?');
-            var queryString = linkType[1];
-            if (linkType.length > 0 && queryString && queryString !== '') {
-                return queryString;
-            }
-            return '';
-        },
-        getNoParamsLink: function (link) {
-            if (link === void 0) { link = ''; }
-            var linkType = link.split('?');
-            return linkType[0];
-        },
-        //query string 转化为 object
-        parseParams: function (queryString) {
-            var linkQuery = {};
-            if (!queryString)
-                return linkQuery;
-            //是否存在原query
-            (queryString.split('&') || []).forEach(function (queryItemString) {
-                var splitQueryItem = queryItemString.split('=');
-                linkQuery[splitQueryItem[0]] = splitQueryItem[1];
-            });
-            return linkQuery;
-        },
-        //query 转化为 string
-        stringifyParams: function (query) {
-            var _this = this;
-            if (!this.isPlainObject(query))
-                return '';
-            var _query = [];
-            this.each(query, function (value, key) {
-                if (_this.isPlainObject(value) || _this.isArray(value)) {
-                    value = JSON.stringify(value);
-                }
-                _query.push(key + "=" + encodeURIComponent(value));
-            });
-            return _query.join('&');
-        },
-        //返回promise
-        promise: function (hook) {
-            var _this = this;
-            return new Promise(function (resolve, reject) {
-                _this.hook(_this, hook, [resolve, reject]);
-            });
-        },
-        //防抖
-        debounce: function (hook, delay) {
-            var _this = this;
-            if (delay === void 0) { delay = 200; }
-            var timer = 0;
-            return function (ctx, args) {
-                if (args === void 0) { args = []; }
-                if (timer)
-                    clearTimeout(timer);
-                timer = setTimeout(function () {
-                    _this.hook(ctx, hook, args);
-                    timer = null;
-                }, delay);
-            };
-        },
-        //节流
-        throttle: function (hook, delay) {
-            var _this = this;
-            if (delay === void 0) { delay = 200; }
-            var last;
-            return function (ctx, args) {
-                if (args === void 0) { args = []; }
-                var now = +new Date();
-                if (!last || (last && (now > (last + delay)))) {
-                    last = now;
-                    _this.hook(ctx, hook, args);
-                }
-            };
         }
-    };
-    exports.default = blueUtils;
-});
+        else {
+            for (i in obj) {
+                if (!obj.hasOwnProperty(i))
+                    continue;
+                if (isReturn) {
+                    newVal.push(cb(obj[i], i, index++));
+                }
+                else {
+                    cb(obj[i], i, index++);
+                }
+            }
+        }
+        if (isReturn)
+            return newVal;
+    },
+    //深拷贝
+    deepCopy(obj) {
+        if (!obj || !(this.isArray(obj)) && !(obj.toString() === "[object Object]"))
+            return obj;
+        //非纯对象类型，直接返回出去
+        if (!(this.isArray(obj)) && (obj.constructor !== Object))
+            return obj;
+        const _obj = this.isArray(obj) ? [] : {};
+        for (let key in obj) {
+            if (!obj.hasOwnProperty(key))
+                continue;
+            if ((this.isArray(obj)) || (this.isPlainObject(obj))) {
+                _obj[key] = this.deepCopy(obj[key]);
+            }
+            else {
+                _obj[key] = obj[key];
+            }
+        }
+        return _obj;
+    },
+    //扩展
+    extend(...args) {
+        //是否深拷贝
+        let isDeep = true;
+        //存放arguments的参数
+        let objects = [...args];
+        //合并后的obj
+        let extendObject = {};
+        const lastArg = objects[objects.length - 1];
+        //检查最后一个参数是否为深拷贝
+        if (this.isBoolean(lastArg)) {
+            isDeep = lastArg;
+            [].pop.call(objects);
+        }
+        //默认深拷贝，否则最后一个参数为深拷贝布尔值
+        if (isDeep) {
+            objects = this.deepCopy(objects);
+        }
+        this.each(objects, (object, index) => {
+            if (index === (objects.length - 1))
+                return;
+            const nextObject = objects[index + 1];
+            this.each(nextObject, (obj, key) => {
+                if (this.isPlainObject(obj)) {
+                    if (!object[key]) {
+                        object[key] = {};
+                    }
+                    object[key] = this.extend(object[key], obj, isDeep);
+                }
+                else {
+                    object[key] = obj;
+                }
+            });
+            objects[index + 1] = extendObject = object;
+            objects[index] = null;
+        });
+        return extendObject;
+    },
+    //获取表达式
+    getRegExp(expr) {
+        const tm = '\\/*.?+$^[](){}|\'\"';
+        this.each(tm, (tmItem, index) => {
+            expr = expr.replace(new RegExp('\\' + tmItem, 'g'), '\\' + tmItem);
+        });
+        return expr;
+    },
+    //获取obj的长度
+    getObjLen(obj) {
+        let index = 0;
+        this.each(obj, () => {
+            ++index;
+        });
+        return index;
+    },
+    getObjKeys(object) {
+        return this.each(object, (obj, key) => {
+            return key;
+        }, true);
+    },
+    //get link query string
+    getLinkParams(link) {
+        const linkType = link.split('?');
+        const queryString = linkType[1];
+        if (linkType.length > 0 && queryString && queryString !== '') {
+            return queryString;
+        }
+        return '';
+    },
+    getNoParamsLink(link = '') {
+        const linkType = link.split('?');
+        return linkType[0];
+    },
+    //query string 转化为 object
+    parseParams(queryString) {
+        const linkQuery = {};
+        if (!queryString)
+            return linkQuery;
+        //是否存在原query
+        (queryString.split('&') || []).forEach((queryItemString) => {
+            const splitQueryItem = queryItemString.split('=');
+            linkQuery[splitQueryItem[0]] = splitQueryItem[1];
+        });
+        return linkQuery;
+    },
+    //query 转化为 string
+    stringifyParams(query) {
+        if (!this.isPlainObject(query))
+            return '';
+        let _query = [];
+        this.each(query, (value, key) => {
+            if (this.isPlainObject(value) || this.isArray(value)) {
+                value = JSON.stringify(value);
+            }
+            _query.push(`${key}=${encodeURIComponent(value)}`);
+        });
+        return _query.join('&');
+    },
+    //返回promise
+    promise(hook) {
+        return new Promise((resolve, reject) => {
+            this.hook(this, hook, [resolve, reject]);
+        });
+    },
+    //防抖
+    debounce(hook, delay = 200) {
+        let timer = 0;
+        return (ctx, args = []) => {
+            if (timer)
+                clearTimeout(timer);
+            timer = setTimeout(() => {
+                this.hook(ctx, hook, args);
+                timer = null;
+            }, delay);
+        };
+    },
+    //节流
+    throttle(hook, delay = 200) {
+        let last;
+        return (ctx, args = []) => {
+            const now = +new Date();
+            if (!last || (last && (now > (last + delay)))) {
+                last = now;
+                this.hook(ctx, hook, args);
+            }
+        };
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (blueUtils);
 
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 1;
 
 /***/ })
 /******/ ])["default"];

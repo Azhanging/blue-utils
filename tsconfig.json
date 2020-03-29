@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    //es模块对default处理
+    "esModuleInterop": true,
     //严格模式
     "alwaysStrict": true,
     //实验性装饰器
@@ -13,20 +15,17 @@
     //生成d.ts文件路径
     "declarationDir": "./types",
     //编译模块类型
-    "module": "UMD",
+    "module": "esnext",
+    //使用模块的解析模式
+    "moduleResolution": "node",
     //目标版本
-    "target": "ES5",
+    "target": "esnext",
     //忽略.d.ts
     "skipLibCheck": true,
     "sourceMap": false,
     "lib": [
-      "es2015",
-      "DOM",
-      "ES5",
-      "ScriptHost"
+      "esnext",
+      "dom"
     ]
-  },
-  "files": [
-    "./src/index.ts"
-  ]
+  }
 }

@@ -1,21 +1,9 @@
 # blue-utils
 blue-utils
 
-
-#### in Node CommonJS,default instantiation;
-
 ```javascript
 const utils = require('blue-utils');
 utils.isStr('string');
-```
-
-
-***********************************
-
-#### in browser your need new BlueUtils;
-
-```javascript
-const utils = new BlueUtils();
 ```
 
 #### Methods
