@@ -19,7 +19,7 @@
     //使用模块的解析模式
     "moduleResolution": "node",
     //目标版本
-    "target": "esnext",
+    "target": "es5",
     //忽略.d.ts
     "skipLibCheck": true,
     "sourceMap": false,
