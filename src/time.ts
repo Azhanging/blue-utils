@@ -8,6 +8,7 @@ interface TResultDate {
 	hours: string;
 	minutes: string;
 	seconds: string;
+	time: number;
 }
 
 //填充数值
@@ -45,7 +46,6 @@ const time: any = {
 
 	//格式化时间
 	formatDate ( date: TDateArg, format: string ): string {
-		//导出的变量“{0}”具有或正在使用外部模块“{2}”中的名称“{1}”，但不能为其命名。
 		const {
 			year,
 			month,
@@ -55,12 +55,12 @@ const time: any = {
 			seconds
 		} = this.getDate(date);
 		return format
-			.replace(`yyyy`, year)
-			.replace(`MM`, month)
-			.replace(`dd`, day)
-			.replace(`HH`, hours)
-			.replace(`mm`, minutes)
-			.replace(`ss`, seconds);
+			.replace(/y{4}/g, year)
+			.replace(/M{2}/g, month)
+			.replace(/d{2}/g, day)
+			.replace(/H{2}/g, hours)
+			.replace(/m{2}/g, minutes)
+			.replace(/s{2}/g, seconds);
 	},
 
 	getDate ( date: TDateArg ): TResultDate {
@@ -69,6 +69,8 @@ const time: any = {
 			time = +new Date((date as string).trim().replace(/-/g, '/'));
 		} else if (date instanceof Date) {
 			time = +date;
+		} else if (typeof date === 'number') {
+			time = date;
 		}
 		if (isNaN(time)) return null;
 		return {
@@ -77,38 +79,49 @@ const time: any = {
 			day: fill(this.getDay(time)),
 			hours: fill(this.getHours(time)),
 			minutes: fill(this.getMinutes(time)),
-			seconds: fill(this.getSeconds(time))
+			seconds: fill(this.getSeconds(time)),
+			time
 		};
 	},
 
 	//获取年
-	getYear ( time: number ): number {
-		return new Date(time).getFullYear();
+	getYear ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getFullYear();
 	},
 
 	//获取月
-	getMonth ( time: number ): number {
-		return new Date(time).getMonth() + 1;
+	getMonth ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getMonth() + 1;
 	},
 
 	//获取日
-	getDay ( time: number ): number {
-		return new Date(time).getDate();
+	getDay ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getDate();
 	},
 
 	//获取时
-	getHours ( time: number ): number {
-		return new Date(time).getHours();
+	getHours ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getHours();
 	},
 
 	//获取分
-	getMinutes ( time: number ): number {
-		return new Date(time).getMinutes();
+	getMinutes ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getMinutes();
 	},
 
 	//获取秒
-	getSeconds ( time: number ): number {
-		return new Date(time).getSeconds();
+	getSeconds ( time: TDateArg ): number {
+		return new Date(this.getTime(time)).getSeconds();
+	},
+
+	//获取时间戳
+	getTime ( time: TDateArg ): number {
+		if (typeof time !== 'number') {
+			const resultDate: TResultDate = this.getDate(time);
+			if (!resultDate) return 0;
+			return resultDate.time;
+		}
+		return time;
 	}
 };
 

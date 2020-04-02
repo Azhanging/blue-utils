@@ -38,7 +38,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-queue-pipe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -94,8 +94,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="Node.js.test.js (1)" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.blue-build-config.js" />
@@ -156,6 +156,8 @@
       <workItem from="1585456250717" duration="132000" />
       <workItem from="1585704208018" duration="12348000" />
       <workItem from="1585730895371" duration="2721000" />
+      <workItem from="1585790207288" duration="970000" />
+      <workItem from="1585793086060" duration="3914000" />
     </task>
     <servers />
   </component>
@@ -176,26 +178,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1584250842771" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585456378497">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585792297940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585456378497" />
-    <state width="1899" height="329" key="GridCell.Tab.0.bottom" timestamp="1585736789305">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585792297940" />
+    <state width="1899" height="235" key="GridCell.Tab.0.bottom" timestamp="1585822516830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="329" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585736789305" />
-    <state width="1899" height="329" key="GridCell.Tab.0.center" timestamp="1585736789305">
+    <state width="1899" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
+    <state width="1899" height="235" key="GridCell.Tab.0.center" timestamp="1585822516830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="329" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585736789305" />
-    <state width="1899" height="329" key="GridCell.Tab.0.left" timestamp="1585736789305">
+    <state width="1899" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
+    <state width="1899" height="235" key="GridCell.Tab.0.left" timestamp="1585822516830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="329" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585736789305" />
-    <state width="1899" height="329" key="GridCell.Tab.0.right" timestamp="1585736789305">
+    <state width="1899" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
+    <state width="1899" height="235" key="GridCell.Tab.0.right" timestamp="1585822516830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="329" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585736789305" />
+    <state width="1899" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1584199385558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -208,9 +210,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1042" y="219" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584241101626" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585713290330">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585794426066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585713290330" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585794426066" />
   </component>
 </project>

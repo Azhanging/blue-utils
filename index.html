@@ -142,6 +142,14 @@
       };
 
       console.log(blueUtils.extend(obj1, obj2, obj3));
+      console.log(`getDate`, blueUtils.getDate(new Date()));
+      console.log(`getDate`, blueUtils.getDate(+new Date()));
+      console.log(`getDate`, blueUtils.getDate('2020-03-01'));
+
+      console.log(`formatDate`, blueUtils.formatDate(new Date(), 'yyyy/MM/dd HH:mm:ss'),);
+      console.log(`formatDate`, blueUtils.formatDate(+new Date(), 'yyyy/MM/dd HH:mm'));
+      console.log(`formatDate`, blueUtils.formatDate('2020-03-01', 'yyyy/MM'));
+
 
 
     </script>

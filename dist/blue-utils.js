@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.6
+ * blue-utils.js 1.1.8
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 01 Apr 2020 08:56:55 GMT
+ * time:Thu, 02 Apr 2020 02:52:41 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -299,15 +299,14 @@ var time = {
     },
     //格式化时间
     formatDate: function (date, format) {
-        //导出的变量“{0}”具有或正在使用外部模块“{2}”中的名称“{1}”，但不能为其命名。
         var _a = this.getDate(date), year = _a.year, month = _a.month, day = _a.day, hours = _a.hours, minutes = _a.minutes, seconds = _a.seconds;
         return format
-            .replace("yyyy", year)
-            .replace("MM", month)
-            .replace("dd", day)
-            .replace("HH", hours)
-            .replace("mm", minutes)
-            .replace("ss", seconds);
+            .replace(/y{4}/g, year)
+            .replace(/M{2}/g, month)
+            .replace(/d{2}/g, day)
+            .replace(/H{2}/g, hours)
+            .replace(/m{2}/g, minutes)
+            .replace(/s{2}/g, seconds);
     },
     getDate: function (date) {
         var time;
@@ -317,6 +316,9 @@ var time = {
         else if (date instanceof Date) {
             time = +date;
         }
+        else if (typeof date === 'number') {
+            time = date;
+        }
         if (isNaN(time))
             return null;
         return {
@@ -325,32 +327,43 @@ var time = {
             day: fill(this.getDay(time)),
             hours: fill(this.getHours(time)),
             minutes: fill(this.getMinutes(time)),
-            seconds: fill(this.getSeconds(time))
+            seconds: fill(this.getSeconds(time)),
+            time: time
         };
     },
     //获取年
     getYear: function (time) {
-        return new Date(time).getFullYear();
+        return new Date(this.getTime(time)).getFullYear();
     },
     //获取月
     getMonth: function (time) {
-        return new Date(time).getMonth() + 1;
+        return new Date(this.getTime(time)).getMonth() + 1;
     },
     //获取日
     getDay: function (time) {
-        return new Date(time).getDate();
+        return new Date(this.getTime(time)).getDate();
     },
     //获取时
     getHours: function (time) {
-        return new Date(time).getHours();
+        return new Date(this.getTime(time)).getHours();
     },
     //获取分
     getMinutes: function (time) {
-        return new Date(time).getMinutes();
+        return new Date(this.getTime(time)).getMinutes();
     },
     //获取秒
     getSeconds: function (time) {
-        return new Date(time).getSeconds();
+        return new Date(this.getTime(time)).getSeconds();
+    },
+    //获取时间戳
+    getTime: function (time) {
+        if (typeof time !== 'number') {
+            var resultDate = this.getDate(time);
+            if (!resultDate)
+                return 0;
+            return resultDate.time;
+        }
+        return time;
     }
 };
 /* harmony default export */ __webpack_exports__["default"] = (time);
