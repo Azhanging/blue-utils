@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f6e5473-bd65-46d8-9720-20cdf9ffbaf6" name="Default" comment="" />
+    <list default="true" id="1875f2cb-db3b-4ce6-93b9-21600f63588e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blue-build-library" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectId" id="1Z7joDEbjHJHDIVZWL0LhQh45my" />
+  <component name="ProjectId" id="1a1P7Al4V6Ox86Vh6iABiPDdSHH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,38 +18,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
-    <property name="ts.external.directory.path" value="E:\achang\github\blue-utils\node_modules\typescript\lib" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\achang\web\blue-utils\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\achang\web\blue-utils" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Node.js.test.js (1)">
-    <configuration name="blue-build-config.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/blue-build-config.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.js (1)" type="NodeJSConfigurationType" temporary="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/test.js" working-dir="$PROJECT_DIR$/src">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -85,20 +44,10 @@
       <envs />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Node.js.blue-build-config.js" />
-      <item itemvalue="Node.js.test.js" />
-      <item itemvalue="Node.js.test.js (1)" />
-      <item itemvalue="npm.build" />
-      <item itemvalue="npm.dev" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="Node.js.test.js (1)" />
-        <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.blue-build-config.js" />
       </list>
     </recent_temporary>
   </component>
@@ -107,112 +56,39 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6f6e5473-bd65-46d8-9720-20cdf9ffbaf6" name="Default" comment="" />
-      <created>1551113582200</created>
+      <changelist id="1875f2cb-db3b-4ce6-93b9-21600f63588e" name="Default Changelist" comment="" />
+      <created>1585899965589</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551113582200</updated>
-      <workItem from="1551113583485" duration="801000" />
-      <workItem from="1552467481911" duration="3769000" />
-      <workItem from="1552490669761" duration="627000" />
-      <workItem from="1555515705217" duration="4041000" />
-      <workItem from="1557973419575" duration="1310000" />
-      <workItem from="1557987708112" duration="1929000" />
-      <workItem from="1558747610166" duration="989000" />
-      <workItem from="1558752332595" duration="756000" />
-      <workItem from="1560561021185" duration="11000" />
-      <workItem from="1560689207470" duration="6058000" />
-      <workItem from="1562156995959" duration="5765000" />
-      <workItem from="1562207760822" duration="611000" />
-      <workItem from="1562230256168" duration="189000" />
-      <workItem from="1562251279619" duration="736000" />
-      <workItem from="1562595526178" duration="1691000" />
-      <workItem from="1563070412791" duration="8375000" />
-      <workItem from="1563121801337" duration="1831000" />
-      <workItem from="1563163222273" duration="6643000" />
-      <workItem from="1563350029836" duration="2136000" />
-      <workItem from="1563611102533" duration="1450000" />
-      <workItem from="1566356581482" duration="2200000" />
-      <workItem from="1566570491186" duration="1077000" />
-      <workItem from="1568425434479" duration="395000" />
-      <workItem from="1577178775419" duration="705000" />
-      <workItem from="1584197204002" duration="3301000" />
-      <workItem from="1584239196261" duration="20011000" />
-      <workItem from="1584277643116" duration="2738000" />
-      <workItem from="1584362847089" duration="8135000" />
-      <workItem from="1584450822918" duration="4499000" />
-      <workItem from="1584536702971" duration="629000" />
-      <workItem from="1584627892895" duration="1056000" />
-      <workItem from="1584759446617" duration="13443000" />
-      <workItem from="1584844778177" duration="6708000" />
-      <workItem from="1585145507807" duration="1910000" />
-      <workItem from="1585229041772" duration="29000" />
-      <workItem from="1585232975148" duration="646000" />
-      <workItem from="1585300174948" duration="529000" />
-      <workItem from="1585302285470" duration="1107000" />
-      <workItem from="1585314179158" duration="2502000" />
-      <workItem from="1585361927701" duration="17000" />
-      <workItem from="1585382283629" duration="2045000" />
-      <workItem from="1585456250717" duration="132000" />
-      <workItem from="1585704208018" duration="12348000" />
-      <workItem from="1585730895371" duration="2721000" />
-      <workItem from="1585790207288" duration="970000" />
-      <workItem from="1585793086060" duration="3914000" />
+      <updated>1585899965589</updated>
+      <workItem from="1585899992247" duration="789000" />
+      <workItem from="1585906697989" duration="175000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#Notifications" timestamp="1584250842771">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585900784416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1584250842771" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585792297940">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585900784416" />
+    <state width="1899" height="274" key="GridCell.Tab.0.bottom" timestamp="1585900786770">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585792297940" />
-    <state width="1899" height="235" key="GridCell.Tab.0.bottom" timestamp="1585822516830">
+    <state width="1899" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786770" />
+    <state width="1899" height="274" key="GridCell.Tab.0.center" timestamp="1585900786769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
-    <state width="1899" height="235" key="GridCell.Tab.0.center" timestamp="1585822516830">
+    <state width="1899" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786769" />
+    <state width="1899" height="274" key="GridCell.Tab.0.left" timestamp="1585900786768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
-    <state width="1899" height="235" key="GridCell.Tab.0.left" timestamp="1585822516830">
+    <state width="1899" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786768" />
+    <state width="1899" height="274" key="GridCell.Tab.0.right" timestamp="1585900786769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
-    <state width="1899" height="235" key="GridCell.Tab.0.right" timestamp="1585822516830">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585822516830" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1584199385558">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584199385558" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584369402953">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584369402953" />
-    <state x="1042" y="219" width="786" height="600" key="find.popup" timestamp="1584241101626">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1042" y="219" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584241101626" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585794426066">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585794426066" />
+    <state width="1899" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786769" />
   </component>
 </project>

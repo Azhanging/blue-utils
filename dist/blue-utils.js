@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.8
+ * blue-utils.js 1.1.9
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Thu, 02 Apr 2020 02:52:41 GMT
+ * time:Fri, 03 Apr 2020 09:41:25 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -16,7 +16,7 @@
 		exports["blueUtils"] = factory();
 	else
 		root["blueUtils"] = factory();
-})(window, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
