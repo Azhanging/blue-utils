@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blue-build-library" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1a1P7Al4V6Ox86Vh6iABiPDdSHH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,8 +20,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-react-program" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="E:\achang\github\blue-utils\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -63,6 +64,8 @@
       <updated>1585899965589</updated>
       <workItem from="1585899992247" duration="789000" />
       <workItem from="1585906697989" duration="175000" />
+      <workItem from="1599187403783" duration="3674000" />
+      <workItem from="1599204568058" duration="14000" />
     </task>
     <servers />
   </component>
@@ -70,25 +73,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585900784416">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599190499074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585900784416" />
-    <state width="1899" height="274" key="GridCell.Tab.0.bottom" timestamp="1585900786770">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599190499074" />
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom" timestamp="1599190438791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786770" />
-    <state width="1899" height="274" key="GridCell.Tab.0.center" timestamp="1585900786769">
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599190438791" />
+    <state width="1899" height="276" key="GridCell.Tab.0.center" timestamp="1599190438791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786769" />
-    <state width="1899" height="274" key="GridCell.Tab.0.left" timestamp="1585900786768">
+    <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599190438791" />
+    <state width="1899" height="276" key="GridCell.Tab.0.left" timestamp="1599190438791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786768" />
-    <state width="1899" height="274" key="GridCell.Tab.0.right" timestamp="1585900786769">
+    <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599190438791" />
+    <state width="1899" height="276" key="GridCell.Tab.0.right" timestamp="1599190438791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585900786769" />
+    <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599190438791" />
   </component>
 </project>

@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.1.9
+ * blue-utils.js 1.2.0
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 03 Apr 2020 09:41:25 GMT
+ * time:Fri, 04 Sep 2020 03:34:01 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -534,10 +534,13 @@ var tools = {
             objects = this.deepCopy(objects);
         }
         this.each(objects, function (object, index) {
-            if (index === (objects.length - 1))
-                return;
+            //最后一位只做返回处理
+            if (index === (objects.length - 1)) {
+                return extendObject = objects[index];
+            }
             var nextObject = objects[index + 1];
             _this.each(nextObject, function (obj, key) {
+                !object && (object = {});
                 if (_this.isPlainObject(obj)) {
                     if (!object[key]) {
                         object[key] = {};
@@ -549,7 +552,7 @@ var tools = {
                 }
             });
             objects[index + 1] = extendObject = object;
-            objects[index] = null;
+            objects[index] = undefined;
         });
         return extendObject;
     }
