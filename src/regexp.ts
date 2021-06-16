@@ -1,4 +1,4 @@
-const regexp: any = {
+const regexp = {
 	//获取表达式
 	getRegExp ( expr ): string {
 		const tm = '\\/*.?+$^[](){}|\'\"';

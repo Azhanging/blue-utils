@@ -1,4 +1,4 @@
-const object: any = {
+const object = {
 	//获取obj的长度
 	getObjLen ( obj: any ): number {
 		let index: number = 0;

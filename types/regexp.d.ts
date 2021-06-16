@@ -1,2 +1,4 @@
-declare const regexp: any;
+declare const regexp: {
+    getRegExp(expr: any): string;
+};
 export default regexp;

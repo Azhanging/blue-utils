@@ -1,4 +1,29 @@
-const tools: any = {
+const tools = {
+
+	//防抖
+	debounce ( hook: Function, delay: number = 200 ): Function {
+		let timer: any = 0;
+		return ( ctx: any, args: any[] = [] ) => {
+			if (timer) clearTimeout(timer);
+			timer = setTimeout(() => {
+				this.hook(ctx, hook, args);
+				timer = null;
+			}, delay);
+		}
+	},
+
+	//节流
+	throttle ( hook: Function, delay: number = 200 ): Function {
+		let last: number;
+		return ( ctx, args: any[] = [] ) => {
+			const now: number = +new Date();
+			if (!last || (last && (now > (last + delay)))) {
+				last = now;
+				this.hook(ctx, hook, args);
+			}
+		}
+	},
+
 	//执行function
 	hook ( context: any, cb: any, args: any[] = [] ) {
 		if (this.isFunction(cb)) {
@@ -19,18 +44,18 @@ const tools: any = {
 		if (this.isArray(obj)) {
 			for (; i < len; i++) {
 				if (isReturn) {
-					newVal.push(cb(obj[i], i));
+					newVal.push(cb(obj[ i ], i));
 				} else {
-					cb(obj[i], i);
+					cb(obj[ i ], i);
 				}
 			}
 		} else {
 			for (i in obj) {
 				if (!obj.hasOwnProperty(i)) continue;
 				if (isReturn) {
-					newVal.push(cb(obj[i], i, index++));
+					newVal.push(cb(obj[ i ], i, index++));
 				} else {
-					cb(obj[i], i, index++);
+					cb(obj[ i ], i, index++);
 				}
 			}
 		}
@@ -47,9 +72,9 @@ const tools: any = {
 		for (let key in obj) {
 			if (!obj.hasOwnProperty(key)) continue;
 			if ((this.isArray(obj)) || (this.isPlainObject(obj))) {
-				_obj[key] = this.deepCopy(obj[key]);
+				_obj[ key ] = this.deepCopy(obj[ key ]);
 			} else {
-				_obj[key] = obj[key];
+				_obj[ key ] = obj[ key ];
 			}
 		}
 		return _obj;
@@ -64,7 +89,7 @@ const tools: any = {
 		//合并后的obj
 		let extendObject = {};
 
-		const lastArg: any = objects[objects.length - 1];
+		const lastArg: any = objects[ objects.length - 1 ];
 
 		//检查最后一个参数是否为深拷贝
 		if (this.isBoolean(lastArg)) {
@@ -80,22 +105,22 @@ const tools: any = {
 		this.each(objects, ( object, index ) => {
 			//最后一位只做返回处理
 			if (index === (objects.length - 1)) {
-				return extendObject = objects[index];
+				return extendObject = objects[ index ];
 			}
-			const nextObject = objects[index + 1];
+			const nextObject = objects[ index + 1 ];
 			this.each(nextObject, ( obj, key ) => {
 				!object && (object = {});
 				if (this.isPlainObject(obj)) {
-					if (!object[key]) {
-						object[key] = {};
+					if (!object[ key ]) {
+						object[ key ] = {};
 					}
-					object[key] = this.extend(object[key], obj, isDeep);
+					object[ key ] = this.extend(object[ key ], obj, isDeep);
 				} else {
-					object[key] = obj;
+					object[ key ] = obj;
 				}
 			});
-			objects[index + 1] = extendObject = object;
-			objects[index] = undefined;
+			objects[ index + 1 ] = extendObject = object;
+			objects[ index ] = undefined;
 		});
 
 		return extendObject;

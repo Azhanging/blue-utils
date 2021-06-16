@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.0
+ * blue-utils.js 1.2.1
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 04 Sep 2020 03:34:01 GMT
+ * time:Wed, 16 Jun 2021 15:36:59 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -219,26 +219,28 @@ var url = {
         return '';
     },
     //获取没有参数链接
-    getNoParamsLink: function (link) {
+    getNotParamsLink: function (link) {
         if (link === void 0) { link = ''; }
         var linkType = link.split('?');
         return linkType[0];
     },
     //query string 转化为 object
-    parseParams: function (queryString) {
+    parseParams: function (queryString, decode) {
+        if (decode === void 0) { decode = true; }
         var linkQuery = {};
         if (!queryString)
             return linkQuery;
         //是否存在原query
         (queryString.split('&') || []).forEach(function (queryItemString) {
-            var splitQueryItem = queryItemString.split('=');
-            linkQuery[splitQueryItem[0]] = splitQueryItem[1];
+            var _a = queryItemString.split('='), key = _a[0], value = _a[1];
+            linkQuery[key] = (decode ? decodeURIComponent(value) : value);
         });
         return linkQuery;
     },
     //query 转化为 string
-    stringifyParams: function (query) {
+    stringifyParams: function (query, encode) {
         var _this = this;
+        if (encode === void 0) { encode = true; }
         if (!this.isPlainObject(query))
             return '';
         var _query = [];
@@ -246,7 +248,7 @@ var url = {
             if (_this.isPlainObject(value) || _this.isArray(value)) {
                 value = JSON.stringify(value);
             }
-            _query.push(key + "=" + encodeURIComponent(value));
+            _query.push(key + "=" + (encode ? encodeURIComponent(value) : value));
         });
         return _query.join('&');
     },
@@ -268,35 +270,6 @@ function fill(val) {
     return "" + val;
 }
 var time = {
-    //防抖
-    debounce: function (hook, delay) {
-        var _this = this;
-        if (delay === void 0) { delay = 200; }
-        var timer = 0;
-        return function (ctx, args) {
-            if (args === void 0) { args = []; }
-            if (timer)
-                clearTimeout(timer);
-            timer = setTimeout(function () {
-                _this.hook(ctx, hook, args);
-                timer = null;
-            }, delay);
-        };
-    },
-    //节流
-    throttle: function (hook, delay) {
-        var _this = this;
-        if (delay === void 0) { delay = 200; }
-        var last;
-        return function (ctx, args) {
-            if (args === void 0) { args = []; }
-            var now = +new Date();
-            if (!last || (last && (now > (last + delay)))) {
-                last = now;
-                _this.hook(ctx, hook, args);
-            }
-        };
-    },
     //格式化时间
     formatDate: function (date, format) {
         var _a = this.getDate(date), year = _a.year, month = _a.month, day = _a.day, hours = _a.hours, minutes = _a.minutes, seconds = _a.seconds;
@@ -450,6 +423,35 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
     return r;
 };
 var tools = {
+    //防抖
+    debounce: function (hook, delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 200; }
+        var timer = 0;
+        return function (ctx, args) {
+            if (args === void 0) { args = []; }
+            if (timer)
+                clearTimeout(timer);
+            timer = setTimeout(function () {
+                _this.hook(ctx, hook, args);
+                timer = null;
+            }, delay);
+        };
+    },
+    //节流
+    throttle: function (hook, delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 200; }
+        var last;
+        return function (ctx, args) {
+            if (args === void 0) { args = []; }
+            var now = +new Date();
+            if (!last || (last && (now > (last + delay)))) {
+                last = now;
+                _this.hook(ctx, hook, args);
+            }
+        };
+    },
     //执行function
     hook: function (context, cb, args) {
         if (args === void 0) { args = []; }

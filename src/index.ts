@@ -2,11 +2,19 @@ import types from './types';
 import url from './url';
 import time from './time';
 import object from './object';
-import regexp  from "./regexp";
-import promise  from "./promise";
-import tools  from "./tools";
+import regexp from "./regexp";
+import promise from "./promise";
+import tools from "./tools";
 
-const blueUtils = {
+type utils = typeof types &
+	typeof url &
+	typeof time &
+	typeof object &
+	typeof regexp &
+	typeof promise &
+	typeof tools;
+
+const blueUtils: utils = {
 	//类型相关
 	...types,
 	//url相关

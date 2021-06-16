@@ -1,4 +1,4 @@
-const promise: any = {
+const promise = {
 	//返回promise
 	promise ( hook: Function ): Promise<any> {
 		try {

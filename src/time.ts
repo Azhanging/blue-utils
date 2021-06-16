@@ -19,31 +19,7 @@ function fill ( val: number ): string {
 	return `${val}`;
 }
 
-const time: any = {
-	//防抖
-	debounce ( hook: Function, delay: number = 200 ): Function {
-		let timer: any = 0;
-		return ( ctx: any, args: any[] = [] ) => {
-			if (timer) clearTimeout(timer);
-			timer = setTimeout(() => {
-				this.hook(ctx, hook, args);
-				timer = null;
-			}, delay);
-		}
-	},
-
-	//节流
-	throttle ( hook: Function, delay: number = 200 ): Function {
-		let last: number;
-		return ( ctx, args: any[] = [] ) => {
-			const now: number = +new Date();
-			if (!last || (last && (now > (last + delay)))) {
-				last = now;
-				this.hook(ctx, hook, args);
-			}
-		}
-	},
-
+const time = {
 	//格式化时间
 	formatDate ( date: TDateArg, format: string ): string {
 		const {

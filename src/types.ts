@@ -1,5 +1,5 @@
 //类型相关
-const types: any = {
+const types = {
 	//是否为空对象
 	isEmptyPlainObject ( object: any ): boolean {
 		return JSON.stringify(object) === "{}";

@@ -100,3 +100,16 @@ const throttleFn = utils.throttle((data)=>{
   console.log(data);
 },200);
 throttleFn(window,[`data`]);
+
+
+debounce(hook: Function, delay?: number): Function;
+throttle(hook: Function, delay?: number): Function;
+formatDate(date: TDateArg, format: string): string;
+getDate(date: TDateArg): TResultDate;
+getYear(time: TDateArg): number;
+getMonth(time: TDateArg): number;
+getDay(time: TDateArg): number;
+getHours(time: TDateArg): number;
+getMinutes(time: TDateArg): number;
+getSeconds(time: TDateArg): number;
+getTime(time: TDateArg): number;
