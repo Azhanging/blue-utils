@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.1
+ * blue-utils.js 1.2.2
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Tue, 13 Jul 2021 15:15:32 GMT
+ * time:Tue, 13 Jul 2021 15:32:17 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
