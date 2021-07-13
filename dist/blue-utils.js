@@ -4,7 +4,7 @@
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Wed, 16 Jun 2021 15:36:59 GMT
+ * time:Tue, 13 Jul 2021 15:15:32 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -544,12 +544,12 @@ var tools = {
             _this.each(nextObject, function (obj, key) {
                 !object && (object = {});
                 if (_this.isPlainObject(obj)) {
-                    if (!object[key]) {
+                    if (!object[key] || !_this.isPlainObject(object[key])) {
                         object[key] = {};
                     }
                     object[key] = _this.extend(object[key], obj, isDeep);
                 }
-                else {
+                else if ((obj === undefined && object[key] === undefined) || obj !== undefined) {
                     object[key] = obj;
                 }
             });

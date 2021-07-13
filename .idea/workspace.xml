@@ -21,28 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1875f2cb-db3b-4ce6-93b9-21600f63588e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/blue-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blue-utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/blue-utils.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blue-utils.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/blue-utils.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blue-utils.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/blue-utils.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blue-utils.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/object.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/promise.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/promise.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/regexp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/regexp.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/time.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/url.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/object.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/promise.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/regexp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/regexp.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/time.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/time.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/tools.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/tools.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/url.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/url.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -69,12 +53,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-uni-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-vue" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\Achang\Web\blue-utils\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="Node.js.test.js">
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -97,6 +84,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.test.js" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
       </list>
@@ -121,7 +109,8 @@
       <workItem from="1618930606694" duration="57000" />
       <workItem from="1622306687215" duration="258000" />
       <workItem from="1622340194193" duration="57000" />
-      <workItem from="1623852755993" duration="3794000" />
+      <workItem from="1623852755993" duration="4999000" />
+      <workItem from="1626188928219" duration="1258000" />
     </task>
     <servers />
   </component>
@@ -138,28 +127,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="645" y="275" key="FileChooserDialogImpl" timestamp="1623852879690">
+    <state x="645" y="275" key="FileChooserDialogImpl" timestamp="1623858013756">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state x="645" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1623852879690" />
-    <state width="1707" height="274" key="GridCell.Tab.0.bottom" timestamp="1623857734461">
+    <state x="645" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1623858013756" />
+    <state width="1707" height="274" key="GridCell.Tab.0.bottom" timestamp="1626190209582">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1623857734461" />
-    <state width="1707" height="274" key="GridCell.Tab.0.center" timestamp="1623857734461">
+    <state width="1707" height="274" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1626190209582" />
+    <state width="1707" height="274" key="GridCell.Tab.0.center" timestamp="1626190209582">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1623857734461" />
-    <state width="1707" height="274" key="GridCell.Tab.0.left" timestamp="1623857734460">
+    <state width="1707" height="274" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1626190209582" />
+    <state width="1707" height="274" key="GridCell.Tab.0.left" timestamp="1626190209582">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1623857734460" />
-    <state width="1707" height="274" key="GridCell.Tab.0.right" timestamp="1623857734461">
+    <state width="1707" height="274" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1626190209582" />
+    <state width="1707" height="274" key="GridCell.Tab.0.right" timestamp="1626190209582">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1623857734461" />
+    <state width="1707" height="274" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1626190209582" />
     <state x="564" y="252" width="600" height="536" key="find.popup" timestamp="1623854950040">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>

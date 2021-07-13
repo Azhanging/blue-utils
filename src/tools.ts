@@ -111,11 +111,11 @@ const tools = {
 			this.each(nextObject, ( obj, key ) => {
 				!object && (object = {});
 				if (this.isPlainObject(obj)) {
-					if (!object[ key ]) {
+					if (!object[ key ] || !this.isPlainObject(object[ key ])) {
 						object[ key ] = {};
 					}
 					object[ key ] = this.extend(object[ key ], obj, isDeep);
-				} else {
+				} else if ((obj === undefined && object[ key ] === undefined) || obj !== undefined) {
 					object[ key ] = obj;
 				}
 			});
