@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.2
+ * blue-utils.js 1.2.5
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Tue, 13 Jul 2021 15:32:17 GMT
+ * time:Fri, 22 Apr 2022 15:31:50 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -152,11 +152,16 @@ var types = {
     },
     //是否为string
     isStr: function (val) {
-        return typeof val === 'string';
+        return typeof val === "string";
     },
     //是否为obj对象
     isPlainObject: function (object) {
-        return object && !this.isArray(object) && (object.toString() === '[object Object]') && (object.constructor === Object);
+        return !!(object &&
+            !this.isArray(object) &&
+            (this.isFunction(object.toString)
+                ? object.toString() === "[object Object]"
+                : true) &&
+            object.constructor === Object);
     },
     //是否为数组
     isArray: function (val) {
@@ -188,7 +193,7 @@ var types = {
     },
     //是否为function
     isFunction: function (fn) {
-        return typeof fn === 'function';
+        return typeof fn === "function";
     },
     //是否为error
     isError: function (error) {
@@ -196,8 +201,8 @@ var types = {
     },
     //是否为布尔值
     isBoolean: function (bool) {
-        return typeof bool === 'boolean';
-    }
+        return typeof bool === "boolean";
+    },
 };
 /* harmony default export */ __webpack_exports__["default"] = (types);
 

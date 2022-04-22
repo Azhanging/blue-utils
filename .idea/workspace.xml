@@ -53,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blue-barricade" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\Achang\Web\blue-utils\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -110,7 +110,8 @@
       <workItem from="1622306687215" duration="258000" />
       <workItem from="1622340194193" duration="57000" />
       <workItem from="1623852755993" duration="4999000" />
-      <workItem from="1626188928219" duration="1372000" />
+      <workItem from="1626188928219" duration="1434000" />
+      <workItem from="1626939393203" duration="62000" />
     </task>
     <servers />
   </component>
@@ -130,26 +131,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="645" y="275" key="FileChooserDialogImpl" timestamp="1623858013756">
+    <state x="645" y="275" key="FileChooserDialogImpl" timestamp="1626939453324">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state x="645" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1623858013756" />
-    <state width="1707" height="274" key="GridCell.Tab.0.bottom" timestamp="1626190305172">
+    <state x="645" y="275" key="FileChooserDialogImpl/0.0.1728.1040@0.0.1728.1040" timestamp="1626939453324" />
+    <state width="1707" height="274" key="GridCell.Tab.0.bottom" timestamp="1626190391594">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1626190305172" />
-    <state width="1707" height="274" key="GridCell.Tab.0.center" timestamp="1626190305172">
+    <state width="1707" height="274" key="GridCell.Tab.0.bottom/0.0.1728.1040@0.0.1728.1040" timestamp="1626190391594" />
+    <state width="1707" height="274" key="GridCell.Tab.0.center" timestamp="1626190391593">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1626190305172" />
-    <state width="1707" height="274" key="GridCell.Tab.0.left" timestamp="1626190305172">
+    <state width="1707" height="274" key="GridCell.Tab.0.center/0.0.1728.1040@0.0.1728.1040" timestamp="1626190391593" />
+    <state width="1707" height="274" key="GridCell.Tab.0.left" timestamp="1626190391593">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1626190305172" />
-    <state width="1707" height="274" key="GridCell.Tab.0.right" timestamp="1626190305172">
+    <state width="1707" height="274" key="GridCell.Tab.0.left/0.0.1728.1040@0.0.1728.1040" timestamp="1626190391593" />
+    <state width="1707" height="274" key="GridCell.Tab.0.right" timestamp="1626190391594">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
-    <state width="1707" height="274" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1626190305172" />
+    <state width="1707" height="274" key="GridCell.Tab.0.right/0.0.1728.1040@0.0.1728.1040" timestamp="1626190391594" />
     <state x="564" y="252" width="600" height="536" key="find.popup" timestamp="1623854950040">
       <screen x="0" y="0" width="1728" height="1040" />
     </state>
