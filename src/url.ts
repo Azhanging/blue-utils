@@ -29,7 +29,7 @@ const url = {
 
 	//query 转化为 string
 	stringifyParams ( query: any, encode: boolean = true ): string {
-		if (!this.isPlainObject(query)) return '';
+		if (!query) return '';
 		let _query: string[] = [];
 		this.each(query, ( value: any, key: string ) => {
 			if (this.isPlainObject(value) || this.isArray(value)) {

@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.5
+ * blue-utils.js 1.2.6
  * (c) 2016-2020 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 22 Apr 2022 15:31:50 GMT
+ * time:Sat, 07 Jan 2023 07:51:36 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -246,7 +246,7 @@ var url = {
     stringifyParams: function (query, encode) {
         var _this = this;
         if (encode === void 0) { encode = true; }
-        if (!this.isPlainObject(query))
+        if (!query)
             return '';
         var _query = [];
         this.each(query, function (value, key) {
