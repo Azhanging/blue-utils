@@ -30,4 +30,8 @@ console.log(
   blueUtils.isPlainObject(`123`),
 );
 
-console.log(res);
+const countDown = new blueUtils.CountDown();
+
+console.log(res,countDown);
+
+countDown.start();

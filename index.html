@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Title</title>
   </head>
   <body>
@@ -10,33 +10,35 @@
     <script>
       var data = {
         aa: 123,
-        ttt: 34534
+        ttt: 34534,
       };
-      var res = blueUtils.extend({
-        data: {
-          a: 1,
-          c: 6
+      var res = blueUtils.extend(
+        {
+          data: {
+            a: 1,
+            c: 6,
+          },
+          mounted() {},
         },
-        mounted() {
+        {
+          created() {},
+          children: [
+            {
+              a: 1,
+            },
+            {
+              b: 2,
+            },
+          ],
+          data: {
+            b: 2,
+            d() {},
+          },
+          methods: {
+            get() {},
+          },
         }
-      }, {
-        created() {
-        },
-        children: [{
-          a: 1
-        }, {
-          b: 2
-        }],
-        data: {
-          b: 2,
-          d() {
-          }
-        },
-        methods: {
-          get() {
-          }
-        }
-      });
+      );
       console.log(res);
 
       const debounceFn = blueUtils.debounce(function () {
@@ -47,10 +49,10 @@
         console.log(event, +new Date());
       }, 1000);
 
-      document.querySelector(`#debounce`).addEventListener('click', (event) => {
+      document.querySelector(`#debounce`).addEventListener("click", (event) => {
         debounceFn(null, [event]);
       });
-      document.querySelector(`#throttle`).addEventListener('click', (event) => {
+      document.querySelector(`#throttle`).addEventListener("click", (event) => {
         throttleFn(null, [event]);
       });
 
@@ -88,10 +90,10 @@
         console.log(this.value, data);
       }
 
-      a.myCall({ value: 1 }, '123');
-      a.myCall(null, '123');
+      a.myCall({ value: 1 }, "123");
+      a.myCall(null, "123");
 
-      a.myApply({ value: '123123' }, [`data1`, `data2`]);
+      a.myApply({ value: "123123" }, [`data1`, `data2`]);
 
       function bindFn() {
         console.log(arguments);
@@ -117,7 +119,7 @@
 
       const p = _new(P, {
         a: 1,
-        b: 2
+        b: 2,
       });
 
       console.log(p);
@@ -132,26 +134,55 @@
       const obj2 = {
         c: 3,
         cc: 4,
-        ccc: new A()
+        ccc: new A(),
       };
 
       const obj3 = {
         d: 4,
         e: 5,
-        ccc: 5
+        ccc: 5,
       };
 
-      console.log(blueUtils.extend(obj1, obj2, obj3));
+      console.log(blueUtils.extend(obj1, undefined, null, obj2, obj3));
       console.log(`getDate`, blueUtils.getDate(new Date()));
       console.log(`getDate`, blueUtils.getDate(+new Date()));
-      console.log(`getDate`, blueUtils.getDate('2020-03-01'));
+      console.log(`getDate`, blueUtils.getDate("2020-03-01"));
 
-      console.log(`formatDate`, blueUtils.formatDate(new Date(), 'yyyy/MM/dd HH:mm:ss'),);
-      console.log(`formatDate`, blueUtils.formatDate(+new Date(), 'yyyy/MM/dd HH:mm'));
-      console.log(`formatDate`, blueUtils.formatDate('2020-03-01', 'yyyy/MM'));
+      console.log(
+        `formatDate`,
+        blueUtils.formatDate(new Date(), "yyyy/MM/dd HH:mm:ss")
+      );
+      console.log(
+        `formatDate`,
+        blueUtils.formatDate(+new Date(), "yyyy/MM/dd HH:mm")
+      );
+      console.log(`formatDate`, blueUtils.formatDate("2020-03-01", "yyyy/MM"));
 
-
-
+      console.log(
+        new blueUtils.CountDown({
+          hooks: {
+            start() {
+              const some = this.genViewDate();
+              console.log(
+                `start 开始了 ${this.countDownTime},${some.day} ${some.hours} ${
+                  some.minutes
+                } ${some.second} ${+new Date()}`
+              );
+            },
+            tick() {
+              const some = this.genViewDate();
+              console.log(
+                `tick 进行中 ${this.countDownTime},${some.day} ${some.hours} ${
+                  some.minutes
+                } ${some.second} ${+new Date()}`
+              );
+            },
+            end() {
+              console.log(`end 结束了 ${this.countDownTime} ${+new Date()}`);
+            },
+          },
+        }).start(1500)
+      );
     </script>
   </body>
 </html>

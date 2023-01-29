@@ -1,4 +1,6 @@
-declare const promise: {
-    promise(hook: Function): Promise<any>;
-};
-export default promise;
+/**
+ * 返回promise
+ * @param hook
+ * @returns
+ */
+export declare function promise(hookHandler: Function): Promise<any>;

@@ -1,14 +1,16 @@
-const promise = {
-	//返回promise
-	promise ( hook: Function ): Promise<any> {
-		try {
-			return new Promise(( resolve?: Function, reject?: Function ) => {
-				this.hook(this, hook, [resolve, reject]);
-			});
-		} catch (e) {
-			console.warn(e);
-		}
-	}
-};
+import { hook } from "./tools";
 
-export default promise;
+/**
+ * 返回promise
+ * @param hook
+ * @returns
+ */
+export function promise(hookHandler: Function): Promise<any> {
+  try {
+    return new Promise((resolve?: Function, reject?: Function) => {
+      hook(this, hookHandler, [resolve, reject]);
+    });
+  } catch (e) {
+    console.warn(e);
+  }
+}

@@ -1,4 +1,6 @@
-declare const regexp: {
-    getRegExp(expr: any): string;
-};
-export default regexp;
+/**
+ * 获取表达式
+ * @param expr
+ * @returns
+ */
+export declare function getRegExp(expr: any): string;

@@ -1,6 +1,6 @@
 {
   "name": "blue-utils",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "blue-utils",
   "main": "./dist/blue-utils.js",
   "types": "./types/index.d.ts",
