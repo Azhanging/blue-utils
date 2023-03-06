@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.7
+ * blue-utils.js 1.2.8
  * (c) 2016-2023 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sun, 29 Jan 2023 09:00:08 GMT
+ * time:Mon, 06 Mar 2023 15:40:33 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -528,8 +528,6 @@ function each(obj, cb, isReturn) {
     }
     else {
         for (i in obj) {
-            if (!obj.hasOwnProperty(i))
-                continue;
             if (isReturn) {
                 newVal.push(cb(obj[i], i, index++));
             }
@@ -554,8 +552,6 @@ function deepCopy(obj) {
         return obj;
     var _obj = Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) ? [] : {};
     for (var key in obj) {
-        if (!obj.hasOwnProperty(key))
-            continue;
         if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) || Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(obj)) {
             _obj[key] = deepCopy(obj[key]);
         }

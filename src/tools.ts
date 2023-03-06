@@ -82,7 +82,6 @@ export function each(
     }
   } else {
     for (i in obj) {
-      if (!obj.hasOwnProperty(i)) continue;
       if (isReturn) {
         newVal.push(cb(obj[i], i, index++));
       } else {
@@ -106,7 +105,6 @@ export function deepCopy(obj: any): any {
   if (!isArray(obj) && obj.constructor !== Object) return obj;
   const _obj: any = isArray(obj) ? [] : {};
   for (let key in obj) {
-    if (!obj.hasOwnProperty(key)) continue;
     if (isArray(obj) || isPlainObject(obj)) {
       _obj[key] = deepCopy(obj[key]);
     } else {
