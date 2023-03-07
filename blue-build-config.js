@@ -4,8 +4,7 @@ const package = require("./package");
 const output = {
   library: "blueUtils",
   libraryTarget: "umd",
-  //调整为非default导向的模块
-  /* libraryExport: 'default' */
+  libraryExport: 'default'
 };
 
 const name = `blue-utils`;

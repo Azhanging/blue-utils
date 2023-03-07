@@ -1,5 +1,5 @@
 declare type TDateArg = string | number | Date;
-interface TResultDate {
+export interface TResultDate {
     year: string;
     month: string;
     day: string;

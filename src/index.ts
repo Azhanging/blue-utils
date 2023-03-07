@@ -1,14 +1,25 @@
 //类型相关
-export * from "./types";
+import * as types from "./types";
 //url相关
-export * from "./url";
+import * as url from "./url";
 //时间相关
-export * from "./time";
+import * as time from "./time";
 //倒计时处理
-export * from "./count-down";
+import * as countDown from "./count-down";
 //正则相关
-export * from "./regexp";
+import * as regexp from "./regexp";
 //promise
-export * from "./promise";
+import * as promise from "./promise";
 //工具类
-export * from "./tools";
+import * as tools from "./tools";
+
+//导出默认接口
+export default {
+  ...types,
+  ...url,
+  ...countDown,
+  ...time,
+  ...regexp,
+  ...promise,
+  ...tools,
+};

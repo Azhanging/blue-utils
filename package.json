@@ -1,6 +1,6 @@
 {
   "name": "blue-utils",
-  "version": "1.2.7",
+  "version": "1.2.9",
   "description": "blue-utils",
   "main": "./dist/blue-utils.js",
   "types": "./types/index.d.ts",
@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --config blue-build-library/dev.js",
     "build": "node blue-build-library/build.js"
   },
-  "keyword": [
+  "keywords": [
     "utils",
     "blue utils"
   ],
