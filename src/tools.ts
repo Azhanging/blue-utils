@@ -99,8 +99,9 @@ export function each(
  * @returns
  */
 export function deepCopy(obj: any): any {
-  if (!obj || (!isArray(obj) && !(obj.toString() === "[object Object]")))
+  if (!obj || (!isArray(obj) && !isPlainObject(obj))) {
     return obj;
+  }
   //非纯对象类型，直接返回出去
   if (!isArray(obj) && obj.constructor !== Object) return obj;
   const _obj: any = isArray(obj) ? [] : {};
