@@ -4,7 +4,7 @@
  * @returns boolean
  */
 export function isEmptyPlainObject(object: any): boolean {
-  return JSON.stringify(object) === "{}";
+  return JSON.stringify(object) === `{}`;
 }
 /**
  * 是否为string
@@ -12,7 +12,7 @@ export function isEmptyPlainObject(object: any): boolean {
  * @returns boolean
  */
 export function isStr(val: any): boolean {
-  return typeof val === "string";
+  return typeof val === `string`;
 }
 
 /**
@@ -25,7 +25,7 @@ export function isPlainObject(object: any): boolean {
     object &&
     !isArray(object) &&
     (isFunction(object.toString)
-      ? object.toString() === "[object Object]"
+      ? object.toString() === `[object Object]`
       : true) &&
     object.constructor === Object
   );
@@ -100,7 +100,7 @@ export function isFalse(bool: any): boolean {
  * @returns
  */
 export function isFunction(fn: any): boolean {
-  return typeof fn === "function";
+  return typeof fn === `function`;
 }
 
 /**
@@ -118,5 +118,5 @@ export function isError(error: any): boolean {
  * @returns
  */
 export function isBoolean(bool: any): boolean {
-  return typeof bool === "boolean";
+  return typeof bool === `boolean`;
 }

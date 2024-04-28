@@ -142,12 +142,12 @@
         e: 5,
         ccc: 5,
       };
-
       console.log(blueUtils.extend(obj1, undefined, null, obj2, obj3));
+
+      //时间处理
       console.log(`getDate`, blueUtils.getDate(new Date()));
       console.log(`getDate`, blueUtils.getDate(+new Date()));
       console.log(`getDate`, blueUtils.getDate("2020-03-01"));
-
       console.log(
         `formatDate`,
         blueUtils.formatDate(new Date(), "yyyy/MM/dd HH:mm:ss")
@@ -158,6 +158,7 @@
       );
       console.log(`formatDate`, blueUtils.formatDate("2020-03-01", "yyyy/MM"));
 
+      //倒计时
       console.log(
         new blueUtils.CountDown({
           hooks: {
@@ -183,6 +184,18 @@
           },
         }).start(1500)
       );
+      
+
+      //链接处理
+      const url = `https://github.com/azhanging?program_name=blue-utils&error_name=blue_utilss?other_params=other_params_value&somename=_deasd?=123312`;
+      console.log(blueUtils.getNotParamsLink(url));
+      console.log(blueUtils.getLinkParams(url));
+      console.log(blueUtils.parseParams(blueUtils.getLinkParams(url)));
+      console.log(blueUtils.parseParams(blueUtils.getLinkParams(``)));
+      console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?`)));
+      console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?a`)));
+
+
     </script>
   </body>
 </html>

@@ -59,7 +59,8 @@ export class CountDown {
     if (this.countDownTime <= 0) {
       tick(`end`);
     } else {
-      this.timer = window.setTimeout(() => {
+      //@ts-ignore
+      this.timer = setTimeout(() => {
         tick();
       }, delay);
     }

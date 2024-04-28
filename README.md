@@ -113,3 +113,23 @@ getHours(time: TDateArg): number;
 getMinutes(time: TDateArg): number;
 getSeconds(time: TDateArg): number;
 getTime(time: TDateArg): number;
+
+
+//倒计时
+const countDown = new utils.CountDown({
+  hooks: {
+    tick(){
+      tick(){},
+      start(){},
+      end(){}
+    }
+  }
+});
+
+//ms时间差
+countDown.start(diffTime);
+countDown.stop();
+countDown.reset();
+
+//生成显示数据 {day,hours,minutes,second}
+countDown.genViewDate();

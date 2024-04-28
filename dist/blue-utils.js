@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.10
- * (c) 2016-2023 Blue
+ * blue-utils.js 1.2.11
+ * (c) 2016-2024 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Mon, 03 Jul 2023 06:54:18 GMT
+ * time:Sun, 28 Apr 2024 14:42:35 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -289,14 +289,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 
 
+var LINK_SPLIT_CHAT = "?";
+var LINK_PARAMS_SPLIT_CHAT = "&";
+var LINK_PARAMS_VALUE_SPLIT_CHAT = "=";
 /**
  * 获取链接的query
  * @param link
  * @returns
  */
 function getLinkParams(link) {
-    var linkType = link.split("?");
-    var queryString = linkType[1];
+    var linkType = link.split(LINK_SPLIT_CHAT);
+    var queryString = linkType.slice(1).join(LINK_SPLIT_CHAT);
     if (linkType.length > 0 && queryString && queryString !== "") {
         return queryString;
     }
@@ -309,7 +312,7 @@ function getLinkParams(link) {
  */
 function getNotParamsLink(link) {
     if (link === void 0) { link = ""; }
-    var linkType = link.split("?");
+    var linkType = link.split(LINK_SPLIT_CHAT);
     return linkType[0];
 }
 /**
@@ -324,8 +327,9 @@ function parseParams(queryString, decode) {
     if (!queryString)
         return linkQuery;
     //是否存在原query
-    (queryString.split("&") || []).forEach(function (queryItemString) {
-        var _a = queryItemString.split("="), key = _a[0], value = _a[1];
+    (queryString.split(LINK_PARAMS_SPLIT_CHAT) || []).forEach(function (queryItemString) {
+        var _a = queryItemString.split(LINK_PARAMS_VALUE_SPLIT_CHAT), key = _a[0], _value = _a.slice(1);
+        var value = _value.join(LINK_PARAMS_VALUE_SPLIT_CHAT);
         linkQuery[key] = decode ? decodeURIComponent(value) : value;
     });
     return linkQuery;
@@ -347,7 +351,7 @@ function stringifyParams(query, encode) {
         }
         _query.push(key + "=" + (encode ? encodeURIComponent(value) : value));
     });
-    return _query.join("&");
+    return _query.join(LINK_PARAMS_SPLIT_CHAT);
 }
 
 
@@ -859,7 +863,8 @@ var CountDown = /** @class */ (function () {
             tick("end");
         }
         else {
-            this.timer = window.setTimeout(function () {
+            //@ts-ignore
+            this.timer = setTimeout(function () {
                 tick();
             }, delay);
         }

@@ -5,9 +5,9 @@ import { each } from "./tools";
  * @returns
  */
 export function getRegExp(expr): string {
-  const tm = "\\/*.?+$^[](){}|'\"";
+  const tm = `\\/*.?+$^[](){}|'\"`;
   each(tm, (tmItem) => {
-    expr = expr.replace(new RegExp("\\" + tmItem, "g"), "\\" + tmItem);
+    expr = expr.replace(new RegExp(`\\` + tmItem, `g`), `\\` + tmItem);
   });
   return expr;
 }
