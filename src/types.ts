@@ -1,122 +1,109 @@
 /**
  * 是否为空对象
- * @param object
- * @returns boolean
+ * @value
  */
-export function isEmptyPlainObject(object: any): boolean {
-  return JSON.stringify(object) === `{}`;
+export function isEmptyPlainObject(value: any): boolean {
+  return JSON.stringify(value) === `{}`;
 }
 /**
  * 是否为string
- * @param val string
- * @returns boolean
+ * @value string
  */
-export function isStr(val: any): boolean {
-  return typeof val === `string`;
+export function isStr(value: any): boolean {
+  return typeof value === `string`;
 }
 
 /**
  * 是否为obj对象
- * @param object
- * @returns boolean
+ * @value
  */
-export function isPlainObject(object: any): boolean {
+export function isPlainObject(value: any): boolean {
   return !!(
-    object &&
-    !isArray(object) &&
-    (isFunction(object.toString)
-      ? object.toString() === `[object Object]`
+    value &&
+    !isArray(value) &&
+    (isFunction(value.toString)
+      ? value.toString() === `[object Object]`
       : true) &&
-    object.constructor === Object
+    value.constructor === Object
   );
 }
 
 /**
  * 是否为数组
- * @param val
- * @returns boolean
+ * @value
  */
-export function isArray(val: any): boolean {
-  return val instanceof Array;
+export function isArray(value: any): boolean {
+  return value instanceof Array;
 }
 
 /**
  * 是否为对象Object Object
- * @param object
- * @returns boolean
+ * @value
  */
-export function isObject(object: any): boolean {
-  return isPlainObject(object) || isArray(object);
+export function isObject(value: any): boolean {
+  return isPlainObject(value) || isArray(value);
 }
 
 /**
  * 是否有值
- * @param val
- * @returns boolean
+ * @value
  */
-export function isDef(val: any): boolean {
-  return val !== undefined && val !== null;
+export function isDef(value: any): boolean {
+  return value !== undefined && value !== null;
 }
 
 /**
  * 是否为undefine 或者 null
- * @param val
- * @returns boolean
+ * @value
  */
-export function isUndef(val: any): boolean {
-  return val === undefined || val === null;
+export function isUndef(value: any): boolean {
+  return value === undefined || value === null;
 }
 
 /**
  * 字符串是否为空
- * @param val
- * @returns boolean
+ * @value
  */
-export function isEmptyStr(val: string): boolean {
-  return val.trim().length === 0;
+export function isEmptyStr(value: string): boolean {
+  return value.trim().length === 0;
 }
 
 /**
  * 是否为true
- * @param bool
- * @returns boolean
+ * @value
  */
-export function isTrue(bool: any): boolean {
-  return bool === true;
+export function isTrue(value: any): boolean {
+  return value === true;
 }
 
 /**
  * 是否为false
- * @param bool
- * @returns
+ * @value
  */
-export function isFalse(bool: any): boolean {
-  return bool === false;
+export function isFalse(value: any): boolean {
+  return value === false;
 }
 
 /**
  * 是否为function
- * @param fn
- * @returns
+ * @value
  */
-export function isFunction(fn: any): boolean {
-  return typeof fn === `function`;
+export function isFunction(value: any): boolean {
+  return typeof value === `function`;
 }
 
 /**
  * 是否为error
- * @param error
- * @returns
+ * @value
  */
-export function isError(error: any): boolean {
-  return error instanceof Error;
+export function isError(value: any): boolean {
+  return value instanceof Error;
 }
 
 /**
  * 是否为布尔值
- * @param bool
- * @returns
+ * @value
  */
-export function isBoolean(bool: any): boolean {
-  return typeof bool === `boolean`;
+export function isBoolean(value: any): boolean {
+  return typeof value === `boolean`;
 }

@@ -1,6 +1,5 @@
 /**
  * 返回promise
- * @param hook
- * @returns
+ * @hook Promise 回调
  */
 export declare function promise(hookHandler: Function): Promise<any>;

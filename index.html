@@ -5,8 +5,20 @@
     <title>Title</title>
   </head>
   <body>
-    <button id="debounce">debounce</button>
-    <button id="throttle">throttle</button>
+    <!-- bind context -->
+    <div>
+      Bind Context：
+      <button id="debounce">debounce</button>
+      <button id="throttle">throttle</button>
+    </div>
+
+    <!-- unbind context -->
+    <div>
+      unBind Context：
+      <button id="debounceUnbindCtx">debounce unbind context</button>
+      <button id="throttleUnbindCtx">throttle unbind context</button>
+    </div>
+
     <script>
       var data = {
         aa: 123,
@@ -41,20 +53,53 @@
       );
       console.log(res);
 
-      const debounceFn = blueUtils.debounce(function () {
+      const debounceFn = blueUtils.debounce(function (event) {
         console.log(event, +new Date());
+        console.log(`current this:`, this);
       });
 
       const throttleFn = blueUtils.throttle(function (event) {
         console.log(event, +new Date());
+        console.log(`current this:`, this);
       }, 1000);
 
-      document.querySelector(`#debounce`).addEventListener("click", (event) => {
-        debounceFn(null, [event]);
-      });
-      document.querySelector(`#throttle`).addEventListener("click", (event) => {
-        throttleFn(null, [event]);
-      });
+      document
+        .querySelector(`#debounce`)
+        .addEventListener("click", function (event) {
+          debounceFn(this, [event]);
+        });
+
+      document
+        .querySelector(`#throttle`)
+        .addEventListener("click", function (event) {
+          throttleFn(this, [event]);
+        });
+
+      const debounceFnUnBindCtx = blueUtils.debounce(
+        function (event) {
+          console.log(event, +new Date());
+          console.log(`current this:`, this);
+        },
+        200,
+        false
+      );
+
+      const throttleFnUnBindCtx = blueUtils.throttle(
+        function (event) {
+          console.log(event, +new Date());
+          console.log(`current this:`, this);
+        },
+        1000,
+        false
+      );
+
+      document
+        .querySelector(`#debounceUnbindCtx`)
+        .addEventListener("click", debounceFnUnBindCtx);
+
+      document
+        .querySelector(`#throttleUnbindCtx`)
+        .addEventListener("click", throttleFnUnBindCtx);
 
       Function.prototype.myCall = function () {
         let [ctx, ...args] = arguments;
@@ -184,7 +229,6 @@
           },
         }).start(1500)
       );
-      
 
       //链接处理
       const url = `https://github.com/azhanging?program_name=blue-utils&error_name=blue_utilss?other_params=other_params_value&somename=_deasd?=123312`;
@@ -194,8 +238,6 @@
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(``)));
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?`)));
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?a`)));
-
-
     </script>
   </body>
 </html>

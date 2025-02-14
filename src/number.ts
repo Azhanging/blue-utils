@@ -3,9 +3,8 @@ type FormatNumber = number | string;
 
 /**
  * 格式化数字处理
- * @param number
- * @param fixed
- * @returns 
+ * @number 数值
+ * @fixed 精度值，默认百分位
  */
 export function formatNumber(number: FormatNumber, fixed: number = 2): string {
   if (typeof number === `string`) {
@@ -20,9 +19,8 @@ export function formatNumber(number: FormatNumber, fixed: number = 2): string {
 
 /**
  * 数字精度的控制处理
- * @param number
- * @param fixed
- * @returns
+ * @number 数值
+ * @fixed 精度值，默认百分位
  */
 export function floatNumber(number: FormatNumber, fixed: number = 2) {
   return parseFloat(formatNumber(number, fixed));

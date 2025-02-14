@@ -11,14 +11,12 @@ export interface TResultDate {
 declare type TCommonDate = number | string | Date;
 /**
  * 补0操作
- * @param time
- * @returns
+ * @number 数值
  */
-export declare function prefixZero(time: number): string;
+export declare function prefixZero(number: number): string;
 /**
  * 生成倒计时的数据
- * @param diffTime
- * @returns
+ * @diffTime 时间戳
  */
 export declare function genCountDownViewDate(diffTime: number): {
     day: string;
@@ -28,69 +26,59 @@ export declare function genCountDownViewDate(diffTime: number): {
 };
 /**
  * 格式化时间
- * @param date
- * @param format
- * @returns
+ * @date 时间
+ * @format 格式化值
  */
-export declare function formatDate(date: TDateArg, format: string): string;
+export declare function formatDate(date: TDateArg, format?: string): string;
 /**
  * 获取时间
- * @param date
- * @returns
+ * @date 时间值
  */
-export declare function getDate(date: TDateArg): TResultDate;
+export declare function getDate(date?: TDateArg): TResultDate;
 /**
  * 获取年
- * @param time
+ * @time 时间值
  * @returns
  */
-export declare function getYear(time: TDateArg): number;
+export declare function getYear(time?: TDateArg): number;
 /**
  * 获取月
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getMonth(time: TDateArg): number;
+export declare function getMonth(time?: TDateArg): number;
 /**
  * 获取日
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getDay(time: TDateArg): number;
+export declare function getDay(time?: TDateArg): number;
 /**
  * 获取时
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getHours(time: TDateArg): number;
+export declare function getHours(time?: TDateArg): number;
 /**
  * 获取分
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getMinutes(time: TDateArg): number;
+export declare function getMinutes(time?: TDateArg): number;
 /**
  * 获取秒
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getSeconds(time: TDateArg): number;
+export declare function getSeconds(time?: TDateArg): number;
 /**
  * 获取时间戳
- * @param time
- * @returns
+ * @time 时间值
  */
-export declare function getTime(time: TDateArg): number;
+export declare function getTime(time?: TDateArg): number;
 /**
  * 转化时间处理
- * @param time
- * @returns
+ * @time 时间值
  */
 export declare function timestamp(time: TCommonDate): number;
 /**
  * 对比差异的时间处理
- * @param opts
- * @returns
+ * @opts 对比时间配置
  */
 export declare function diffTime(opts: {
     currentTime: TCommonDate;

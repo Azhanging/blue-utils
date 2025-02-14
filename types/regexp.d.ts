@@ -1,6 +1,5 @@
 /**
  * 获取表达式
- * @param expr
- * @returns
+ * @expr 正则表达式
  */
 export declare function getRegExp(expr: any): string;

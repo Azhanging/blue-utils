@@ -1,10 +1,10 @@
 /*!
  * 
  * blue-utils.js 1.2.11
- * (c) 2016-2024 Blue
+ * (c) 2016-2025 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Sun, 28 Apr 2024 14:42:35 GMT
+ * time:Fri, 14 Feb 2025 09:20:08 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -166,112 +166,99 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isBoolean", function() { return isBoolean; });
 /**
  * 是否为空对象
- * @param object
- * @returns boolean
+ * @value
  */
-function isEmptyPlainObject(object) {
-    return JSON.stringify(object) === "{}";
+function isEmptyPlainObject(value) {
+    return JSON.stringify(value) === "{}";
 }
 /**
  * 是否为string
- * @param val string
- * @returns boolean
+ * @value string
  */
-function isStr(val) {
-    return typeof val === "string";
+function isStr(value) {
+    return typeof value === "string";
 }
 /**
  * 是否为obj对象
- * @param object
- * @returns boolean
+ * @value
  */
-function isPlainObject(object) {
-    return !!(object &&
-        !isArray(object) &&
-        (isFunction(object.toString)
-            ? object.toString() === "[object Object]"
+function isPlainObject(value) {
+    return !!(value &&
+        !isArray(value) &&
+        (isFunction(value.toString)
+            ? value.toString() === "[object Object]"
             : true) &&
-        object.constructor === Object);
+        value.constructor === Object);
 }
 /**
  * 是否为数组
- * @param val
- * @returns boolean
+ * @value
  */
-function isArray(val) {
-    return val instanceof Array;
+function isArray(value) {
+    return value instanceof Array;
 }
 /**
  * 是否为对象Object Object
- * @param object
- * @returns boolean
+ * @value
  */
-function isObject(object) {
-    return isPlainObject(object) || isArray(object);
+function isObject(value) {
+    return isPlainObject(value) || isArray(value);
 }
 /**
  * 是否有值
- * @param val
- * @returns boolean
+ * @value
  */
-function isDef(val) {
-    return val !== undefined && val !== null;
+function isDef(value) {
+    return value !== undefined && value !== null;
 }
 /**
  * 是否为undefine 或者 null
- * @param val
- * @returns boolean
+ * @value
  */
-function isUndef(val) {
-    return val === undefined || val === null;
+function isUndef(value) {
+    return value === undefined || value === null;
 }
 /**
  * 字符串是否为空
- * @param val
- * @returns boolean
+ * @value
  */
-function isEmptyStr(val) {
-    return val.trim().length === 0;
+function isEmptyStr(value) {
+    return value.trim().length === 0;
 }
 /**
  * 是否为true
- * @param bool
- * @returns boolean
+ * @value
  */
-function isTrue(bool) {
-    return bool === true;
+function isTrue(value) {
+    return value === true;
 }
 /**
  * 是否为false
- * @param bool
- * @returns
+ * @value
  */
-function isFalse(bool) {
-    return bool === false;
+function isFalse(value) {
+    return value === false;
 }
 /**
  * 是否为function
- * @param fn
- * @returns
+ * @value
  */
-function isFunction(fn) {
-    return typeof fn === "function";
+function isFunction(value) {
+    return typeof value === "function";
 }
 /**
  * 是否为error
- * @param error
- * @returns
+ * @value
  */
-function isError(error) {
-    return error instanceof Error;
+function isError(value) {
+    return value instanceof Error;
 }
 /**
  * 是否为布尔值
- * @param bool
- * @returns
+ * @value
  */
-function isBoolean(bool) {
-    return typeof bool === "boolean";
+function isBoolean(value) {
+    return typeof value === "boolean";
 }
 
 
@@ -294,8 +281,7 @@ var LINK_PARAMS_SPLIT_CHAT = "&";
 var LINK_PARAMS_VALUE_SPLIT_CHAT = "=";
 /**
  * 获取链接的query
- * @param link
- * @returns
+ * @link 链接值
  */
 function getLinkParams(link) {
     var linkType = link.split(LINK_SPLIT_CHAT);
@@ -307,8 +293,7 @@ function getLinkParams(link) {
 }
 /**
  * 获取没有参数链接
- * @param link
- * @returns
+ * @link 链接值
  */
 function getNotParamsLink(link) {
     if (link === void 0) { link = ""; }
@@ -317,9 +302,8 @@ function getNotParamsLink(link) {
 }
 /**
  * query string 转化为 object
- * @param queryString
- * @param decode
- * @returns
+ * @queryString 参数字符串值
+ * @decode 是否解码处理
  */
 function parseParams(queryString, decode) {
     if (decode === void 0) { decode = true; }
@@ -336,9 +320,8 @@ function parseParams(queryString, decode) {
 }
 /**
  * query 转化为 string
- * @param query
- * @param encode
- * @returns
+ * @query 参数值
+ * @encode 是否转码处理
  */
 function stringifyParams(query, encode) {
     if (encode === void 0) { encode = true; }
@@ -383,47 +366,83 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 
 /**
  * 防抖
- * @param hook
- * @param delay
- * @returns
+ * @hookHandler 方法函数定义
+ * @delay 防抖延迟范围
+ * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
  */
-function debounce(hookHandler, delay) {
+function debounce(hookHandler, delay, bindContext) {
     if (delay === void 0) { delay = 200; }
+    if (bindContext === void 0) { bindContext = true; }
     var timer = 0;
-    return function (ctx, args) {
+    function handler(args) {
+        var _this = this;
         if (args === void 0) { args = []; }
         if (timer)
             clearTimeout(timer);
         timer = setTimeout(function () {
-            hook(ctx, hookHandler, args);
+            hook(_this, hookHandler, args);
             timer = null;
         }, delay);
-    };
+    }
+    //bind context
+    if (bindContext) {
+        return function (ctx, args) {
+            if (ctx === void 0) { ctx = this; }
+            if (args === void 0) { args = []; }
+            handler.call(ctx, args);
+        };
+    }
+    else {
+        return function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            handler.call(this, args);
+        };
+    }
 }
 /**
  * 节流
- * @param hook
- * @param delay
- * @returns
+ * @hookHandler 方法函数定义
+ * @delay 节流延迟范围
+ * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
  */
-function throttle(hookHandler, delay) {
+function throttle(hookHandler, delay, bindContext) {
     if (delay === void 0) { delay = 200; }
+    if (bindContext === void 0) { bindContext = true; }
     var last;
-    return function (ctx, args) {
+    function handler(args) {
         if (args === void 0) { args = []; }
         var now = +new Date();
         if (!last || (last && now > last + delay)) {
             last = now;
-            hook(ctx, hookHandler, args);
+            hook(this, hookHandler, args);
         }
-    };
+    }
+    //bind context
+    if (bindContext) {
+        return function (ctx, args) {
+            if (args === void 0) { args = []; }
+            handler.call(ctx, args);
+        };
+    }
+    else {
+        return function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            handler.call(this, args);
+        };
+    }
 }
 /**
- * 执行function
- * @param context
- * @param cb
- * @param args
- * @returns
+ * 执行Function
+ * @context 执行上下文
+ * @cb 执行函数
+ * @args 带入到执行行数参数值
+ * @return 如果执行为函数，返回最终执行结果，否则返回原始执行回调
  */
 function hook(context, cb, args) {
     if (args === void 0) { args = []; }
@@ -434,10 +453,9 @@ function hook(context, cb, args) {
 }
 /**
  * 遍历
- * @param obj
- * @param cb
- * @param isReturn
- * @returns
+ * @obj 遍历对象
+ * @cb 遍历回调
+ * @isReturn 是否返回所有的遍历回调返回值
  */
 function each(obj, cb, isReturn) {
     if (isReturn === void 0) { isReturn = false; }
@@ -470,30 +488,29 @@ function each(obj, cb, isReturn) {
 }
 /**
  * 深拷贝
- * @param obj
- * @returns
+ * @value 需要深拷贝的指定值
  */
-function deepCopy(obj) {
-    if (!obj || (!Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) && !Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(obj))) {
-        return obj;
+function deepCopy(value) {
+    if (!value || (!Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(value) && !Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(value))) {
+        return value;
     }
     //非纯对象类型，直接返回出去
-    if (!Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) && obj.constructor !== Object)
-        return obj;
-    var _obj = Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) ? [] : {};
-    for (var key in obj) {
-        if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj) || Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(obj)) {
-            _obj[key] = deepCopy(obj[key]);
+    if (!Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(value) && value.constructor !== Object)
+        return value;
+    var _value = Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(value) ? [] : {};
+    for (var key in value) {
+        if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(value) || Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(value)) {
+            _value[key] = deepCopy(value[key]);
         }
         else {
-            _obj[key] = obj[key];
+            _value[key] = value[key];
         }
     }
-    return _obj;
+    return _value;
 }
 /**
  * 扩展
- * @param args
+ * @args 扩展值，最后一个为布尔值来决定是否需要深拷贝进行处理
  * @returns
  */
 function extend() {
@@ -543,7 +560,6 @@ function extend() {
 }
 /**
  * 生成一个UUID
- * @returns
  */
 function genGuid() {
     function gen() {
@@ -553,8 +569,7 @@ function genGuid() {
 }
 /**
  * 对象转数组，对于上面[数组转对象]的转换是相对的
- * @param object
- * @returns
+ * @object 对象值
  */
 function objectToArray(object) {
     var array = [];
@@ -565,9 +580,8 @@ function objectToArray(object) {
 }
 /**
  * 数组转对象，指定key做承载点
- * @param array
- * @param key
- * @returns
+ * @array 数组值
+ * @key 提取的key值
  */
 function arrayToObject(array, key) {
     var newObj = {};
@@ -579,20 +593,18 @@ function arrayToObject(array, key) {
 }
 /**
  * 获取obj的长度
- * @param obj
- * @returns
+ * @object 对象值
  */
-function getObjLen(obj) {
+function getObjLen(object) {
     var index = 0;
-    each(obj, function () {
+    each(object, function () {
         ++index;
     });
     return index;
 }
 /**
  * 获取obj的keys
- * @param object
- * @returns
+ * @object 对象值
  */
 function getObjKeys(object) {
     return each(object, function (obj, key) {
@@ -624,20 +636,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * 补0操作
- * @param time
- * @returns
+ * @number 数值
  */
-function prefixZero(time) {
-    if (time < 10) {
-        return "0" + time;
+function prefixZero(number) {
+    if (number < 10) {
+        return "0" + number;
     }
-    return "" + time;
+    return "" + number;
 }
 var TICK_TIME = 1000;
 /**
  * 生成倒计时的数据
- * @param diffTime
- * @returns
+ * @diffTime 时间戳
  */
 function genCountDownViewDate(diffTime) {
     if (diffTime < TICK_TIME) {
@@ -655,11 +665,11 @@ function genCountDownViewDate(diffTime) {
 }
 /**
  * 格式化时间
- * @param date
- * @param format
- * @returns
+ * @date 时间
+ * @format 格式化值
  */
 function formatDate(date, format) {
+    if (format === void 0) { format = "yyyy-MM-dd HH:ss:mm"; }
     var _a = getDate(date), year = _a.year, month = _a.month, day = _a.day, hours = _a.hours, minutes = _a.minutes, seconds = _a.seconds;
     return format
         .replace(/y{4}/g, year)
@@ -671,10 +681,10 @@ function formatDate(date, format) {
 }
 /**
  * 获取时间
- * @param date
- * @returns
+ * @date 时间值
  */
 function getDate(date) {
+    if (date === void 0) { date = +new Date(); }
     var time;
     if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isStr"])(date)) {
         time = +new Date(date.trim().replace(/-/g, "/"));
@@ -699,58 +709,59 @@ function getDate(date) {
 }
 /**
  * 获取年
- * @param time
+ * @time 时间值
  * @returns
  */
 function getYear(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getFullYear();
 }
 /**
  * 获取月
- * @param time
- * @returns
+ * @time 时间值
  */
 function getMonth(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getMonth() + 1;
 }
 /**
  * 获取日
- * @param time
- * @returns
+ * @time 时间值
  */
 function getDay(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getDate();
 }
 /**
  * 获取时
- * @param time
- * @returns
+ * @time 时间值
  */
 function getHours(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getHours();
 }
 /**
  * 获取分
- * @param time
- * @returns
+ * @time 时间值
  */
 function getMinutes(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getMinutes();
 }
 /**
  * 获取秒
- * @param time
- * @returns
+ * @time 时间值
  */
 function getSeconds(time) {
+    if (time === void 0) { time = +new Date(); }
     return new Date(getTime(time)).getSeconds();
 }
 /**
  * 获取时间戳
- * @param time
- * @returns
+ * @time 时间值
  */
 function getTime(time) {
+    if (time === void 0) { time = +new Date(); }
     if (typeof time !== "number") {
         var resultDate = getDate(time);
         if (!resultDate)
@@ -761,8 +772,7 @@ function getTime(time) {
 }
 /**
  * 转化时间处理
- * @param time
- * @returns
+ * @time 时间值
  */
 function timestamp(time) {
     var reg = /^\d{13}$/g;
@@ -779,8 +789,7 @@ function timestamp(time) {
 }
 /**
  * 对比差异的时间处理
- * @param opts
- * @returns
+ * @opts 对比时间配置
  */
 function diffTime(opts) {
     var currentTime = opts.currentTime, targetTime = opts.targetTime, diffTime = opts.diffTime, _a = opts.condition, condition = _a === void 0 ? ">" : _a;
@@ -926,8 +935,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * 获取表达式
- * @param expr
- * @returns
+ * @expr 正则表达式
  */
 function getRegExp(expr) {
     var tm = "\\/*.?+$^[](){}|'\"";
@@ -949,8 +957,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * 返回promise
- * @param hook
- * @returns
+ * @hook Promise 回调
  */
 function promise(hookHandler) {
     var _this = this;

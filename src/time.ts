@@ -18,22 +18,20 @@ type TCommonDate = number | string | Date;
 
 /**
  * 补0操作
- * @param time
- * @returns
+ * @number 数值
  */
-export function prefixZero(time: number): string {
-  if (time < 10) {
-    return `0${time}`;
+export function prefixZero(number: number): string {
+  if (number < 10) {
+    return `0${number}`;
   }
-  return `${time}`;
+  return `${number}`;
 }
 
 const TICK_TIME = 1000;
 
 /**
  * 生成倒计时的数据
- * @param diffTime
- * @returns
+ * @diffTime 时间戳
  */
 export function genCountDownViewDate(diffTime: number): {
   day: string;
@@ -57,11 +55,13 @@ export function genCountDownViewDate(diffTime: number): {
 
 /**
  * 格式化时间
- * @param date
- * @param format
- * @returns
+ * @date 时间
+ * @format 格式化值
  */
-export function formatDate(date: TDateArg, format: string): string {
+export function formatDate(
+  date: TDateArg,
+  format: string = `yyyy-MM-dd HH:ss:mm`
+): string {
   const { year, month, day, hours, minutes, seconds } = getDate(date);
   return format
     .replace(/y{4}/g, year)
@@ -74,10 +74,9 @@ export function formatDate(date: TDateArg, format: string): string {
 
 /**
  * 获取时间
- * @param date
- * @returns
+ * @date 时间值
  */
-export function getDate(date: TDateArg): TResultDate {
+export function getDate(date: TDateArg = +new Date()): TResultDate {
   let time: number;
   if (isStr(date)) {
     time = +new Date((date as string).trim().replace(/-/g, "/"));
@@ -100,64 +99,58 @@ export function getDate(date: TDateArg): TResultDate {
 
 /**
  * 获取年
- * @param time
+ * @time 时间值
  * @returns
  */
-export function getYear(time: TDateArg): number {
+export function getYear(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getFullYear();
 }
 
 /**
  * 获取月
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getMonth(time: TDateArg): number {
+export function getMonth(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getMonth() + 1;
 }
 
 /**
  * 获取日
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getDay(time: TDateArg): number {
+export function getDay(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getDate();
 }
 
 /**
  * 获取时
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getHours(time: TDateArg): number {
+export function getHours(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getHours();
 }
 
 /**
  * 获取分
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getMinutes(time: TDateArg): number {
+export function getMinutes(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getMinutes();
 }
 
 /**
  * 获取秒
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getSeconds(time: TDateArg): number {
+export function getSeconds(time: TDateArg = +new Date()): number {
   return new Date(getTime(time)).getSeconds();
 }
 
 /**
  * 获取时间戳
- * @param time
- * @returns
+ * @time 时间值
  */
-export function getTime(time: TDateArg): number {
+export function getTime(time: TDateArg = +new Date()): number {
   if (typeof time !== "number") {
     const resultDate: TResultDate = getDate(time);
     if (!resultDate) return 0;
@@ -168,8 +161,7 @@ export function getTime(time: TDateArg): number {
 
 /**
  * 转化时间处理
- * @param time
- * @returns
+ * @time 时间值
  */
 export function timestamp(time: TCommonDate): number {
   const reg = /^\d{13}$/g;
@@ -185,8 +177,7 @@ export function timestamp(time: TCommonDate): number {
 
 /**
  * 对比差异的时间处理
- * @param opts
- * @returns
+ * @opts 对比时间配置
  */
 export function diffTime(opts: {
   currentTime: TCommonDate;

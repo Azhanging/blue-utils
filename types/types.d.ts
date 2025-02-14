@@ -1,78 +1,65 @@
 /**
  * 是否为空对象
- * @param object
- * @returns boolean
+ * @value
  */
-export declare function isEmptyPlainObject(object: any): boolean;
+export declare function isEmptyPlainObject(value: any): boolean;
 /**
  * 是否为string
- * @param val string
- * @returns boolean
+ * @value string
  */
-export declare function isStr(val: any): boolean;
+export declare function isStr(value: any): boolean;
 /**
  * 是否为obj对象
- * @param object
- * @returns boolean
+ * @value
  */
-export declare function isPlainObject(object: any): boolean;
+export declare function isPlainObject(value: any): boolean;
 /**
  * 是否为数组
- * @param val
- * @returns boolean
+ * @value
  */
-export declare function isArray(val: any): boolean;
+export declare function isArray(value: any): boolean;
 /**
  * 是否为对象Object Object
- * @param object
- * @returns boolean
+ * @value
  */
-export declare function isObject(object: any): boolean;
+export declare function isObject(value: any): boolean;
 /**
  * 是否有值
- * @param val
- * @returns boolean
+ * @value
  */
-export declare function isDef(val: any): boolean;
+export declare function isDef(value: any): boolean;
 /**
  * 是否为undefine 或者 null
- * @param val
- * @returns boolean
+ * @value
  */
-export declare function isUndef(val: any): boolean;
+export declare function isUndef(value: any): boolean;
 /**
  * 字符串是否为空
- * @param val
- * @returns boolean
+ * @value
  */
-export declare function isEmptyStr(val: string): boolean;
+export declare function isEmptyStr(value: string): boolean;
 /**
  * 是否为true
- * @param bool
- * @returns boolean
+ * @value
  */
-export declare function isTrue(bool: any): boolean;
+export declare function isTrue(value: any): boolean;
 /**
  * 是否为false
- * @param bool
- * @returns
+ * @value
  */
-export declare function isFalse(bool: any): boolean;
+export declare function isFalse(value: any): boolean;
 /**
  * 是否为function
- * @param fn
- * @returns
+ * @value
  */
-export declare function isFunction(fn: any): boolean;
+export declare function isFunction(value: any): boolean;
 /**
  * 是否为error
- * @param error
- * @returns
+ * @value
  */
-export declare function isError(error: any): boolean;
+export declare function isError(value: any): boolean;
 /**
  * 是否为布尔值
- * @param bool
- * @returns
+ * @value
  */
-export declare function isBoolean(bool: any): boolean;
+export declare function isBoolean(value: any): boolean;

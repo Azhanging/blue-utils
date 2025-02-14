@@ -2,8 +2,7 @@ import { hook } from "./tools";
 
 /**
  * 返回promise
- * @param hook
- * @returns
+ * @hook Promise 回调
  */
 export function promise(hookHandler: Function): Promise<any> {
   try {

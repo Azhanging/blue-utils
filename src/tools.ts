@@ -5,46 +5,79 @@ import {
   isPlainObject,
   isBoolean,
 } from "./types";
+
 /**
  * 防抖
- * @param hook
- * @param delay
- * @returns
+ * @hookHandler 方法函数定义
+ * @delay 防抖延迟范围
+ * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
  */
-export function debounce(hookHandler: Function, delay: number = 200): Function {
+export function debounce(
+  hookHandler: Function,
+  delay: number = 200,
+  bindContext: boolean = true
+): Function {
   let timer: any = 0;
-  return (ctx: any, args: any[] = []) => {
+
+  function handler(args: any[] = []) {
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => {
-      hook(ctx, hookHandler, args);
+      hook(this, hookHandler, args);
       timer = null;
     }, delay);
-  };
+  }
+
+  //bind context
+  if (bindContext) {
+    return function (ctx: any = this, args: any[] = []) {
+      handler.call(ctx, args);
+    };
+  } else {
+    return function (...args: any[]) {
+      handler.call(this, args);
+    };
+  }
 }
 
 /**
  * 节流
- * @param hook
- * @param delay
- * @returns
+ * @hookHandler 方法函数定义
+ * @delay 节流延迟范围
+ * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
  */
-export function throttle(hookHandler: Function, delay: number = 200): Function {
+export function throttle(
+  hookHandler: Function,
+  delay: number = 200,
+  bindContext: boolean = true
+): Function {
   let last: number;
-  return (ctx, args: any[] = []) => {
+
+  function handler(args: any[] = []) {
     const now: number = +new Date();
     if (!last || (last && now > last + delay)) {
       last = now;
-      hook(ctx, hookHandler, args);
+      hook(this, hookHandler, args);
     }
-  };
+  }
+
+  //bind context
+  if (bindContext) {
+    return function (ctx: any, args: any[] = []) {
+      handler.call(ctx, args);
+    };
+  } else {
+    return function (...args: any[]) {
+      handler.call(this, args);
+    };
+  }
 }
 
 /**
- * 执行function
- * @param context
- * @param cb
- * @param args
- * @returns
+ * 执行Function
+ * @context 执行上下文
+ * @cb 执行函数
+ * @args 带入到执行行数参数值
+ * @return 如果执行为函数，返回最终执行结果，否则返回原始执行回调
  */
 export function hook(context: any, cb: any, args: any[] = []) {
   if (isFunction(cb)) {
@@ -55,10 +88,9 @@ export function hook(context: any, cb: any, args: any[] = []) {
 
 /**
  * 遍历
- * @param obj
- * @param cb
- * @param isReturn
- * @returns
+ * @obj 遍历对象
+ * @cb 遍历回调
+ * @isReturn 是否返回所有的遍历回调返回值
  */
 export function each(
   obj: any,
@@ -95,29 +127,28 @@ export function each(
 
 /**
  * 深拷贝
- * @param obj
- * @returns
+ * @value 需要深拷贝的指定值
  */
-export function deepCopy(obj: any): any {
-  if (!obj || (!isArray(obj) && !isPlainObject(obj))) {
-    return obj;
+export function deepCopy(value: any): any {
+  if (!value || (!isArray(value) && !isPlainObject(value))) {
+    return value;
   }
   //非纯对象类型，直接返回出去
-  if (!isArray(obj) && obj.constructor !== Object) return obj;
-  const _obj: any = isArray(obj) ? [] : {};
-  for (let key in obj) {
-    if (isArray(obj) || isPlainObject(obj)) {
-      _obj[key] = deepCopy(obj[key]);
+  if (!isArray(value) && value.constructor !== Object) return value;
+  const _value: any = isArray(value) ? [] : {};
+  for (let key in value) {
+    if (isArray(value) || isPlainObject(value)) {
+      _value[key] = deepCopy(value[key]);
     } else {
-      _obj[key] = obj[key];
+      _value[key] = value[key];
     }
   }
-  return _obj;
+  return _value;
 }
 
 /**
  * 扩展
- * @param args
+ * @args 扩展值，最后一个为布尔值来决定是否需要深拷贝进行处理
  * @returns
  */
 export function extend(...args: any[]): any {
@@ -141,13 +172,13 @@ export function extend(...args: any[]): any {
     objects = deepCopy(objects);
   }
 
-  each(objects, (object, index) => {
+  each(objects, (object: any, index: number) => {
     //最后一位只做返回处理
     if (index === objects.length - 1) {
       return (extendObject = objects[index]);
     }
     const nextObject = objects[index + 1];
-    each(nextObject, (obj, key) => {
+    each(nextObject, (obj: any, key: string) => {
       !object && (object = {});
       if (isPlainObject(obj)) {
         if (!object[key] || !isPlainObject(object[key])) {
@@ -170,7 +201,6 @@ export function extend(...args: any[]): any {
 
 /**
  * 生成一个UUID
- * @returns
  */
 export function genGuid(): string {
   function gen(): string {
@@ -181,8 +211,7 @@ export function genGuid(): string {
 
 /**
  * 对象转数组，对于上面[数组转对象]的转换是相对的
- * @param object
- * @returns
+ * @object 对象值
  */
 export function objectToArray<V>(object: { [key: string]: V }): V[] {
   const array: any[] = [];
@@ -194,9 +223,8 @@ export function objectToArray<V>(object: { [key: string]: V }): V[] {
 
 /**
  * 数组转对象，指定key做承载点
- * @param array
- * @param key
- * @returns
+ * @array 数组值
+ * @key 提取的key值
  */
 export function arrayToObject<Item, Key extends keyof Item>(
   array: Item[],
@@ -214,12 +242,11 @@ export function arrayToObject<Item, Key extends keyof Item>(
 
 /**
  * 获取obj的长度
- * @param obj
- * @returns
+ * @object 对象值
  */
-export function getObjLen(obj: any): number {
+export function getObjLen(object: any): number {
   let index: number = 0;
-  each(obj, () => {
+  each(object, () => {
     ++index;
   });
   return index;
@@ -227,8 +254,7 @@ export function getObjLen(obj: any): number {
 
 /**
  * 获取obj的keys
- * @param object
- * @returns
+ * @object 对象值
  */
 export function getObjKeys(object: any): any[] | void {
   return each(
