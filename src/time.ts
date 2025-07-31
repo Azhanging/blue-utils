@@ -13,9 +13,6 @@ export interface TResultDate {
   time: number;
 }
 
-//通用的时间类型
-type TCommonDate = number | string | Date;
-
 /**
  * 补0操作
  * @number 数值
@@ -163,7 +160,7 @@ export function getTime(time: TDateArg = +new Date()): number {
  * 转化时间处理
  * @time 时间值
  */
-export function timestamp(time: TCommonDate): number {
+export function timestamp(time: TDateArg): number {
   const reg = /^\d{13}$/g;
   if (typeof time === `string` && reg.test(time)) {
     return parseInt(time);
@@ -180,8 +177,8 @@ export function timestamp(time: TCommonDate): number {
  * @opts 对比时间配置
  */
 export function diffTime(opts: {
-  currentTime: TCommonDate;
-  targetTime: TCommonDate;
+  currentTime: TDateArg;
+  targetTime: TDateArg;
   diffTime: number;
   condition: `>` | `>=` | `<` | `<=`;
 }): boolean {

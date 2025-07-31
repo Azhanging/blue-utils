@@ -12,9 +12,13 @@ import * as regexp from "./regexp";
 import * as promise from "./promise";
 //工具类
 import * as tools from "./tools";
+//json类处理
+import * as json from "./json";
+//计算相关
+import * as math from "./math";
 
-//导出默认接口
-export default {
+//工具
+const utils = {
   ...types,
   ...url,
   ...countDown,
@@ -22,4 +26,8 @@ export default {
   ...regexp,
   ...promise,
   ...tools,
+  ...json,
+  ...math,
 };
+
+export default utils;

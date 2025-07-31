@@ -8,7 +8,6 @@ export interface TResultDate {
     seconds: string;
     time: number;
 }
-declare type TCommonDate = number | string | Date;
 /**
  * 补0操作
  * @number 数值
@@ -75,14 +74,14 @@ export declare function getTime(time?: TDateArg): number;
  * 转化时间处理
  * @time 时间值
  */
-export declare function timestamp(time: TCommonDate): number;
+export declare function timestamp(time: TDateArg): number;
 /**
  * 对比差异的时间处理
  * @opts 对比时间配置
  */
 export declare function diffTime(opts: {
-    currentTime: TCommonDate;
-    targetTime: TCommonDate;
+    currentTime: TDateArg;
+    targetTime: TDateArg;
     diffTime: number;
     condition: `>` | `>=` | `<` | `<=`;
 }): boolean;

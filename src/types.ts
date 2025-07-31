@@ -9,15 +9,15 @@ export function isEmptyPlainObject(value: any): boolean {
  * 是否为string
  * @value string
  */
-export function isStr(value: any): boolean {
+export function isStr(value: any): value is string {
   return typeof value === `string`;
 }
 
 /**
- * 是否为obj对象
+ * 是否为Object对象
  * @value
  */
-export function isPlainObject(value: any): boolean {
+export function isPlainObject(value: any): value is object {
   return !!(
     value &&
     !isArray(value) &&
@@ -32,7 +32,7 @@ export function isPlainObject(value: any): boolean {
  * 是否为数组
  * @value
  */
-export function isArray(value: any): boolean {
+export function isArray(value: any): value is Array<any> {
   return value instanceof Array;
 }
 
@@ -88,7 +88,7 @@ export function isFalse(value: any): boolean {
  * 是否为function
  * @value
  */
-export function isFunction(value: any): boolean {
+export function isFunction(value: any): value is Function {
   return typeof value === `function`;
 }
 
@@ -104,6 +104,6 @@ export function isError(value: any): boolean {
  * 是否为布尔值
  * @value
  */
-export function isBoolean(value: any): boolean {
+export function isBoolean(value: any): value is boolean {
   return typeof value === `boolean`;
 }

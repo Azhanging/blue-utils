@@ -20,6 +20,18 @@
     </div>
 
     <script>
+      blueUtils.extendMethods({
+        some() {
+          console.log(`extend some method`, this);
+        },
+        some1() {
+          console.log(`extend some1 method`, this);
+        },
+      });
+
+      blueUtils.some.call(this);
+      blueUtils.some1.call({ a: 1 });
+
       var data = {
         aa: 123,
         ttt: 34534,
@@ -75,31 +87,29 @@
           throttleFn(this, [event]);
         });
 
-      const debounceFnUnBindCtx = blueUtils.debounce(
-        function (event) {
-          console.log(event, +new Date());
-          console.log(`current this:`, this);
-        },
-        200,
-        false
+      document.querySelector(`#debounceUnbindCtx`).addEventListener(
+        "click",
+        blueUtils.debounce(
+          function (event) {
+            console.log(event, +new Date());
+            console.log(`current this:`, this);
+          },
+          200,
+          false
+        )
       );
 
-      const throttleFnUnBindCtx = blueUtils.throttle(
-        function (event) {
-          console.log(event, +new Date());
-          console.log(`current this:`, this);
-        },
-        1000,
-        false
+      document.querySelector(`#throttleUnbindCtx`).addEventListener(
+        "click",
+        blueUtils.throttle(
+          function (event) {
+            console.log(event, +new Date());
+            console.log(`current this:`, this);
+          },
+          1000,
+          false
+        )
       );
-
-      document
-        .querySelector(`#debounceUnbindCtx`)
-        .addEventListener("click", debounceFnUnBindCtx);
-
-      document
-        .querySelector(`#throttleUnbindCtx`)
-        .addEventListener("click", throttleFnUnBindCtx);
 
       Function.prototype.myCall = function () {
         let [ctx, ...args] = arguments;
@@ -238,6 +248,18 @@
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(``)));
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?`)));
       console.log(blueUtils.parseParams(blueUtils.getLinkParams(`?a`)));
+
+      //json处理
+      console.log(blueUtils.jsonStringify({ a: 1 }));
+      console.log(blueUtils.jsonStringify([1, 2, 3, 4]));
+      console.log(blueUtils.jsonParse(`{"a":1}`));
+      console.log(blueUtils.jsonParse(`{a:1}`));
+
+      //计算处理
+      console.log(`加法计算`, blueUtils.accAdd(2.22, 3.11));
+      console.log(`减法计算`, blueUtils.accSub(2.22, 3.11));
+      console.log(`除法计算`, blueUtils.accDiv(2.22, 3.11));
+      console.log(`乘法计算`, blueUtils.accMul(2.22, 3.11));
     </script>
   </body>
 </html>

@@ -30,13 +30,17 @@ export class CountDown {
   ) {
     this.options = opts;
   }
-  //开始倒计时
+  /**
+   * 开始执行倒计时
+   *  */ 
   start(countDownTime: number) {
     this.countDownTime = countDownTime;
     this._hookStart();
     this._tick();
   }
-  //每阶段的处理
+  /**
+   * 每阶段的处理
+   *  */ 
   _tick(delay = this.delay) {
     const tick = (type = `tick`) => {
       if (this.countDownTime >= this.delay) {
@@ -65,16 +69,22 @@ export class CountDown {
       }, delay);
     }
   }
-  //停止处理
+  /**
+   * 停止处理
+   *  */ 
   stop() {
     this.resetTimeout();
   }
-  //重置
+  /**
+   * 重置处理
+   *  */ 
   reset() {
     this.countDownTime = 0;
     this.resetTimeout();
   }
-  //清除定时处理
+  /**
+   * 清除定时处理
+   *  */ 
   resetTimeout() {
     clearTimeout(this.timer);
     this.timer = 0;
@@ -88,20 +98,28 @@ export class CountDown {
     const { hooks } = this.options;
     return hook(this, hooks[type]);
   }
-  //递减处理
+  /**
+   * start钩子处理
+   *  */ 
   _hookStart() {
     return this._hook(`start`);
   }
-  //结束了
+  /**
+   * end钩子处理
+   *  */ 
   _hookEnd() {
     this._hook(`end`);
     this.resetTimeout();
   }
-  //递减处理
+  /**
+   * tick钩子处理
+   *  */ 
   _hookTick() {
     return this._hook(`tick`);
   }
-  //生成倒计时显示
+  /**
+   * 生成倒计时显示
+   *  */ 
   genViewDate(diffTime = this.countDownTime) {
     return genCountDownViewDate(diffTime);
   }

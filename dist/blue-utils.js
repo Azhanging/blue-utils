@@ -1,10 +1,10 @@
 /*!
  * 
- * blue-utils.js 1.2.11
+ * blue-utils.js 1.2.12
  * (c) 2016-2025 Blue
  * Released under the MIT License.
  * https://github.com/azhanging/blue-utils
- * time:Fri, 14 Feb 2025 09:20:08 GMT
+ * time:Thu, 31 Jul 2025 09:34:32 GMT
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -116,6 +116,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _regexp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
 /* harmony import */ var _promise__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _tools__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3);
+/* harmony import */ var _json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -141,8 +143,13 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 //工具类
 
-//导出默认接口
-/* harmony default export */ __webpack_exports__["default"] = (__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, _types__WEBPACK_IMPORTED_MODULE_0__), _url__WEBPACK_IMPORTED_MODULE_1__), _count_down__WEBPACK_IMPORTED_MODULE_3__), _time__WEBPACK_IMPORTED_MODULE_2__), _regexp__WEBPACK_IMPORTED_MODULE_4__), _promise__WEBPACK_IMPORTED_MODULE_5__), _tools__WEBPACK_IMPORTED_MODULE_6__));
+//json类处理
+
+//计算相关
+
+//工具
+var utils = __assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign(__assign({}, _types__WEBPACK_IMPORTED_MODULE_0__), _url__WEBPACK_IMPORTED_MODULE_1__), _count_down__WEBPACK_IMPORTED_MODULE_3__), _time__WEBPACK_IMPORTED_MODULE_2__), _regexp__WEBPACK_IMPORTED_MODULE_4__), _promise__WEBPACK_IMPORTED_MODULE_5__), _tools__WEBPACK_IMPORTED_MODULE_6__), _json__WEBPACK_IMPORTED_MODULE_7__), _math__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony default export */ __webpack_exports__["default"] = (utils);
 
 
 /***/ }),
@@ -179,7 +186,7 @@ function isStr(value) {
     return typeof value === "string";
 }
 /**
- * 是否为obj对象
+ * 是否为Object对象
  * @value
  */
 function isPlainObject(value) {
@@ -364,26 +371,8 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
     return r;
 };
 
-/**
- * 防抖
- * @hookHandler 方法函数定义
- * @delay 防抖延迟范围
- * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
- */
-function debounce(hookHandler, delay, bindContext) {
-    if (delay === void 0) { delay = 200; }
-    if (bindContext === void 0) { bindContext = true; }
-    var timer = 0;
-    function handler(args) {
-        var _this = this;
-        if (args === void 0) { args = []; }
-        if (timer)
-            clearTimeout(timer);
-        timer = setTimeout(function () {
-            hook(_this, hookHandler, args);
-            timer = null;
-        }, delay);
-    }
+//防抖与节流回调
+function debounceThrottleCallback(bindContext, handler) {
     //bind context
     if (bindContext) {
         return function (ctx, args) {
@@ -403,6 +392,27 @@ function debounce(hookHandler, delay, bindContext) {
     }
 }
 /**
+ * 防抖
+ * @hookHandler 方法函数定义
+ * @delay 防抖延迟范围
+ * @bindContext 是否需要绑定当前方法函数上下文，默认绑定
+ */
+function debounce(hookHandler, delay, bindContext) {
+    if (delay === void 0) { delay = 200; }
+    if (bindContext === void 0) { bindContext = true; }
+    var timer = 0;
+    return debounceThrottleCallback(bindContext, function (args) {
+        var _this = this;
+        if (args === void 0) { args = []; }
+        if (timer)
+            clearTimeout(timer);
+        timer = setTimeout(function () {
+            hook(_this, hookHandler, args);
+            timer = null;
+        }, delay);
+    });
+}
+/**
  * 节流
  * @hookHandler 方法函数定义
  * @delay 节流延迟范围
@@ -412,30 +422,14 @@ function throttle(hookHandler, delay, bindContext) {
     if (delay === void 0) { delay = 200; }
     if (bindContext === void 0) { bindContext = true; }
     var last;
-    function handler(args) {
+    return debounceThrottleCallback(bindContext, function (args) {
         if (args === void 0) { args = []; }
         var now = +new Date();
         if (!last || (last && now > last + delay)) {
             last = now;
             hook(this, hookHandler, args);
         }
-    }
-    //bind context
-    if (bindContext) {
-        return function (ctx, args) {
-            if (args === void 0) { args = []; }
-            handler.call(ctx, args);
-        };
-    }
-    else {
-        return function () {
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            handler.call(this, args);
-        };
-    }
+    });
 }
 /**
  * 执行Function
@@ -445,6 +439,7 @@ function throttle(hookHandler, delay, bindContext) {
  * @return 如果执行为函数，返回最终执行结果，否则返回原始执行回调
  */
 function hook(context, cb, args) {
+    if (context === void 0) { context = this; }
     if (args === void 0) { args = []; }
     if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(cb)) {
         return cb.apply(context, args);
@@ -457,34 +452,35 @@ function hook(context, cb, args) {
  * @cb 遍历回调
  * @isReturn 是否返回所有的遍历回调返回值
  */
-function each(obj, cb, isReturn) {
+function each(value, callback, isReturn) {
     if (isReturn === void 0) { isReturn = false; }
-    if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isUndef"])(obj))
+    if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isUndef"])(value))
         return;
-    var i = 0, index = 0, newVal = [];
-    var len = obj.length;
-    if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(obj)) {
-        for (; i < len; i++) {
+    var returnValue = [];
+    //数组 || 字符串
+    if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isArray"])(value) || Object(_types__WEBPACK_IMPORTED_MODULE_0__["isStr"])(value)) {
+        //遍历数据为数组类型
+        var len = value.length;
+        for (var i = 0; i < len; i++) {
+            var callbackValue = callback(value[i], i);
             if (isReturn) {
-                newVal.push(cb(obj[i], i));
-            }
-            else {
-                cb(obj[i], i);
+                returnValue.push(callbackValue);
             }
         }
     }
-    else {
-        for (i in obj) {
+    else if (Object(_types__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(value)) {
+        //遍历数据为Object类型
+        var index = 0;
+        for (var key in value) {
+            var callbackValue = callback(value[key], key, index++);
             if (isReturn) {
-                newVal.push(cb(obj[i], i, index++));
-            }
-            else {
-                cb(obj[i], i, index++);
+                returnValue.push(callbackValue);
             }
         }
     }
+    //返回值
     if (isReturn)
-        return newVal;
+        return returnValue;
 }
 /**
  * 深拷贝
@@ -836,13 +832,17 @@ var CountDown = /** @class */ (function () {
         this.countDownTime = 0;
         this.options = opts;
     }
-    //开始倒计时
+    /**
+     * 开始执行倒计时
+     *  */
     CountDown.prototype.start = function (countDownTime) {
         this.countDownTime = countDownTime;
         this._hookStart();
         this._tick();
     };
-    //每阶段的处理
+    /**
+     * 每阶段的处理
+     *  */
     CountDown.prototype._tick = function (delay) {
         var _this = this;
         if (delay === void 0) { delay = this.delay; }
@@ -878,16 +878,22 @@ var CountDown = /** @class */ (function () {
             }, delay);
         }
     };
-    //停止处理
+    /**
+     * 停止处理
+     *  */
     CountDown.prototype.stop = function () {
         this.resetTimeout();
     };
-    //重置
+    /**
+     * 重置处理
+     *  */
     CountDown.prototype.reset = function () {
         this.countDownTime = 0;
         this.resetTimeout();
     };
-    //清除定时处理
+    /**
+     * 清除定时处理
+     *  */
     CountDown.prototype.resetTimeout = function () {
         clearTimeout(this.timer);
         this.timer = 0;
@@ -901,20 +907,28 @@ var CountDown = /** @class */ (function () {
         var hooks = this.options.hooks;
         return Object(_tools__WEBPACK_IMPORTED_MODULE_0__["hook"])(this, hooks[type]);
     };
-    //递减处理
+    /**
+     * start钩子处理
+     *  */
     CountDown.prototype._hookStart = function () {
         return this._hook("start");
     };
-    //结束了
+    /**
+     * end钩子处理
+     *  */
     CountDown.prototype._hookEnd = function () {
         this._hook("end");
         this.resetTimeout();
     };
-    //递减处理
+    /**
+     * tick钩子处理
+     *  */
     CountDown.prototype._hookTick = function () {
         return this._hook("tick");
     };
-    //生成倒计时显示
+    /**
+     * 生成倒计时显示
+     *  */
     CountDown.prototype.genViewDate = function (diffTime) {
         if (diffTime === void 0) { diffTime = this.countDownTime; }
         return Object(_time__WEBPACK_IMPORTED_MODULE_1__["genCountDownViewDate"])(diffTime);
@@ -969,6 +983,223 @@ function promise(hookHandler) {
     catch (e) {
         console.warn(e);
     }
+}
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jsonStringify", function() { return jsonStringify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jsonParse", function() { return jsonParse; });
+/**
+ * @value 需要转换为string的json值
+ */
+function jsonStringify(value) {
+    try {
+        return JSON.stringify(value);
+    }
+    catch (e) {
+        return value;
+    }
+}
+/**
+ * @value 需要转换为实体对象的json值
+ */
+function jsonParse(value) {
+    try {
+        if (typeof value === "string") {
+            return JSON.parse(value);
+        }
+        return value;
+    }
+    catch (e) {
+        return value;
+    }
+}
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accAdd", function() { return accAdd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accSub", function() { return accSub; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accDiv", function() { return accDiv; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accMul", function() { return accMul; });
+function countDecimals(num) {
+    var len = 0;
+    try {
+        num = Number(num);
+        var str = num.toString().toUpperCase();
+        if (str.split("E").length === 2) {
+            var isDecimal = false;
+            if (str.split(".").length === 2) {
+                str = str.split(".")[1];
+                if (parseInt(str.split("E")[0]) !== 0) {
+                    isDecimal = true;
+                }
+            }
+            var x = str.split("E");
+            if (isDecimal) {
+                len = x[0].length;
+            }
+            len -= parseInt(x[1]);
+        }
+        else if (str.split(".").length === 2) {
+            if (parseInt(str.split(".")[1]) !== 0) {
+                len = str.split(".")[1].length;
+            }
+        }
+    }
+    catch (e) {
+        throw e;
+    }
+    finally {
+        if (isNaN(len) || len < 0) {
+            len = 0;
+        }
+        return len;
+    }
+}
+function convertToInt(num) {
+    num = Number(num);
+    var newNum = num;
+    var times = countDecimals(num);
+    var temp_num = num.toString().toUpperCase();
+    if (temp_num.split("E").length === 2) {
+        newNum = Math.round(num * Math.pow(10, times));
+    }
+    else {
+        newNum = Number(temp_num.replace(".", ""));
+    }
+    return newNum;
+}
+//计算类型
+var MathTypes;
+(function (MathTypes) {
+    MathTypes["ADD"] = "add";
+    MathTypes["SUB"] = "sub";
+    MathTypes["DIV"] = "div";
+    MathTypes["MUL"] = "mul";
+})(MathTypes || (MathTypes = {}));
+function getCorrectResult(type, num1, num2, result) {
+    var temp_result = 0;
+    switch (type) {
+        case MathTypes.ADD:
+            temp_result = num1 + num2;
+            break;
+        case MathTypes.SUB:
+            temp_result = num1 - num2;
+            break;
+        case MathTypes.DIV:
+            temp_result = num1 / num2;
+            break;
+        case MathTypes.MUL:
+            temp_result = num1 * num2;
+            break;
+    }
+    if (Math.abs(result - temp_result) > 1) {
+        return temp_result;
+    }
+    return result;
+}
+/**
+ * 加法计算
+ *  */
+function accAdd(num1, num2) {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    var dec1;
+    var dec2;
+    var times;
+    try {
+        dec1 = countDecimals(num1) + 1;
+    }
+    catch (e) {
+        dec1 = 0;
+    }
+    try {
+        dec2 = countDecimals(num2) + 1;
+    }
+    catch (e) {
+        dec2 = 0;
+    }
+    times = Math.pow(10, Math.max(dec1, dec2));
+    var result = (accMul(num1, times) + accMul(num2, times)) / times;
+    return getCorrectResult(MathTypes.ADD, num1, num2, result);
+}
+/**
+ * 减法计算
+ *  */
+function accSub(num1, num2) {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    var dec1;
+    var dec2;
+    var times;
+    try {
+        dec1 = countDecimals(num1) + 1;
+    }
+    catch (e) {
+        dec1 = 0;
+    }
+    try {
+        dec2 = countDecimals(num2) + 1;
+    }
+    catch (e) {
+        dec2 = 0;
+    }
+    times = Math.pow(10, Math.max(dec1, dec2));
+    var result = Number((accMul(num1, times) - accMul(num2, times)) / times);
+    return getCorrectResult(MathTypes.SUB, num1, num2, result);
+}
+/**
+ * 除法计算
+ *  */
+function accDiv(num1, num2) {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    var t1 = 0;
+    var t2 = 0;
+    var dec1;
+    var dec2;
+    try {
+        t1 = countDecimals(num1);
+    }
+    catch (e) { }
+    try {
+        t2 = countDecimals(num2);
+    }
+    catch (e) { }
+    dec1 = convertToInt(num1);
+    dec2 = convertToInt(num2);
+    var result = accMul(dec1 / dec2, Math.pow(10, t2 - t1));
+    return getCorrectResult(MathTypes.DIV, num1, num2, result);
+}
+/**
+ * 乘法计算
+ *  */
+function accMul(num1, num2) {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    var times = 0;
+    var s1 = num1.toString();
+    var s2 = num2.toString();
+    try {
+        times += countDecimals(s1);
+    }
+    catch (e) { }
+    try {
+        times += countDecimals(s2);
+    }
+    catch (e) { }
+    var result = (convertToInt(s1) * convertToInt(s2)) / Math.pow(10, times);
+    return getCorrectResult(MathTypes.MUL, num1, num2, result);
 }
 
 
